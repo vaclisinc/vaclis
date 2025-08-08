@@ -1,0 +1,937 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --vinyl-black: #1a1a1a;
+    --gold-accent: #d4af37;
+    --neon-pink: #ff006e;
+    --neon-blue: #00f5ff;
+    --warm-white: #faf8f3;
+    --tape-brown: #8b4513;
+    --poster-red: #dc143c;
+    --studio-green: #00ff41;
+    --font-mono: 'Space Mono', monospace;
+    --font-display: 'Bebas Neue', cursive;
+    --font-serif: 'Libre Baskerville', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--warm-white);
+    font-family: var(--font-mono);
+    overflow-x: hidden;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="10" fill="%23ff006e" opacity="0.8"/></svg>') 16 16, auto;
+}
+
+/* Music Visualizer Background */
+.music-visualizer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    height: 100px;
+    background: linear-gradient(180deg, var(--neon-pink), transparent);
+    animation: wave-dance 2s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+.wave:nth-child(1) { left: 0%; animation-delay: 0s; }
+.wave:nth-child(2) { left: 20%; animation-delay: 0.2s; }
+.wave:nth-child(3) { left: 40%; animation-delay: 0.4s; }
+.wave:nth-child(4) { left: 60%; animation-delay: 0.6s; }
+.wave:nth-child(5) { left: 80%; animation-delay: 0.8s; }
+
+@keyframes wave-dance {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(3); }
+}
+
+/* Piano Navigation */
+.piano-nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.piano-keys {
+    display: flex;
+    position: relative;
+    gap: 2px;
+}
+
+.key {
+    cursor: pointer;
+    transition: all 0.1s;
+    position: relative;
+    user-select: none;
+}
+
+.key.white {
+    width: 50px;
+    height: 120px;
+    background: linear-gradient(180deg, #fff, #f0f0f0);
+    border: 1px solid #000;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.key.white span {
+    font-size: 10px;
+    color: #333;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+}
+
+.key.black {
+    width: 30px;
+    height: 80px;
+    background: linear-gradient(180deg, #333, #000);
+    position: absolute;
+    z-index: 2;
+    border-radius: 0 0 3px 3px;
+}
+
+.key.black:nth-of-type(2) { left: 35px; }
+.key.black:nth-of-type(4) { left: 87px; }
+.key.black:nth-of-type(6) { left: 191px; }
+.key.black:nth-of-type(8) { left: 243px; }
+.key.black:nth-of-type(10) { left: 295px; }
+
+.key:active, .key.pressed {
+    transform: translateY(2px);
+}
+
+.key.white:active, .key.white.pressed {
+    background: linear-gradient(180deg, #f0f0f0, #ddd);
+}
+
+.key.black:active, .key.black.pressed {
+    background: linear-gradient(180deg, #222, #000);
+}
+
+.volume-control {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--gold-accent);
+}
+
+/* Hero Album Cover */
+.hero-album {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px 50px;
+}
+
+.album-cover {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.vinyl-record {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at 30% 30%, #333, #000);
+    border-radius: 50%;
+    position: relative;
+    animation: spin 20s linear infinite;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.vinyl-record::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    border-radius: 50%;
+    background: repeating-radial-gradient(circle, transparent, transparent 2px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px);
+}
+
+.vinyl-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: var(--gold-accent);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--bg-dark);
+}
+
+.artist-name {
+    font-family: var(--font-display);
+    font-size: 24px;
+    margin: 0;
+}
+
+.album-subtitle {
+    font-size: 10px;
+    margin: 5px 0;
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+    margin-top: 10px;
+}
+
+.track.playing {
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    line-height: 0.9;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.album-year {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--gold-accent);
+    margin-bottom: 30px;
+}
+
+.genre-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.genre {
+    background: transparent;
+    border: 1px solid var(--neon-pink);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.genre:hover {
+    background: var(--neon-pink);
+    color: var(--bg-dark);
+    transform: scale(1.1);
+}
+
+.now-playing {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--gold-accent);
+}
+
+.now-playing .label {
+    display: block;
+    font-size: 10px;
+    color: var(--gold-accent);
+    margin-bottom: 10px;
+}
+
+.current-role {
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--neon-blue);
+}
+
+/* Mixtape About Section */
+.mixtape-about {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cassette-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.cassette-tape {
+    background: var(--tape-brown);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cassette-label {
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    color: var(--bg-dark);
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.cassette-label h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--poster-red);
+}
+
+.tape-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.handwritten {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--neon-pink);
+}
+
+.cassette-reels {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.reel {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #333, #000);
+    border-radius: 50%;
+    position: relative;
+    animation: spin 3s linear infinite;
+}
+
+.reel::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: var(--tape-brown);
+    border-radius: 50%;
+}
+
+/* Vinyl Projects Section */
+.vinyl-projects {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+}
+
+.section-header {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--gold-accent);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.record-shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.record-sleeve {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.record-sleeve:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.record-sleeve.platinum {
+    background: linear-gradient(135deg, #e5e4e2, #c0c0c0);
+}
+
+.record-sleeve.viral {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+}
+
+.record {
+    width: 100%;
+    aspect-ratio: 1;
+    background: radial-gradient(circle at 30% 30%, #333, #000);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
+}
+
+.record-sleeve:hover .record {
+    transform: translateY(-50px) rotate(10deg);
+}
+
+.record-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    background: var(--warm-white);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--bg-dark);
+    padding: 10px;
+}
+
+.record-label h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.record-label p {
+    font-size: 0.7rem;
+    margin: 5px 0;
+}
+
+.record-stats {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.record-stats span {
+    font-size: 0.6rem;
+    background: var(--bg-dark);
+    color: var(--warm-white);
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.sleeve-info {
+    color: var(--warm-white);
+}
+
+.sleeve-info p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.listen-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--neon-pink);
+    color: var(--warm-white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.listen-btn:hover {
+    background: var(--neon-blue);
+    transform: scale(1.05);
+}
+
+.award-sticker {
+    display: inline-block;
+    background: var(--gold-accent);
+    color: var(--bg-dark);
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    transform: rotate(-15deg);
+    margin-top: 10px;
+}
+
+/* Concert Poster Wall */
+.poster-wall {
+    padding: 100px 20px;
+    background: linear-gradient(45deg, rgba(255, 0, 110, 0.1), rgba(0, 245, 255, 0.1));
+}
+
+.posters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.concert-poster {
+    background: var(--bg-dark);
+    border: 3px solid var(--warm-white);
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    transform: rotate(-2deg);
+}
+
+.concert-poster:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.concert-poster:hover {
+    transform: rotate(0) scale(1.1);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.poster-date {
+    font-size: 0.8rem;
+    color: var(--gold-accent);
+    margin-bottom: 10px;
+}
+
+.concert-poster h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 0.9;
+}
+
+.venue {
+    font-family: var(--font-serif);
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--neon-blue);
+}
+
+.poster-badge {
+    display: inline-block;
+    background: var(--poster-red);
+    color: var(--warm-white);
+    padding: 5px 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transform: skew(-10deg);
+}
+
+.feat {
+    font-size: 0.9rem;
+    color: var(--gold-accent);
+}
+
+.concert-poster.meichu {
+    background: linear-gradient(135deg, #4285f4, #ea4335);
+}
+
+.concert-poster.taipei {
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+}
+
+.concert-poster.sitcon {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.concert-poster.piano {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.concert-poster.berkeley {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+    border-color: var(--gold-accent);
+}
+
+/* Music Studio Section */
+.music-studio {
+    padding: 100px 20px;
+    background: radial-gradient(circle at center, rgba(0, 255, 65, 0.1), transparent);
+}
+
+.studio-rack {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 40px;
+}
+
+.equipment-section {
+    background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.equipment-section h3 {
+    font-family: var(--font-display);
+    color: var(--studio-green);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.instrument-rack {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.instrument {
+    text-align: center;
+}
+
+.knob {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #666, #333);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.knob::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--studio-green);
+}
+
+.knob:hover {
+    transform: rotate(45deg);
+}
+
+.instrument label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.led-meter {
+    display: flex;
+    gap: 2px;
+}
+
+.led-meter span {
+    width: 10px;
+    height: 20px;
+    background: #333;
+    transition: all 0.3s;
+}
+
+.instrument[data-level="95"] .led-meter span,
+.instrument[data-level="90"] .led-meter span:nth-child(-n+4),
+.instrument[data-level="85"] .led-meter span:nth-child(-n+3) {
+    background: var(--studio-green);
+    box-shadow: 0 0 10px var(--studio-green);
+}
+
+.effects-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.effect-pedal {
+    background: linear-gradient(180deg, #666, #333);
+    border: 2px solid #222;
+    color: var(--warm-white);
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.effect-pedal::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.effect-pedal:hover {
+    transform: scale(1.05);
+    border-color: var(--neon-pink);
+}
+
+.effect-pedal:active {
+    transform: scale(0.95);
+}
+
+.effect-pedal:active::before {
+    background: var(--studio-green);
+    box-shadow: 0 0 10px var(--studio-green);
+}
+
+.daw-display {
+    background: #111;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+}
+
+.track-line {
+    background: linear-gradient(90deg, var(--studio-green) 0%, var(--studio-green) 30%, transparent 30%);
+    color: var(--studio-green);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    animation: track-play 3s linear infinite;
+}
+
+@keyframes track-play {
+    from { background-position: 0 0; }
+    to { background-position: 100px 0; }
+}
+
+/* Backstage Pass */
+.backstage-pass {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.pass-card {
+    background: linear-gradient(135deg, var(--gold-accent), #b8960a);
+    color: var(--bg-dark);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform 0.3s;
+}
+
+.pass-card:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.pass-card h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pass-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 5px solid var(--bg-dark);
+}
+
+.pass-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pass-info {
+    text-align: center;
+}
+
+.pass-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pass-title {
+    background: var(--bg-dark);
+    color: var(--gold-accent);
+    padding: 5px 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.contact-list a {
+    color: var(--bg-dark);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.contact-list a:hover {
+    transform: translateX(10px);
+}
+
+.social-stamps {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stamp {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-dark);
+    color: var(--gold-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    transform: rotate(-10deg);
+    transition: all 0.3s;
+}
+
+.stamp:hover {
+    transform: rotate(0) scale(1.2);
+}
+
+.download-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-dark);
+    color: var(--gold-accent);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.download-cv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.barcode {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+/* End Credits */
+.end-credits {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, transparent, var(--bg-dark));
+}
+
+.secret-message {
+    font-size: 0.8rem;
+    color: var(--gold-accent);
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .piano-nav {
+        display: none;
+    }
+    
+    .album-cover {
+        flex-direction: column;
+    }
+    
+    .vinyl-record {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .album-title {
+        font-size: 2.5rem;
+    }
+    
+    .record-shelf {
+        grid-template-columns: 1fr;
+    }
+    
+    .posters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .instrument-rack {
+        flex-direction: column;
+    }
+}
