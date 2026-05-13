@@ -70,15 +70,26 @@ if ('IntersectionObserver' in window) {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.05, rootMargin: '0px 0px -10% 0px' }
   );
 
   fadeEls.forEach(function (el) {
     observer.observe(el);
   });
 } else {
-  // Fallback: show everything
-  fadeEls.forEach(function (el) {
+  fadeEls.forEach(function (el) { el.classList.add('visible'); });
+}
+
+// Safety net: if any .fade-in hasn't been revealed within ~1s
+// (e.g. screenshot capture, printing, or reading without scrolling),
+// force-show them so content never stays invisible.
+setTimeout(function () {
+  document.querySelectorAll('.fade-in:not(.visible)').forEach(function (el) {
     el.classList.add('visible');
   });
+}, 1000);
+
+// Respect users who prefer reduced motion — skip the animation entirely.
+if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  fadeEls.forEach(function (el) { el.classList.add('visible'); });
 }
