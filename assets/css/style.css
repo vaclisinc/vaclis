@@ -546,6 +546,16 @@ ul  { list-style: none; }
 .pub-status.planned   { background: rgba(107, 114, 129, .12); color: var(--muted); border: 1px solid rgba(107, 114, 129, .22); }
 .pub-status.published { background: rgba(0, 50, 98, .10); color: var(--berkeley-blue); border: 1px solid rgba(0, 50, 98, .22); }
 
+/* Double-blind redaction */
+.pub.redacted .pub-title-text,
+.pub.redacted .pub-authors,
+.pub.redacted .entry-details,
+.redacted-inline {
+  filter: blur(5px);
+  user-select: none;
+  pointer-events: none;
+}
+
 .pub-summary {
   font-family: var(--serif);
   font-size: 1rem;
