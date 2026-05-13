@@ -258,10 +258,11 @@ ul  { list-style: none; }
   font-family: var(--serif-display);
   font-style: italic;
   font-weight: 400;
-  font-size: .35em;
+  font-size: .32em;
   letter-spacing: .14em;
   color: var(--muted);
-  margin-top: 18px;
+  margin-top: 32px;
+  line-height: 1.4;
 }
 
 .hero-tagline {

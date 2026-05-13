@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Song-Ze (Jimmy) Yu — Music CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #d8d4cc;
+    --accent: #8a6d3b;
+    --paper: #fbf9f4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #e8e6e0;
+    font-family: 'Source Serif 4', 'Cormorant Garamond', Georgia, serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Language toggle bar */
+  .lang-bar {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 100;
+    background: rgba(251,249,244,0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--line);
+    padding: 6px 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .lang-bar a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0 6px;
+    font-weight: 500;
+  }
+  .lang-bar a.active {
+    color: var(--ink);
+    border-bottom: 1px solid var(--accent);
+  }
+  .lang-bar a:not(.active):hover { color: var(--ink); }
+  .lang-bar .sep { color: var(--line); }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 24px auto;
+    padding: 12mm 18mm 16mm;
+    background: var(--paper);
+    box-shadow: 0 6px 28px rgba(0,0,0,.08);
+    position: relative;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .avatar {
+    flex: 0 0 32mm;
+    width: 32mm;
+    height: 32mm;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+    border: 1px solid var(--line);
+  }
+  .avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: 50% 25%;
+    display: block;
+    filter: contrast(1.02) saturate(0.95);
+  }
+  .name-block { flex: 1; }
+  .name-block .en {
+    font-size: 28pt;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .name-block .zh {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 10.5pt;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 3px;
+  }
+  .meta {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 9.5pt;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+  .meta strong { color: var(--ink); font-weight: 500; }
+  .meta .links {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dotted var(--line);
+    font-size: 9pt;
+    letter-spacing: 0.5px;
+  }
+  .meta .links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-style: normal;
+  }
+  .meta .links a:hover { text-decoration: underline; }
+
+  /* Section heading */
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11pt;
+    letter-spacing: 4px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin: 18px 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .section-title .alt {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    color: var(--muted);
+    text-transform: none;
+  }
+
+  /* Profile section */
+  .profile {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  /* Bio */
+  .bio {
+    flex: 1;
+    font-size: 11pt;
+    line-height: 1.85;
+    text-align: justify;
+    color: #2a2a2a;
+  }
+  .bio p + p { margin-top: 8px; }
+  .bio .lead::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30pt;
+    float: left;
+    line-height: 0.9;
+    padding: 4px 8px 0 0;
+    color: var(--accent);
+  }
+  .bio em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* Timeline */
+  .timeline {
+    margin-top: 4px;
+    column-count: 2;
+    column-gap: 24px;
+  }
+  .year-group {
+    break-inside: avoid;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 12px;
+  }
+  .year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18pt;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 48px;
+    border-right: 1px solid var(--line);
+    padding-right: 10px;
+    padding-top: 2px;
+  }
+  .events {
+    flex: 1;
+    font-size: 9.5pt;
+    line-height: 1.7;
+  }
+  .events .row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .events .mo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 9pt;
+    color: var(--muted);
+    min-width: 26px;
+    font-style: italic;
+  }
+  .events .show {
+    flex: 1;
+    color: #2a2a2a;
+  }
+  .events .show .hl {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .events .show .cn {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .qr {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .qr img {
+    width: 78px;
+    height: 78px;
+    display: block;
+    border: 1px solid var(--line);
+    padding: 4px;
+    background: #fff;
+  }
+  .qr-text {
+    font-size: 8.5pt;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .qr-text strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11pt;
+    letter-spacing: 2px;
+    color: var(--ink);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .seal {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 9pt;
+    color: var(--muted);
+    text-align: right;
+    letter-spacing: 1px;
+  }
+  .seal .en-name {
+    font-family: 'Source Serif 4', serif;
+    font-style: normal;
+    font-size: 10.5pt;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    display: block;
+    font-weight: 500;
+  }
+
+  /* === Page 2 / 3 — Archive === */
+  .page.archive { padding: 22mm 18mm 22mm; }
+  .page.archive header { margin-bottom: 4mm; }
+  .page.archive .section-title { margin: 28px 0 14px; }
+  .page.archive .grid-kidstar,
+  .page.archive .grid-roles,
+  .page.archive .full-strip { margin-bottom: 4mm; }
+
+  .grid-kidstar {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 46mm;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  .grid-kidstar figure { margin: 0; }
+  .grid-kidstar .hero    { grid-column: 1 / 5;  grid-row: 1 / 3; }
+  .grid-kidstar .wide-a  { grid-column: 5 / 10; grid-row: 1 / 2; }
+  .grid-kidstar .poster  { grid-column: 10 / 13; grid-row: 1 / 3; }
+  .grid-kidstar .wide-b  { grid-column: 5 / 10; grid-row: 2 / 3; }
+  .grid-kidstar .small   { grid-column: span 3; grid-row: span 1; }
+
+  figure.tile {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 3px;
+    min-width: 0; min-height: 0;
+    margin: 0;
+  }
+  figure.tile img {
+    width: 100%; height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+    background: #1a1a1a;
+    border: 1px solid var(--line);
+  }
+  figure.tile figcaption {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 8pt;
+    line-height: 1.35;
+    color: #444;
+    letter-spacing: 0.3px;
+    padding: 0 2px;
+  }
+  figure.tile figcaption b {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--accent);
+    font-family: 'Source Serif 4', serif;
+    letter-spacing: 0;
+  }
+  figure.tile.contain img {
+    object-fit: contain;
+    background: #0d0d0d;
+  }
+
+  /* Now — role grid */
+  .now-lede {
+    font-size: 10pt;
+    line-height: 1.7;
+    color: #2a2a2a;
+    margin: -2px 0 12px;
+    letter-spacing: 0.3px;
+  }
+  .grid-roles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .role-tile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+  .role-tile .role-img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #1a1a1a;
+    border: 1px solid var(--line);
+    position: relative;
+  }
+  .role-tile .role-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 -32px 36px -28px rgba(0,0,0,.45);
+    pointer-events: none;
+  }
+  .role-tile img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .role-tile .role-img.split {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--paper);
+  }
+  .role-tile .role-img.split img {
+    height: calc(50% - 1px);
+  }
+  .role-tile figcaption {
+    margin-top: 8px;
+    line-height: 1.2;
+  }
+  .role-tile .role-en {
+    display: block;
+    font-family: 'Source Serif 4', serif;
+    font-size: 11.5pt;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--ink);
+  }
+  .role-tile .role-zh {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 8.5pt;
+    color: var(--accent);
+    letter-spacing: 2px;
+  }
+
+  .full-strip {
+    margin: 6px 0 14px;
+    padding: 0;
+  }
+  .full-strip img {
+    width: 100%; height: auto;
+    display: block;
+    border: 1px solid var(--line);
+  }
+
+  .verify-note {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px dotted var(--line);
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 9pt;
+    line-height: 1.6;
+    color: var(--muted);
+    text-align: right;
+    letter-spacing: 0.4px;
+  }
+  .verify-note b { color: var(--ink); font-weight: 500; font-style: normal; }
+  .verify-note a { color: var(--accent); text-decoration: none; }
+
+  @page { size: A4 portrait; margin: 0; }
+
+  @media print {
+    .lang-bar { display: none !important; }
+    .role-tile .role-img::after {
+      content: none !important;
+      display: none !important;
+      box-shadow: none !important;
+    }
+    .role-tile .role-img { background: #fff !important; }
+
+    html, body {
+      background: #fff;
+      width: 210mm;
+      margin: 0; padding: 0;
+    }
+    .page {
+      margin: 0 !important;
+      box-shadow: none !important;
+      width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Language toggle -->
+<div class="lang-bar">
+  <a href="en.html" class="active">EN</a>
+  <span class="sep">|</span>
+  <a href="index.html">中文</a>
+  <span class="sep">·</span>
+  <a href="../">← Main</a>
+</div>
+
+<!-- ============================================================ -->
+<!-- Page 1 — Profile & Timeline                                   -->
+<!-- ============================================================ -->
+<div class="page">
+
+  <header>
+    <div class="avatar">
+      <img src="S__12820487.jpg" alt="Song-Ze (Jimmy) Yu">
+    </div>
+    <div class="name-block">
+      <div class="en">Song-Ze (Jimmy) Yu</div>
+      <div class="zh">游 松 澤 &nbsp;·&nbsp; Yu, Song-Ze</div>
+    </div>
+    <div class="meta">
+      <div><strong>Piano</strong> &nbsp;·&nbsp; Keys &nbsp;·&nbsp; Lead Vocal</div>
+      <div>Cajón &nbsp;·&nbsp; Electric Guitar &nbsp;·&nbsp; Producer</div>
+      <div class="links">
+        <a href="https://www.instagram.com/jy.1204_/">IG&nbsp;@jy.1204_</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.youtube.com/@vaclis">YT&nbsp;@vaclis</a>
+      </div>
+    </div>
+  </header>
+
+  <h2 class="section-title">Profile <span class="alt">— a brief biography</span></h2>
+  <div class="bio">
+    <p class="lead">
+      I’m Song-Ze (Jimmy) Yu. Give me any piece I need to perform and <em>I can play it after one listen</em>.
+      I learned piano on my own — and won first place at my very first competition. That win opened a decade
+      as a child star: between 2009 and 2016, I appeared on over 100 Chinese-language TV variety shows and
+      Lunar New Year galas, performed <em>24 solo recitals</em> across Greater China, shared the stage with
+      <em>Jay Chou</em> three times, and was a featured guest at <em>Yan Jue’s Taipei Arena</em> concert.
+    </p>
+    <p>
+      I’ve been writing songs since junior high — now more than <em>20 originals</em>, with full mixing and mastering.
+      In my freshman year at National Cheng Kung University, I was invited to compose and play keys for the senior class’s
+      graduation song. After transferring to National Tsing Hua University, I joined several bands — sometimes on keys,
+      sometimes lead vocal with cajón, sometimes electric guitar. Whichever instrument the band needed, I’d fill in.
+      My sophomore-year single <em>“失電陣線聯盟” (Power-Out United Front)</em> reached <em>14.4K plays</em> on Instagram.
+      If it’s keyboard, I don’t rehearse — one listen and I can improvise the part live.
+    </p>
+  </div>
+
+  <h2 class="section-title">Selected Appearances &amp; Recitals <span class="alt">— performance timeline</span></h2>
+  <div class="timeline">
+
+    <div class="year-group">
+      <div class="year">2008</div>
+      <div class="events">
+        <div class="row"><span class="mo">12</span><span class="show">Steinbach Taiwan Music Competition — 1st (regional) <span class="cn">史坦巴哈台灣音樂大賽市區第一名</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2009</div>
+      <div class="events">
+        <div class="row"><span class="mo">07</span><span class="show">Steinbach Taiwan Music Competition — 5th (national) <span class="cn">全國第五名</span></span></div>
+        <div class="row"><span class="mo">09</span><span class="show">Super Kid-Star Alliance <span class="cn">超級童盟會</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2010</div>
+      <div class="events">
+        <div class="row"><span class="mo">04</span><span class="show">Diamond Night Club; Dream Class <span class="cn">鑽石夜總會、夢想學堂</span></span></div>
+        <div class="row"><span class="mo">05</span><span class="show">Super Star <span class="cn">王牌大明星</span></span></div>
+        <div class="row"><span class="mo">06</span><span class="show">Happy Lucky Star <span class="cn">歡樂幸運星</span></span></div>
+        <div class="row"><span class="mo">07</span><span class="show">National Variety Show; EBC News; Dream Class <span class="cn">綜藝大國民、東森新聞、夢想學堂</span></span></div>
+        <div class="row"><span class="mo">08</span><span class="show">Variety Big Brother; Super Kid-Star Alliance <span class="cn">綜藝大哥大、超級童盟會</span></span></div>
+        <div class="row"><span class="mo">09</span><span class="show">I Want to be on Spring Gala (CCTV) <span class="cn">我要上春晚</span></span></div>
+        <div class="row"><span class="mo">10</span><span class="show">Day Day Up (Hunan TV) <span class="cn">天天向上</span></span></div>
+        <div class="row"><span class="mo">11</span><span class="show">TTV &amp; Unique News interviews; Kids are Busy; <span class="hl">Mr. Channel (with Jay Chou)</span>; Hong Kong &amp; Kunshan tours <span class="cn">台視與非凡新聞專訪、小孩很忙、Mr. 頻道（周杰倫）</span></span></div>
+        <div class="row"><span class="mo">12</span><span class="show">Super Kid-Star Alliance; Shandong New Year Gala <span class="cn">超級童盟會、山東賀年會</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2011</div>
+      <div class="events">
+        <div class="row"><span class="mo">01</span><span class="show">I Want to be on Spring Gala; Super Talent Show <span class="cn">我要上春晚、超級達人秀</span></span></div>
+        <div class="row"><span class="mo">03</span><span class="show">Happy Camp (Hunan TV); Who is the Host Tonight <span class="cn">快樂大本營、今晚誰當家</span></span></div>
+        <div class="row"><span class="mo">04</span><span class="show">Guess Guess Guess; <span class="hl">Taiwan to the World (Jay Chou special)</span>; Natural Talents <span class="cn">台灣走向世界（周杰倫專訪）</span></span></div>
+        <div class="row"><span class="mo">05</span><span class="show">Taiwan Superstar; Super Kid-Star Alliance <span class="cn">台灣大明星、超級童盟會</span></span></div>
+        <div class="row"><span class="mo">06</span><span class="show">Hope Class <span class="cn">希望學堂</span></span></div>
+        <div class="row"><span class="mo">08</span><span class="show">SET News <span class="cn">三立新聞</span></span></div>
+        <div class="row"><span class="mo">10</span><span class="show">Oh My Lady (TVBS) <span class="cn">愛喲我的媽</span></span></div>
+        <div class="row"><span class="mo">11</span><span class="show">China’s Got Talent <span class="cn">中國達人秀</span></span></div>
+        <div class="row"><span class="mo">12</span><span class="show">Years Show; Yifus Gala <span class="cn">年代秀、怡富斯</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2012</div>
+      <div class="events">
+        <div class="row"><span class="mo">01</span><span class="show">Our Family Visit; Dragon-Tiger 101; University Students <span class="cn">我們一家訪問人、龍騰虎躍 101、大學生了沒</span></span></div>
+        <div class="row"><span class="mo">03</span><span class="show">Happy Blue Sky; New Recruit March <span class="cn">快樂藍天下、新兵進行曲</span></span></div>
+        <div class="row"><span class="mo">05</span><span class="show">Harlem Fashion; Super Imitation Show <span class="cn">哈林哈時尚、超級模王大道</span></span></div>
+        <div class="row"><span class="mo">06</span><span class="show">Red-White Victory; Sisterhood Confessions <span class="cn">紅白紅白我勝利、姊妹淘心話</span></span></div>
+        <div class="row"><span class="mo">08</span><span class="show">Guoguang Help Help Help; Sharp Women <span class="cn">國光幫幫忙、女人好犀利</span></span></div>
+        <div class="row"><span class="mo">10</span><span class="show">Guoguang Help Help Help; Super Red Star Chart <span class="cn">國光幫幫忙、超級紅人榜</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2013</div>
+      <div class="events">
+        <div class="row"><span class="mo">07</span><span class="show">Little Universe 33; Who is the Host Tonight; <span class="hl">Yan Jue · Taipei Arena Concert — special guest (8-hands piano with Bai-An &amp; Cosmos People)</span> <span class="cn">嚴爵小巨蛋演唱會嘉賓</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2014</div>
+      <div class="events">
+        <div class="row"><span class="mo">01</span><span class="show">Big Winner Baby; Men Left, Women Right <span class="cn">寶貝大贏家、男左女右</span></span></div>
+        <div class="row"><span class="mo">12</span><span class="show">Big Winner Baby <span class="cn">寶貝大贏家</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2015</div>
+      <div class="events">
+        <div class="row"><span class="mo">01</span><span class="show">City Spring Gala; Gan-Chuan commercial tour <span class="cn">城市春晚、贛川商演</span></span></div>
+        <div class="row"><span class="mo">02</span><span class="show">Jiangsu Spring Gala; Youth China <span class="cn">江蘇春晚、少年中國派</span></span></div>
+        <div class="row"><span class="mo">07</span><span class="show">Big Winner Baby III <span class="cn">寶貝大贏家 3</span></span></div>
+        <div class="row"><span class="mo">09</span><span class="show">Queen of the Bag; Taipei Student Arts Festival — 3rd (vocal) <span class="cn">一袋女王、台北市學藝競賽歌唱組第三名</span></span></div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year">2016</div>
+      <div class="events">
+        <div class="row"><span class="mo">01–02</span><span class="show"><span class="hl">Solo Piano Tour ×10</span> · Mudanjiang, Dalian ×2, Baoding, Liuzhou ×3, Nanning, Xuzhou, Hangzhou</span></div>
+        <div class="row"><span class="mo">07</span><span class="show"><span class="hl">Solo Piano Tour ×14</span> · Kunming, Nanchang, Guangzhou, Shenzhen, Haikou, Changsha, Nanjing, Zhengzhou, Shaoxing, Changzhou, Dongguan, Foshan, Ganzhou, Lanzhou</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&data=https://www.youtube.com/watch?v=sUzeCFrn8rM%26list=PL3ZuB3PPtzx5pUTIN3RdnaHvlZkh_g5VE" alt="YouTube playlist QR code">
+      <div class="qr-text">
+        <strong>Watch · Performances</strong>
+        Selected TV shows &amp; recitals<br>
+        YouTube playlist
+      </div>
+    </div>
+    <div class="seal">
+      <span class="en-name">Song-Ze (Jimmy) Yu</span>
+      游松澤 · 2026 · Berkeley
+    </div>
+  </footer>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- Page 2 — Archive · The Kid-Star Years                         -->
+<!-- ============================================================ -->
+<div class="page archive">
+
+  <header>
+    <div class="name-block">
+      <div class="en" style="font-size:18pt; letter-spacing:1px;">Archive &nbsp;<span style="font-size:11pt; color:var(--muted); letter-spacing:3px;">I.</span></div>
+      <div class="zh">The Kid-Star Years &nbsp;·&nbsp; 童星時期</div>
+    </div>
+    <div class="meta">
+      <div>2009 — 2016</div>
+      <div style="font-style:italic;">Song-Ze (Jimmy) Yu &nbsp;游松澤</div>
+    </div>
+  </header>
+
+  <h2 class="section-title">Selected Stills <span class="alt">— TV shows &amp; live performances</span></h2>
+
+  <div class="grid-kidstar">
+    <figure class="tile hero">
+      <img src="proof/kid_star/0.jpg" alt="On stage with Jay Chou">
+    </figure>
+    <figure class="tile wide-a contain">
+      <img src="proof/kid_star/IMG_9551.JPG" alt="Solo piano recital">
+    </figure>
+    <figure class="tile poster">
+      <img src="proof/kid_star/大本營 複本.jpg" alt="Hunan TV Happy Camp — Magic Horse Award 2011">
+    </figure>
+    <figure class="tile wide-b">
+      <img src="proof/kid_star/images (4).jpeg" alt="Yan Jue · Taipei Arena concert" style="object-position:center 40%;">
+    </figure>
+
+    <figure class="tile small">
+      <img src="proof/kid_star/CIMG9377.JPG" alt="Live performance">
+    </figure>
+    <figure class="tile small">
+      <img src="proof/kid_star/CIMG8461.JPG" alt="Backstage group photo">
+    </figure>
+    <figure class="tile small">
+      <img src="proof/kid_star/IMG_7390.JPG" alt="China’s Got Talent" style="object-position:center 25%;">
+    </figure>
+    <figure class="tile small">
+      <img src="proof/kid_star/yehmin-20101102193558.jpg" alt="TVBS interview">
+    </figure>
+  </div>
+
+  <h2 class="section-title">YouTube Playlist <span class="alt">— view counts across TV variety shows</span></h2>
+  <figure class="full-strip">
+    <img src="proof/kid_star/tvshows.jpg" alt="YouTube TV-show playlist">
+  </figure>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- Page 3 — Archive · Now                                        -->
+<!-- ============================================================ -->
+<div class="page archive">
+
+  <header>
+    <div class="name-block">
+      <div class="en" style="font-size:18pt; letter-spacing:1px;">Archive &nbsp;<span style="font-size:11pt; color:var(--muted); letter-spacing:3px;">II.</span></div>
+      <div class="zh">Now &nbsp;·&nbsp; 現在進行式 · 2023 —</div>
+    </div>
+    <div class="meta">
+      <div>Berkeley · Hsinchu · Taipei</div>
+      <div style="font-style:italic;">Song-Ze (Jimmy) Yu &nbsp;游松澤</div>
+    </div>
+  </header>
+
+  <h2 class="section-title">Band Roles <span class="alt">— anywhere the song needs me</span></h2>
+  <p class="now-lede">
+    Across multiple college bands, I fill whichever role is empty — beyond piano, I can sing lead, play cajón,
+    handle electric guitar, and arrange &amp; mix the final track.
+  </p>
+
+  <div class="grid-roles">
+    <figure class="role-tile">
+      <div class="role-img split">
+        <img src="proof/nowadays/vocal.jpg" alt="Lead vocal" style="object-position: 42% center;">
+        <img src="proof/nowadays/vocal.jpeg" alt="Lead vocal / harmony" style="object-position: center 30%;">
+      </div>
+      <figcaption>
+        <span class="role-en">Lead Vocal</span>
+        <span class="role-zh">主　唱</span>
+      </figcaption>
+    </figure>
+    <figure class="role-tile">
+      <div class="role-img"><img src="proof/nowadays/drum.jpeg" alt="Cajón" style="object-position: 0% center;"></div>
+      <figcaption>
+        <span class="role-en">Cajón</span>
+        <span class="role-zh">木箱鼓</span>
+      </figcaption>
+    </figure>
+    <figure class="role-tile">
+      <div class="role-img"><img src="proof/nowadays/electric-guitar.jpg" alt="Electric guitar" style="object-position: center 35%;"></div>
+      <figcaption>
+        <span class="role-en">Electric Guitar</span>
+        <span class="role-zh">電吉他</span>
+      </figcaption>
+    </figure>
+    <figure class="role-tile">
+      <div class="role-img"><img src="proof/nowadays/artist_cover.jpg" alt="Composition &amp; production" style="object-position: 60% center;"></div>
+      <figcaption>
+        <span class="role-en">Composition &amp; Production</span>
+        <span class="role-zh">編曲・製作</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <h2 class="section-title">Instagram <span class="alt">— view counts on original work</span></h2>
+  <figure class="full-strip">
+    <img src="proof/nowadays/composition_views.jpg" alt="Instagram view counts">
+  </figure>
+
+  <p class="verify-note">
+    For verification, search “<b>游松澤</b>” on <b>YouTube</b> or <b>Google</b>, or visit
+    Instagram <a href="https://www.instagram.com/jy.1204_/">@jy.1204_</a>.
+  </p>
+
+</div>
+
+</body>
+</html>
