@@ -13,10 +13,10 @@
 <body>
 
   <!-- Sticky Navigation -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-name">Song-Ze Yu</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
@@ -79,20 +79,20 @@
         <div class="about-text">
           <p>
             I'm a Computer Science student at <em>UC Berkeley</em> (exchange from National Tsing Hua University).
-            I work at the intersection of <em>machine learning for music and audio</em>, <em>LLM alignment</em>, and <em>HCI</em> —
+            I work at the intersection of <em>machine learning for music and audio</em>, <em>LLM alignment</em>, and <em>HCI</em>:
             building models that listen, evaluating what they actually hear, and designing the human-in-the-loop
-            interfaces around them. 
+            interfaces around them.
           </p>
           <p>
             My research lives between two labs: <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a>
             under Prof. <a href="https://darrellgroup.github.io/" target="_blank" rel="noopener">Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and the
             <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a>
-            under Prof. <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Carmine-Emanuele Cella</a>. 
+            under Prof. <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Carmine-Emanuele Cella</a>.
           </p>
-          <p>My long-term goal is to build <em>audio-language models</em> for music — the way vision-language models reshaped how we reason
+          <p>My long-term goal is to build <em>audio-language models</em> for music; the way vision-language models reshaped how we reason
             about images, I believe similar foundations are needed for sound.</p>
           <p>
-            Before research, I was a child piano prodigy — first prize at my first competition,
+            Before research, I was a child piano prodigy: first prize at my first competition,
             then <em>24 solo recitals</em> and more than
             <a href="https://www.youtube.com/watch?v=sUzeCFrn8rM&amp;list=PL3ZuB3PPtzx5pUTIN3RdnaHvlZkh_g5VE" target="_blank" rel="noopener"><em>70 TV appearances</em></a>
             across China and Taiwan between 2009 and 2016, including three on-stage moments with Jay Chou.
@@ -109,11 +109,11 @@
     <section class="section" id="research">
       <div class="container fade-in">
         <p class="section-eyebrow">Publications &amp; Research</p>
-        <h2 class="section-title"><em>Research</em></h2>
+        <h2 class="section-title">My <em>research</em>.</h2>
         <p class="section-intro">
-          My research sits at the intersection of <em>music ML</em>, <em>LLM alignment</em>, and a touch of <em>HCI</em> —
-          building models that listen, evaluating what they actually hear, and designing the human-in-the-loop
-          interfaces around them.
+          Three active threads: <em>audio-language models</em> for music understanding, <em>LLM alignment</em> via
+          large-scale population simulation, and <em>music-technology interfaces</em> between performer and algorithm.
+          Most of what's listed below is under review or in preparation.
         </p>
 
         <h3 class="subsection-title">Under Review <span class="num">— 2026</span></h3>
@@ -132,7 +132,7 @@
           </p>
           <ul class="entry-details">
             <li>A <strong>text-based representation</strong> unifying score-level info (harmony, phrasing, dynamics, voicing, articulation) with time-aligned audio-perceptual features.</li>
-            <li>Format LLMs can directly consume — bridges symbolic notation and recorded performance.</li>
+            <li>Format LLMs can directly consume; bridges symbolic notation and recorded performance.</li>
             <li>Plus an automatic caption-and-QA generation pipeline for time-grounded music understanding in ALMs.</li>
           </ul>
         </article>
@@ -151,7 +151,7 @@
             <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR Lab</a>, UC Berkeley
           </p>
           <ul class="entry-details">
-            <li><strong>28 experiments</strong> measuring pitch hearing in audio-language models — absolute &amp; relative perception, sequences &amp; chords.</li>
+            <li><strong>28 experiments</strong> measuring pitch hearing in audio-language models: absolute &amp; relative perception, sequences &amp; chords.</li>
             <li>Varies loudness, note duration, sound source, time stretching, background noise, and notation format.</li>
             <li>Frontier ALMs perform consistently poorly: <strong>current models do not yet possess stable pitch perception</strong>.</li>
             <li>Released as a Python package with evaluation data + generation tools.</li>
@@ -192,7 +192,7 @@
             <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT Lab</a>, UC Berkeley
           </p>
           <ul class="entry-details">
-            <li>Interactive demo for <strong>multi-turn, text-guided audio effect refinement</strong> — engineers iteratively refine effects through natural-language instructions.</li>
+            <li>Interactive demo for <strong>multi-turn, text-guided audio effect refinement</strong>; engineers iteratively refine effects through natural-language instructions.</li>
             <li>Hybrid <strong>LLM + CLAP-optimization</strong> architecture: the LLM picks effects &amp; initial parameters; CLAP-guided optimization perceptually refines them.</li>
             <li>Outperforms LLM-only reprompting on directional descriptor pairs (e.g. “less bright / more warm”).</li>
           </ul>
@@ -214,7 +214,7 @@
           <ul class="entry-details">
             <li>ReaScript-generated dataset of piano recordings with varied multi-band EQ parameters.</li>
             <li>Supervised neural net predicts EQ settings directly from reference audio DSP features (<strong>MSE 0.0216</strong>).</li>
-            <li>Shipped as <strong>VTR-SmartEQ</strong> — a working JUCE plugin used in real production.</li>
+            <li>Shipped as <strong>VTR-SmartEQ</strong>, a working JUCE plugin used in real production.</li>
           </ul>
           <p class="pub-links">
             <a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">arXiv →</a>
@@ -247,8 +247,8 @@
           </div>
           <p class="entry-sub"><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR</a>, UC Berkeley · advised by Prof. Trevor Darrell &amp; David M. Chan</p>
           <ul class="entry-details">
-            <li><span class="redacted-inline">Co-first author on <strong>PitchBench</strong> (NeurIPS D&amp;B 2026, under review) — benchmarking pitch hearing in audio-language models.</span></li>
-            <li>Lead author on <strong>Anamnesis</strong> (EMNLP 2026 Demo, planned) — open-source platform for backstory-conditioned survey simulation.</li>
+            <li><span class="redacted-inline">Co-first author on <strong>PitchBench</strong> (NeurIPS D&amp;B 2026, under review): benchmarking pitch hearing in audio-language models.</span></li>
+            <li>Lead author on <strong>Anamnesis</strong> (EMNLP 2026 Demo, planned): open-source platform for backstory-conditioned survey simulation.</li>
           </ul>
         </div>
 
@@ -264,8 +264,8 @@
           </div>
           <p class="entry-sub"><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT</a>, UC Berkeley · advised by Prof. Carmine-Emanuele Cella</p>
           <ul class="entry-details">
-            <li><span class="redacted-inline">Author on <strong>MuNo-LM</strong> (ISMIR 2026, under review) — unifying score and performance for audio-language modeling.</span></li>
-            <li>Lead author on <strong>InstructFX2FX</strong> (DAFx 2026, planned) — multi-turn text-to-preset audio effect refinement via LLM + CLAP optimization.</li>
+            <li><span class="redacted-inline">Author on <strong>MuNo-LM</strong> (ISMIR 2026, under review): unifying score and performance for audio-language modeling.</span></li>
+            <li>Lead author on <strong>InstructFX2FX</strong> (DAFx 2026 Demo, planned): multi-turn text-to-preset audio effect refinement via LLM + CLAP optimization.</li>
           </ul>
         </div>
 
@@ -332,7 +332,7 @@
           </div>
           <ul class="entry-details">
             <li>Led development and launch of Berkeleytime's new <strong>Explore page</strong>, serving 122K+ monthly users.</li>
-            <li>Manage a <strong>10-member Machine Learning Pod</strong> — driving technical strategy, engineering execution, task allocation, and code reviews across the team.</li>
+            <li>Manage a <strong>10-member Machine Learning Pod</strong>: driving technical strategy, engineering execution, task allocation, and code reviews across the team.</li>
             <li>Unblocked production deployment of <strong>semantic search</strong> by leading migration from FAISS to Redis + MongoDB Vector Search, improving scalability and operability.</li>
             <li>Built the AI semantic search service (BGE + FAISS) as a FastAPI microservice integrated with the Node.js / Docker / GraphQL stack.</li>
             <li>Reduced GraphQL first-load latency from <strong>25s → 1s</strong> through pagination and Redis caching; shipped 20+ urgent PRs.</li>
@@ -356,18 +356,18 @@
         <div class="music-preview">
           <div class="music-preview-text">
             <p>
-              I learned piano by ear. My first competition — a national piano contest in Taiwan — I won
+              I learned piano by ear. My first competition (a national piano contest in Taiwan), I won
               <em>first place</em> without a teacher. What followed, between 2009 and 2016, was a child-star
               decade: more than
               <a href="https://www.youtube.com/watch?v=sUzeCFrn8rM&amp;list=PL3ZuB3PPtzx5pUTIN3RdnaHvlZkh_g5VE" target="_blank" rel="noopener"><em>70 TV appearances</em></a>,
               <em>24 solo piano recitals</em> across mainland China and
               Taiwan, three on-stage moments with <em>Jay Chou</em>, and a featured guest spot at
-              <em>Yan Jue's Taipei Arena</em> concert.
+              <em>Yen-J's Taipei Arena</em> concert.
             </p>
             <p>
               I never stopped writing. I have <em>20+ original songs</em>, and my single
               <em>“失電陣線聯盟”</em> crossed <em>14.4K plays</em> on Instagram. In college I
-              played keys, lead vocal, cajón, and electric guitar across several bands — whatever the
+              played keys, lead vocal, cajón, and electric guitar across several bands; whatever the
               song needed, I'd fill in. If it's keyboard, I don't need rehearsal: one listen and I can
               improvise the part on stage.
             </p>
@@ -397,7 +397,7 @@
               <a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram →</a>
             </div>
           </div>
-          <img src="music-cv/S__12820487.jpg" alt="Song-Ze Yu — portrait" class="music-preview-img" />
+          <img src="music-cv/S__12820487.jpg" alt="Song-Ze Yu" class="music-preview-img" />
         </div>
       </div>
     </section>
@@ -410,9 +410,6 @@
         <p class="section-eyebrow">Go Bears</p>
         <h2 class="section-title">Life at <em>Berkeley</em>.</h2>
         <p class="section-intro">
-          I came to Berkeley as a CS exchange student from National Tsing Hua University —
-          advised by <em>Prof. Trevor Darrell</em> at <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR</a>
-          and <em>Prof. Carmine-Emanuele Cella</em> at <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT</a>.
           Outside research, I designed and built two presentations to capture this year:
           one for our <em>Berkeleytime ML Pod's</em> final showcase, one as a personal scrapbook of my exchange.
         </p>
@@ -424,20 +421,20 @@
               <p class="feature-card-tag">ML Pod · OCTO Showcase</p>
               <h3 class="feature-card-title">berkeleytime.vaclis.net</h3>
               <p class="feature-card-desc">
-                Designed and built the Berkeleytime ML Pod's end-of-semester showcase deck —
-                walking through Explore page launch, semantic search infrastructure, and pod leadership over Spring 2026.
+                Designed and built the Berkeleytime ML Pod's end-of-semester showcase deck:
+                Explore page launch, semantic search infrastructure, and pod leadership over Spring 2026.
               </p>
               <span class="feature-card-link">Open presentation →</span>
             </div>
           </a>
 
           <a class="feature-card" href="https://gobears.vaclis.net/" target="_blank" rel="noopener">
-            <img class="feature-card-img" src="images/projects/gobears-cover.jpeg" alt="Life in Berkeley — gobears.vaclis.net">
+            <img class="feature-card-img" src="images/projects/gobears-cover.jpeg" alt="Life in Berkeley, gobears.vaclis.net">
             <div class="feature-card-body">
               <p class="feature-card-tag">Personal Scrapbook</p>
               <h3 class="feature-card-title">gobears.vaclis.net</h3>
               <p class="feature-card-desc">
-                A handcrafted slide deck of my Berkeley exchange year — BAIR, classes, recitals, Bay Area trips,
+                A handcrafted slide deck of my Berkeley exchange year: BAIR, classes, frat, trips,
                 and the people who made this the best year of my life.
               </p>
               <span class="feature-card-link">Open scrapbook →</span>
@@ -458,35 +455,35 @@
           <div class="award-item">
             <span class="award-date">Oct 2025</span>
             <div class="award-body">
-              <strong>Claude × a16z × Berkeley M.E.T. Makeathon</strong> — <em>Best Design</em>
+              <strong>Claude × a16z × Berkeley M.E.T. Makeathon</strong>: <em>Best Design</em>
               <span class="award-detail">Built <em>Haven</em>, a room-scanning interior design app, in 5 hours. Berkeley, CA.</span>
             </div>
           </div>
           <div class="award-item">
             <span class="award-date">Oct 2024</span>
             <div class="award-body">
-              <strong>Meichu Hackathon 2024</strong> — <em>2nd Place (Google)</em>
+              <strong>Meichu Hackathon 2024</strong>: <em>2nd Place (Google)</em>
               <span class="award-detail">Travelity: AI personalized travel planner. NT$16,000 prize. Hsinchu, Taiwan.</span>
             </div>
           </div>
           <div class="award-item">
             <span class="award-date">Sep 2024</span>
             <div class="award-body">
-              <strong>Taipei Hackathon 2024</strong> — <em>3rd Place</em>
+              <strong>Taipei Hackathon 2024</strong>: <em>3rd Place</em>
               <span class="award-detail">ParkFlow integrated into Taipei's official TownPass app (3M+ downloads). NT$100,000 prize.</span>
             </div>
           </div>
           <div class="award-item">
             <span class="award-date">Jul 2024</span>
             <div class="award-body">
-              <strong>SITCON Hackathon 2024</strong> — <em>1st Place</em>
+              <strong>SITCON Hackathon 2024</strong>: <em>1st Place</em>
               <span class="award-detail">ccDiary: AI mental-health journaling app with anonymous social features. Taipei, Taiwan.</span>
             </div>
           </div>
           <div class="award-item">
             <span class="award-date">May 2024</span>
             <div class="award-body">
-              <strong>WorldQuant Challenge 2024</strong> — <em>Silver Level</em>
+              <strong>WorldQuant Challenge 2024</strong>: <em>Silver Level</em>
               <span class="award-detail">Quantitative alpha research from academic papers and social-media signals.</span>
             </div>
           </div>
@@ -522,7 +519,7 @@
             <h4 class="project-title">Vaclis Tone Replication</h4>
             <p class="project-tag">Python · PyTorch · DSP</p>
             <p class="project-desc">
-              The underlying <em>audio-to-preset</em> model — predicts multi-band EQ parameters directly
+              The underlying <em>audio-to-preset</em> model: predicts multi-band EQ parameters directly
               from a reference recording. Trained on a ReaScript-automated piano dataset.
             </p>
             <a href="https://github.com/vaclisinc/Vaclis_Tone_Replication" target="_blank" rel="noopener" class="project-link">arXiv 2509.24404 →</a>
@@ -572,7 +569,7 @@
             <p class="project-tag">Flutter · Python · OpenAI · LangChain</p>
             <p class="project-desc">
               An AI-powered mental-health diary with anonymous social features. <em>1st Place</em> at
-              SITCON Hackathon 2024 — built with the team to make journaling less lonely.
+              SITCON Hackathon 2024: built with the team to make journaling less lonely.
             </p>
             <a href="https://github.com/SimonLiu423/cc_diary" target="_blank" rel="noopener" class="project-link">github.com/SimonLiu423/cc_diary →</a>
           </div>
@@ -606,7 +603,7 @@
             <h4 class="project-title">InningIQ</h4>
             <p class="project-tag">React · Python · FastAPI · Firebase</p>
             <p class="project-desc">
-              A web platform of subservices for amateur baseball — including <em>jyBaseball</em>, a
+              A web platform of subservices for amateur baseball: including <em>jyBaseball</em>, a
               community-driven digitization tool. Built with the NTHU baseball team and Taiwanese baseball YouTubers.
             </p>
             <a href="https://github.com/vaclisinc/InningIQ" target="_blank" rel="noopener" class="project-link">github.com/vaclisinc/InningIQ →</a>
@@ -639,7 +636,7 @@
     <section class="section section-contact" id="contact">
       <div class="container fade-in">
         <p class="contact-eyebrow">Get in touch</p>
-        <h2 class="contact-title">Let's <em>be in touch</em>.</h2>
+        <h2 class="contact-title">Let's <em>talk</em>.</h2>
         <p class="contact-text">
           I'm happy to talk about audio-language models, music technology, hackathon ideas,
           piano performance, or anything in between. The fastest way to reach me is email.

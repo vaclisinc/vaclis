@@ -940,7 +940,7 @@ ul  { list-style: none; }
 }
 .music-preview-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   margin: 30px 0 26px;
   padding: 20px 0;
@@ -1179,4 +1179,67 @@ ul  { list-style: none; }
   .section-title { font-size: 2rem; }
   .pub-title, .entry-title { font-size: 1.18rem; }
   .feature-card-body { padding: 22px 22px 24px; }
+}
+
+/* ============================================================
+   Focus-visible: keyboard navigation indicators
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--berkeley-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.btn:focus-visible,
+.btn.btn-ghost:focus-visible {
+  outline: 2px solid var(--berkeley-blue);
+  outline-offset: 4px;
+  border-radius: 999px;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--berkeley-blue);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* On the dark contact section and footer, use gold for visibility */
+.section-contact :focus-visible,
+.footer :focus-visible {
+  outline-color: var(--california-gold);
+}
+
+/* Feature and project cards get an inset ring so the border aligns */
+.feature-card:focus-visible,
+.project-card:focus-visible {
+  outline: 2px solid var(--berkeley-blue);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Reduced-motion: respect system preference for all transitions
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  a,
+  .btn,
+  .btn.btn-ghost,
+  .feature-card,
+  .project-card,
+  .hero-socials a,
+  .contact-socials a,
+  .contact-email,
+  .nav,
+  .nav-toggle span,
+  .nav-links a,
+  .pub-links a,
+  .project-link,
+  .music-links a {
+    transition: none;
+  }
 }

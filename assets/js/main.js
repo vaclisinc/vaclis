@@ -17,8 +17,9 @@ const toggle = document.getElementById('nav-toggle');
 const links = document.getElementById('nav-links');
 
 toggle.addEventListener('click', function () {
-  toggle.classList.toggle('open');
+  const isOpen = toggle.classList.toggle('open');
   links.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 });
 
 // Close mobile menu when a link is clicked
@@ -26,6 +27,7 @@ links.querySelectorAll('a').forEach(function (link) {
   link.addEventListener('click', function () {
     toggle.classList.remove('open');
     links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
   });
 });
 
