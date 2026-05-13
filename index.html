@@ -45,9 +45,6 @@
         </h1>
         <p class="hero-tagline">An engineer <em>&amp;</em> a musician.</p>
         <div class="hero-rule"></div>
-        <p class="hero-oneliner">
-          Music ML<span class="sep">·</span>LLM alignment<span class="sep">·</span>HCI<span class="sep">·</span>Pianist (24 solo recitals)
-        </p>
         <div class="hero-socials">
           <a href="https://www.linkedin.com/in/vaclis/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -81,22 +78,26 @@
         <h2 class="section-title">An <em>engineer</em>, a <em>musician</em>.</h2>
         <div class="about-text">
           <p>
-            I'm a Computer Science student at <em>UC Berkeley</em> (exchange from National Tsing Hua University),
-            working on machine learning for music and audio. My long-term goal is to build
-            <em>audio-language models</em> for music — the way vision-language models reshaped how we reason
-            about images, I believe similar foundations are needed for sound.
+            I'm a Computer Science student at <em>UC Berkeley</em> (exchange from National Tsing Hua University).
+            I work at the intersection of <em>machine learning for music and audio</em>, <em>LLM alignment</em>, and <em>HCI</em> —
+            building models that listen, evaluating what they actually hear, and designing the human-in-the-loop
+            interfaces around them. 
           </p>
           <p>
-            Today, my research lives at the intersection of two labs: <em>Berkeley AI Research (BAIR)</em>
-            under Prof. Trevor Darrell, and the <em>Center for New Music &amp; Audio Technologies (CNMAT)</em>
-            under Prof. Carmine-Emanuele Cella. Two papers are currently under review at ISMIR 2026
-            and NeurIPS 2026 Datasets &amp; Benchmarks.
+            My research lives between two labs: <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a>
+            under Prof. <a href="https://darrellgroup.github.io/" target="_blank" rel="noopener">Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and the
+            <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a>
+            under Prof. <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Carmine-Emanuele Cella</a>. 
           </p>
+          <p>My long-term goal is to build <em>audio-language models</em> for music — the way vision-language models reshaped how we reason
+            about images, I believe similar foundations are needed for sound.</p>
           <p>
             Before research, I was a child piano prodigy — first prize at my first competition,
-            then <em>24 solo recitals</em> and more than <em>70 TV appearances</em> across Greater China between
-            2009 and 2016, including three on-stage moments with Jay Chou. I still play, write, and produce.
-            That dual lens of engineer and musician is the through-line of everything I build.
+            then <em>24 solo recitals</em> and more than
+            <a href="https://www.youtube.com/watch?v=sUzeCFrn8rM&amp;list=PL3ZuB3PPtzx5pUTIN3RdnaHvlZkh_g5VE" target="_blank" rel="noopener"><em>70 TV appearances</em></a>
+            across China and Taiwan between 2009 and 2016, including three on-stage moments with Jay Chou.
+            I still play, write, and produce. That dual lens of engineer and musician is the through-line
+            of everything I build.
           </p>
         </div>
       </div>
@@ -126,15 +127,14 @@
             Milan Liessens Dujardin, <span class="me">Song-Ze Yu</span>.
           </p>
           <p class="pub-meta">
-            <span class="venue">ISMIR 2026</span> · Center for New Music &amp; Audio Technologies (CNMAT), UC Berkeley
+            <span class="venue">ISMIR 2026</span> ·
+            <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a>, UC Berkeley
           </p>
-          <p class="pub-summary">
-            A <em>text-based representation</em> that unifies score-level information — harmony, phrasing, dynamics,
-            voicing, articulation — with time-aligned audio-perceptual features in a format LLMs can directly
-            consume. We pair it with an automatic caption-and-QA generation pipeline that translates aligned
-            score-performance data into time-grounded musical analyses, paving the way to fine-grained music
-            understanding in audio-language models.
-          </p>
+          <ul class="entry-details">
+            <li>A <strong>text-based representation</strong> unifying score-level info (harmony, phrasing, dynamics, voicing, articulation) with time-aligned audio-perceptual features.</li>
+            <li>Format LLMs can directly consume — bridges symbolic notation and recorded performance.</li>
+            <li>Plus an automatic caption-and-QA generation pipeline for time-grounded music understanding in ALMs.</li>
+          </ul>
         </article>
 
         <article class="pub">
@@ -147,16 +147,15 @@
             <span style="font-style:italic;color:var(--muted);font-size:.85em;">&nbsp;(<sup>*</sup>equal contribution)</span>
           </p>
           <p class="pub-meta">
-            <span class="venue">NeurIPS 2026 — Datasets &amp; Benchmarks Track</span> · BAIR Lab, UC Berkeley
+            <span class="venue">NeurIPS 2026 — Datasets &amp; Benchmarks Track</span> ·
+            <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR Lab</a>, UC Berkeley
           </p>
-          <p class="pub-summary">
-            An evaluation suite that systematically measures <em>pitch hearing</em> in audio-language models —
-            28 experiments spanning absolute and relative pitch perception within sequences and chords, while
-            varying loudness, note duration, sound source, time stretching, background noise, and notation format.
-            Frontier ALMs perform consistently poorly across settings: <em>current models do not yet possess stable
-            pitch perception</em>, even for controlled synthetic and instrumental stimuli. Released as a Python
-            package with evaluation data and generation tools.
-          </p>
+          <ul class="entry-details">
+            <li><strong>28 experiments</strong> measuring pitch hearing in audio-language models — absolute &amp; relative perception, sequences &amp; chords.</li>
+            <li>Varies loudness, note duration, sound source, time stretching, background noise, and notation format.</li>
+            <li>Frontier ALMs perform consistently poorly: <strong>current models do not yet possess stable pitch perception</strong>.</li>
+            <li>Released as a Python package with evaluation data + generation tools.</li>
+          </ul>
         </article>
 
         <h3 class="subsection-title">In Preparation <span class="num">— planned 2026</span></h3>
@@ -170,14 +169,14 @@
             <span class="me">Song-Ze Yu</span>, Joseph Suh, Yutong Bai, Serina Chang, David M. Chan.
           </p>
           <p class="pub-meta">
-            <span class="venue">EMNLP 2026 — Demo Track</span> · BAIR Lab, UC Berkeley
+            <span class="venue">EMNLP 2026 Demo</span> ·
+            <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR Lab</a>, UC Berkeley
           </p>
-          <p class="pub-summary">
-            A scalable platform for demographically-controlled multimodal survey simulation and virtual
-            population studies. Achieved closer alignment to ground-truth population distributions than
-            individual human respondents on ATP surveys. Originally submitted to ACL 2026 Demo; being
-            extended for EMNLP 2026 Demo.
-          </p>
+          <ul class="entry-details">
+            <li>Open-source platform for <strong>demographically-controlled</strong> multimodal survey simulation &amp; virtual population studies.</li>
+            <li>Achieved closer alignment to ground-truth population distributions than individual human respondents on ATP surveys.</li>
+            <li>Originally submitted to ACL 2026 Demo; being extended for EMNLP 2026 Demo.</li>
+          </ul>
         </article>
 
         <article class="pub">
@@ -185,16 +184,20 @@
             InstructFX2FX: A Multi-Turn Text-to-Preset Demo for Iterative Audio Effect Refinement
             <span class="pub-status planned">DAFx · Planned</span>
           </h4>
-          <p class="pub-authors"><span class="me">Song-Ze Yu</span>, Carmine-Emanuele Cella.</p>
-          <p class="pub-meta"><span class="venue">DAFx 2026</span> · CNMAT Lab, UC Berkeley</p>
-          <p class="pub-summary">
-            An interactive demo for <em>multi-turn, text-guided audio effect refinement</em>. A hybrid LLM + CLAP-optimization
-            architecture: the LLM acts as a high-level planner — selecting effects, ordering the signal chain, and
-            proposing initial parameters — while CLAP-guided optimization perceptually refines those parameters
-            across successive natural-language instructions. Outperforms an LLM-only reprompting baseline on
-            directional descriptor pairs.
+          <p class="pub-authors">
+            <span class="me">Song-Ze Yu</span>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang.
           </p>
+          <p class="pub-meta">
+            <span class="venue">DAFx 2026 Demo</span> ·
+            <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT Lab</a>, UC Berkeley
+          </p>
+          <ul class="entry-details">
+            <li>Interactive demo for <strong>multi-turn, text-guided audio effect refinement</strong> — engineers iteratively refine effects through natural-language instructions.</li>
+            <li>Hybrid <strong>LLM + CLAP-optimization</strong> architecture: the LLM picks effects &amp; initial parameters; CLAP-guided optimization perceptually refines them.</li>
+            <li>Outperforms LLM-only reprompting on directional descriptor pairs (e.g. “less bright / more warm”).</li>
+          </ul>
           <p class="pub-links">
+            <a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">presentation →</a>
             <a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">code →</a>
           </p>
         </article>
@@ -208,11 +211,11 @@
           </h4>
           <p class="pub-authors"><span class="me">Song-Ze Yu</span>, Yi-Wen Liu.</p>
           <p class="pub-meta"><span class="venue">arXiv 2509.24404</span> · AHG Music Lab, National Tsing Hua University</p>
-          <p class="pub-summary">
-            Built a ReaScript-generated dataset of piano recordings with varied multi-band EQ parameters
-            and trained a supervised neural network to predict EQ settings directly from reference audio
-            DSP features (MSE 0.0216). The model became the core of <em>VTR-SmartEQ</em>, a working JUCE plugin.
-          </p>
+          <ul class="entry-details">
+            <li>ReaScript-generated dataset of piano recordings with varied multi-band EQ parameters.</li>
+            <li>Supervised neural net predicts EQ settings directly from reference audio DSP features (<strong>MSE 0.0216</strong>).</li>
+            <li>Shipped as <strong>VTR-SmartEQ</strong> — a working JUCE plugin used in real production.</li>
+          </ul>
           <p class="pub-links">
             <a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">arXiv →</a>
             <a href="https://github.com/vaclisinc/Vaclis_Tone_Replication" target="_blank" rel="noopener">model code →</a>
@@ -242,7 +245,7 @@
             </div>
             <span class="entry-date">Feb 2026 — Present</span>
           </div>
-          <p class="entry-sub">BAIR, UC Berkeley · advised by Prof. Trevor Darrell &amp; David M. Chan</p>
+          <p class="entry-sub"><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR</a>, UC Berkeley · advised by Prof. Trevor Darrell &amp; David M. Chan</p>
           <ul class="entry-details">
             <li>Co-first author on <strong>PitchBench</strong> (NeurIPS D&amp;B 2026, under review) — benchmarking pitch hearing in audio-language models.</li>
             <li>Co-author on <strong>Anamnesis</strong> (EMNLP 2026 Demo, planned) — open-source platform for backstory-conditioned survey simulation.</li>
@@ -259,7 +262,7 @@
             </div>
             <span class="entry-date">Sep 2025 — Present</span>
           </div>
-          <p class="entry-sub">CNMAT, UC Berkeley · advised by Prof. Carmine-Emanuele Cella</p>
+          <p class="entry-sub"><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT</a>, UC Berkeley · advised by Prof. Carmine-Emanuele Cella</p>
           <ul class="entry-details">
             <li>Author on <strong>MuNo-LM</strong> (ISMIR 2026, under review) — unifying score and performance for audio-language modeling.</li>
             <li>Lead author on <strong>InstructFX2FX</strong> (DAFx 2026, planned) — multi-turn text-to-preset audio effect refinement via LLM + CLAP optimization.</li>
@@ -355,7 +358,9 @@
             <p>
               I learned piano by ear. My first competition — a national piano contest in Taiwan — I won
               <em>first place</em> without a teacher. What followed, between 2009 and 2016, was a child-star
-              decade: more than <em>70 TV appearances</em>, <em>24 solo piano recitals</em> across mainland China and
+              decade: more than
+              <a href="https://www.youtube.com/watch?v=sUzeCFrn8rM&amp;list=PL3ZuB3PPtzx5pUTIN3RdnaHvlZkh_g5VE" target="_blank" rel="noopener"><em>70 TV appearances</em></a>,
+              <em>24 solo piano recitals</em> across mainland China and
               Taiwan, three on-stage moments with <em>Jay Chou</em>, and a featured guest spot at
               <em>Yan Jue's Taipei Arena</em> concert.
             </p>
@@ -406,7 +411,8 @@
         <h2 class="section-title">Life at <em>Berkeley</em>.</h2>
         <p class="section-intro">
           I came to Berkeley as a CS exchange student from National Tsing Hua University —
-          advised by <em>Prof. Trevor Darrell</em> at BAIR and <em>Prof. Carmine-Emanuele Cella</em> at CNMAT.
+          advised by <em>Prof. Trevor Darrell</em> at <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR</a>
+          and <em>Prof. Carmine-Emanuele Cella</em> at <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT</a>.
           Outside research, I designed and built two presentations to capture this year:
           one for our <em>Berkeleytime ML Pod's</em> final showcase, one as a personal scrapbook of my exchange.
         </p>
