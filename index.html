@@ -39,7 +39,7 @@
     <!-- ============================================================ -->
     <section class="hero" id="hero">
       <div class="hero-content fade-in">
-        <p class="hero-eyebrow">ML Researcher · BAIR · CNMAT</p>
+        <!-- <p class="hero-eyebrow">ML Researcher · BAIR · CNMAT</p> -->
         <h1 class="hero-name">
           Song-Ze Yu
           <span class="alt">游 松 澤 &nbsp;·&nbsp; Jimmy</span>
@@ -59,7 +59,7 @@
           <a href="https://www.youtube.com/@vaclis_daily" target="_blank" rel="noopener" aria-label="YouTube">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
           </a>
-          <a href="mailto:vaclis@berkeley.edu" aria-label="Email">
+          <a href="mailto:nckusic2022@gmail.com" aria-label="Email">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
@@ -79,19 +79,19 @@
         <h2 class="section-title">An <em>engineer</em>, a <em>musician</em>.</h2>
         <div class="about-text">
           <p>
-            I'm a Computer Science student at <em>UC Berkeley</em> (exchange from National Tsing Hua University).
-            I work at the intersection of <em>machine learning for music and audio</em>, <em>LLM alignment</em>, and <em>HCI</em>:
-            building models that listen, evaluating what they actually hear, and designing the human-in-the-loop
-            interfaces around them.
+            I'm a Computer Science student from <em>UC Berkeley</em> and <em>National Tsing Hua University</em>, working at 
+            the intersection of <em>machine learning for music and audio</em>, <em>LLM alignment</em>, and <em>HCI</em>.
           </p>
           <p>
-            My research lives between two labs: <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a>
-            under Prof. <a href="https://darrellgroup.github.io/" target="_blank" rel="noopener">Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and the
-            <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a>
+            My research lives between <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR</a>
+            under Prof. <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank" rel="noopener">Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and the
+            <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT </a> <!-- Center for New Music &amp; Audio Technologies (CNMAT)-->
             under Prof. <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Carmine-Emanuele Cella</a>.
           </p>
-          <p>My long-term goal is to build <em>audio-language models</em> for music; the way vision-language models reshaped how we reason
-            about images, I believe similar foundations are needed for sound.</p>
+          <p>My long-term goal is to build <em>audio-language models</em> that can truly hear and understand music. This exposes a brand-new human computer interaction method to musicians, to discuss, collaborate, or even interact with non-musical audiences.
+            <!-- ; the way vision-language models reshaped how we reason
+            about images, I believe similar foundations are needed for sound. -->
+          </p>
           <p>
             Before research, I was a child piano prodigy: first prize at my first competition,
             then <em>24 solo recitals</em> and more than
@@ -110,12 +110,48 @@
     <section class="section" id="research">
       <div class="container fade-in">
         <p class="section-eyebrow">Publications &amp; Research</p>
-        <h2 class="section-title">My <em>research</em>.</h2>
-        <p class="section-intro">
-          Three active threads: <em>audio-language models</em> for music understanding, <em>LLM alignment</em> via
-          large-scale population simulation, and <em>music-technology interfaces</em> between performer and algorithm.
-          Most of what's listed below is under review or in preparation.
-        </p>
+        <h2 class="section-title">My <em>research</em> taste.</h2>
+        <div class="research-thesis">
+          <p>
+            Music AI has never looked more promising nowadays: companies like Suno, Udio, and Ace Studio
+            show how deeply generative models may reshape music itself. However, I'm deeply concerned that much of this field is
+            moving toward replacing the <em>humanity</em>, <em>intention</em>, and <em>creativity</em> from the soul of a musician with a black-box.
+          </p>
+          <p>
+            I tried to reflect what was missing and how to leverage the advantage of this exploding AI generative era.
+            My research starts from <em>three missing pieces</em>:
+          </p>
+
+          <div class="research-pillar">
+            <h4>Controllability.</h4>
+            <p>Many models nowadays can produce impressive zero-shot results, but giving very little control to musicians.</p>
+          </div>
+
+          <div class="research-pillar">
+            <h4>Music understanding.</h4>
+            <p>
+              Many models learn patterns at letent space level from large-scale data from the internet, but still lack of grounded understanding from
+              <em>"perceptual level"</em> — pitch, rhythm and music structure to <em>"hidden level"</em> — the intention from the composer, the expression
+              from the player, and the emotion from the audience. But these are the key of how we bring music from random
+              permutation of notes to life.
+            </p>
+          </div>
+
+          <div class="research-pillar">
+            <h4>Humanity.</h4>
+            <p>
+              Music is the most abstract language we have. There is no ground truth hidden in the notes or audio signal itself.
+              The same musical phrase can bring huge variance between individuals. This leads me to a research question I care deeply:
+              <em>can ALMs model and align human preferences?</em>
+            </p>
+          </div>
+
+          <p>
+            Together, these questions shape my long-term research direction: building a unified audio-language model that can truly
+            <em>hear</em>, <em>understand</em>, and <em>communicate</em> about music, enabling new forms of HCI between musicians,
+            computers, and audiences.
+          </p>
+        </div>
 
         <h3 class="subsection-title">Under Review <span class="num">— 2026</span></h3>
 
