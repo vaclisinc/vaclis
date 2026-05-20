@@ -451,6 +451,89 @@ ul  { list-style: none; }
 }
 
 /* ============================================================
+   Research Thesis
+   ============================================================ */
+.research-thesis {
+  max-width: 680px;
+  margin-bottom: 56px;
+}
+.research-thesis > p {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  color: var(--ink-soft);
+  line-height: 1.85;
+  margin: 0 0 22px;
+}
+
+/* Default emphasis: plain italic, no gilt mark */
+.research-thesis em {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  color: inherit;
+}
+
+/* Curator's mark: italic + Berkeley blue + gilt underline. Use sparingly. */
+.research-thesis em.mark {
+  font-weight: 600;
+  color: var(--berkeley-blue);
+  background-image: linear-gradient(transparent 88%, rgba(253, 181, 21, 0.55) 88%);
+  background-repeat: no-repeat;
+  padding: 0 2px;
+}
+
+/* Three pillars — gold left bar frames each pillar as a discrete chapter. */
+.research-pillar {
+  margin: 26px 0;
+  padding: 4px 0 4px 22px;
+  border-left: 2px solid var(--california-gold);
+}
+.research-pillar .pillar-lead {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.22rem;
+  line-height: 1.3;
+  color: var(--berkeley-blue);
+  letter-spacing: -.012em;
+  margin: 0 0 4px;
+}
+.research-pillar .pillar-body {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* The Humanity research question — italic line, restrained scale, whitespace does the work */
+.research-pillar .pillar-question {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.22rem;
+  line-height: 1.4;
+  color: var(--berkeley-blue);
+  letter-spacing: -.012em;
+  margin: 10px 0 0;
+}
+
+/* Closing thesis — hairline rule above is the only graphic element in the block */
+.research-vision {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--berkeley-blue);
+  letter-spacing: -.012em;
+  max-width: 680px;
+  margin: 48px 0 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--parchment-rule);
+}
+
+/* ============================================================
    Publications
    ============================================================ */
 .pub {
