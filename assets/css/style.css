@@ -210,10 +210,34 @@ ul  { list-style: none; }
 }
 
 .hero-content {
-  max-width: 760px;
-  text-align: center;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 56px;
+  row-gap: 0;
+  align-items: center;
+  text-align: left;
   position: relative;
   z-index: 1;
+}
+
+.hero-avatar {
+  width: 240px;
+  height: 240px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 8%;
+  border: 1px solid rgba(0, 50, 98, .12);
+  box-shadow: 0 24px 50px -28px rgba(0, 50, 98, .4);
+}
+
+.hero-intro { min-width: 0; }
+
+.hero-actions {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 12px;
 }
 
 .hero-eyebrow {
@@ -265,7 +289,7 @@ ul  { list-style: none; }
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   color: var(--ink-soft);
   line-height: 1.25;
-  margin: 26px auto 18px;
+  margin: 26px 0 18px;
   max-width: 640px;
 }
 .hero-tagline em {
@@ -278,12 +302,12 @@ ul  { list-style: none; }
   width: 160px;
   height: 1px;
   background: rgba(0, 50, 98, .35);
-  margin: 26px auto;
+  margin: 26px 0;
 }
 
 .hero-socials {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   margin-bottom: 34px;
 }
@@ -301,7 +325,7 @@ ul  { list-style: none; }
 
 .hero-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 14px;
   flex-wrap: wrap;
 }
@@ -1367,6 +1391,13 @@ ul  { list-style: none; }
   }
 
   .hero { min-height: auto; padding: 130px 22px 80px; }
+  .hero-content { grid-template-columns: 1fr; column-gap: 0; row-gap: 0; text-align: center; justify-items: center; }
+  .hero-avatar { grid-column: 1; width: 160px; height: 160px; margin-bottom: 28px; }
+  .hero-intro { grid-column: 1; }
+  .hero-actions { grid-column: 1; justify-self: center; }
+  .hero-tagline { margin: 26px auto 18px; }
+  .hero-rule { margin: 26px auto; }
+  .hero-socials, .hero-actions { justify-content: center; }
   .section { padding: 70px 0; }
   .section + .section { padding-top: 40px; }
 
@@ -1389,6 +1420,7 @@ ul  { list-style: none; }
 }
 
 @media (max-width: 420px) {
+  .hero-avatar { width: 124px; height: 124px; }
   .hero-name { font-size: 2.6rem; }
   .hero-tagline { font-size: 1.4rem; }
   .section-title { font-size: 2rem; }
