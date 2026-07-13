@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=13" />
+  <link rel="stylesheet" href="assets/css/style.css?v=14" />
 </head>
 <body class="research-page">
   <nav class="nav" id="nav" aria-label="Main navigation">
@@ -122,40 +122,41 @@
         <header class="research-panel-header research-taste-header">
           <div>
             <p class="research-kicker">Research</p>
-            <h2>Taste</h2>
+            <h2>My <em>research</em> taste.</h2>
           </div>
-          <p>Generative music systems can produce convincing audio. I am more interested in what they still miss: the <strong>humanity</strong>, <strong>intention</strong>, and <strong>creativity</strong> that give a musical performance its meaning.</p>
+          <div class="research-taste-intro">
+            <p>Music AI has never looked more promising nowadays: companies like Suno, Udio, and Ace Studio show how generative models may reshape music itself. However, I'm deeply concerned that much of this field is moving toward replacing the <em class="mark">humanity</em>, <em class="mark">intention</em>, and <em class="mark">creativity</em> from the soul of a musician.</p>
+            <p>I tried to reflect <em>what</em> was missing and <em>how</em> to leverage the advantage of this exploding generative AI era. My research starts from <em>three missing pieces</em>:</p>
+          </div>
         </header>
 
         <div class="research-problem-list">
           <article class="research-problem" id="taste-controllability" tabindex="-1">
             <h3>Controllability.</h3>
             <div class="research-problem-copy">
-              <p>Many models produce impressive zero-shot results while giving musicians very little control. I want systems that make musical decisions inspectable and revisable, so musicians can steer music generation and audio effect design instead of accepting a finished output.</p>
-              <p class="research-question">How can a model expand creative possibility while leaving authorship with the musician?</p>
+              <p>Many models nowadays can produce impressive zero-shot results, but giving very little control to musicians.</p>
             </div>
           </article>
 
           <article class="research-problem" id="taste-understanding" tabindex="-1">
             <h3>Music understanding.</h3>
             <div class="research-problem-copy">
-              <p>Many models learn latent patterns from internet-scale data, but still lack grounded understanding from the perceptual level (pitch, rhythm, and musical structure) to the hidden level (the composer’s intention, the performer’s expression, and the audience’s emotion).</p>
-              <p class="research-question">These are what bring music from a random permutation of notes to life.</p>
+              <p>Many models learn patterns at latent space level from large-scale internet data, but still lack of grounded understanding from <em class="mark">“perceptual level”</em> (pitch, rhythm and music structure), to <em class="mark">“hidden level”</em> (the intention from the composer, the expression from the player, and the emotion from the audience).<br />But these are how we bring music from random permutation of notes to life.</p>
             </div>
           </article>
 
           <article class="research-problem" id="taste-alignment" tabindex="-1">
-            <h3>Humanity and alignment.</h3>
+            <h3>Humanity.</h3>
             <div class="research-problem-copy">
-              <p>Music is the most abstract language we have. There is no single ground truth hidden in the notes or audio signal itself, and the same musical phrase can mean something different to every listener.</p>
-              <p class="research-question">Can audio-language models represent and align with human preferences without flattening that variance?</p>
+              <p>Music is the <em class="mark">most abstract language</em> we have. There is no ground truth hidden in the notes or audio signal itself. The same musical phrase can bring huge variance between individuals. This leads me to a research question I care deeply:</p>
+              <p class="research-question">can ALMs model and align human preferences?</p>
             </div>
           </article>
         </div>
 
         <div class="research-vision">
           <p class="research-kicker">Long-term direction</p>
-          <p>Together, these questions shape my long-term direction: building audio-language models that can hear, understand, and communicate about music, while leaving room for people to lead the interaction.</p>
+          <p>Together, these questions shape my long-term research direction: building a unified audio-language model that can truly hear, understand, and communicate about music, enabling new forms of HCI between musicians, computers, and audiences.</p>
         </div>
       </div>
     </section>
