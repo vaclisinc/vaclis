@@ -1,97 +1,61 @@
-// Sticky nav scroll effect
 const nav = document.getElementById('nav');
+const toggle = document.getElementById('nav-toggle');
+const links = document.getElementById('nav-links');
 
 function updateNav() {
-  if (window.scrollY > 60) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
+  nav.classList.toggle('scrolled', window.scrollY > 24);
 }
 
 window.addEventListener('scroll', updateNav, { passive: true });
 updateNav();
 
-// Mobile hamburger menu
-const toggle = document.getElementById('nav-toggle');
-const links = document.getElementById('nav-links');
-
-toggle.addEventListener('click', function () {
-  const isOpen = toggle.classList.toggle('open');
-  links.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-});
-
-// Close mobile menu when a link is clicked
-links.querySelectorAll('a').forEach(function (link) {
-  link.addEventListener('click', function () {
-    toggle.classList.remove('open');
-    links.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
+if (toggle && links) {
+  toggle.addEventListener('click', function () {
+    const isOpen = toggle.classList.toggle('open');
+    links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
-});
 
-// Active nav link on scroll
-const sections = document.querySelectorAll('.section, .hero');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-function updateActiveLink() {
-  var scrollPos = window.scrollY + 100;
-
-  sections.forEach(function (section) {
-    var id = section.getAttribute('id');
-    if (!id) return;
-
-    var top = section.offsetTop;
-    var height = section.offsetHeight;
-
-    if (scrollPos >= top && scrollPos < top + height) {
-      navLinks.forEach(function (link) {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + id) {
-          link.classList.add('active');
-        }
-      });
-    }
+  links.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      toggle.classList.remove('open');
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 
-window.addEventListener('scroll', updateActiveLink, { passive: true });
-updateActiveLink();
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(function (link) {
+  const href = link.getAttribute('href');
+  if (href === currentPage) {
+    link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
+  }
+});
 
-// Fade-in on scroll with IntersectionObserver
-var fadeEls = document.querySelectorAll('.fade-in');
-
+const fadeEls = document.querySelectorAll('.fade-in');
 if ('IntersectionObserver' in window) {
-  var observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.05, rootMargin: '0px 0px -10% 0px' }
-  );
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -8% 0px' });
 
-  fadeEls.forEach(function (el) {
-    observer.observe(el);
-  });
+  fadeEls.forEach(function (element) { observer.observe(element); });
 } else {
-  fadeEls.forEach(function (el) { el.classList.add('visible'); });
+  fadeEls.forEach(function (element) { element.classList.add('visible'); });
 }
 
-// Safety net: if any .fade-in hasn't been revealed within ~1s
-// (e.g. screenshot capture, printing, or reading without scrolling),
-// force-show them so content never stays invisible.
 setTimeout(function () {
-  document.querySelectorAll('.fade-in:not(.visible)').forEach(function (el) {
-    el.classList.add('visible');
+  document.querySelectorAll('.fade-in:not(.visible)').forEach(function (element) {
+    element.classList.add('visible');
   });
-}, 1000);
+}, 900);
 
-// Respect users who prefer reduced motion — skip the animation entirely.
 if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  fadeEls.forEach(function (el) { el.classList.add('visible'); });
+  fadeEls.forEach(function (element) { element.classList.add('visible'); });
 }

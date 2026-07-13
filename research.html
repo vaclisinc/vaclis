@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research · Song-Ze Yu</title>
+  <meta name="description" content="Research by Song-Ze Yu on audio-language models, musical perception, representation, and interaction." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=5" />
+</head>
+<body>
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">Song-Ze Yu</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active" aria-current="page">Research</a></li>
+        <li><a href="more.html">More</a></li>
+        <li><a href="assets/files/vaclis_Curriculum_Vitae.pdf" target="_blank" rel="noopener">CV ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <header class="page-header">
+      <div class="measure fade-in">
+        <p class="eyebrow">Song-Ze Yu · Research</p>
+        <h1>Building models that can <em>hear</em> before they speak.</h1>
+        <p class="lead">
+          I study audio-language models as perceptual systems. The goal is not only to generate plausible language about sound,
+          but to understand what a model actually hears, how that knowledge is represented, and how a musician can work with it.
+        </p>
+      </div>
+    </header>
+
+    <section class="page-section">
+      <div class="measure fade-in">
+        <div class="section-heading">
+          <p class="eyebrow">Research questions</p>
+          <h2>Three connected problems.</h2>
+        </div>
+        <div class="research-questions">
+          <article>
+            <h3>Musical perception</h3>
+            <p>Can a general audio-language model identify pitch, rhythm, and structure reliably when the sound source, duration, notation, or acoustic context changes?</p>
+          </article>
+          <article>
+            <h3>Useful representation</h3>
+            <p>How can symbolic score information and time-aligned performance features coexist in a representation that a language model can inspect and reason over?</p>
+          </article>
+          <article>
+            <h3>Human-led interaction</h3>
+            <p>How can models respond to a musician's intent without flattening the choices that make a performance personal, expressive, and worth revising?</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section paper-section" id="papers">
+      <div class="wide fade-in">
+        <div class="section-heading section-heading-row">
+          <div><p class="eyebrow">Publications and demos</p><h2>Recent work.</h2></div>
+          <p class="section-note">Selected work, newest first</p>
+        </div>
+        <div class="paper-list paper-list-full">
+          <article class="paper-row">
+            <div class="paper-index">2026</div>
+            <div class="paper-main">
+              <p class="paper-status">Preprint · arXiv:2605.26176</p>
+              <h3><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></h3>
+              <p class="paper-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen</p>
+              <p class="paper-summary">PitchBench introduces 28 controlled experiments covering absolute and relative pitch, sequences, chords, sound sources, time stretching, background noise, and notation formats. Across frontier models, pitch perception remains unreliable and varies sharply with the acoustic and response conditions.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">arXiv ↗</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset ↗</a><a href="https://github.com/vaclisinc/PitchBench" target="_blank" rel="noopener">Code ↗</a></div>
+            </div>
+          </article>
+
+          <article class="paper-row">
+            <div class="paper-index">2026</div>
+            <div class="paper-main">
+              <p class="paper-status">DAFx 2026 demo · arXiv preprint</p>
+              <h3><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: A Multi-turn Text-to-Preset Demo for Iterative Audio Effect Refinement</a></h3>
+              <p class="paper-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang</p>
+              <p class="paper-summary">InstructFX2FX treats audio production as a stateful interaction. An LLM plans an effect chain and initial parameters, while CLAP-guided optimization refines the existing sound across successive instructions such as “make it warmer” or “less harsh.”</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">arXiv ↗</a><a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">Demo ↗</a><a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">Code ↗</a></div>
+            </div>
+          </article>
+
+          <article class="paper-row">
+            <div class="paper-index">2026</div>
+            <div class="paper-main">
+              <p class="paper-status">Under review · ISMIR 2026</p>
+              <h3>MuNo-LM: Music Notation for Language Models, Unifying Score and Performance for Audio-Language Modeling</h3>
+              <p class="paper-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong></p>
+              <p class="paper-summary">A text-based representation that brings score-level information such as harmony, phrasing, dynamics, voicing, and articulation together with time-aligned audio-perceptual features.</p>
+            </div>
+          </article>
+
+          <article class="paper-row">
+            <div class="paper-index">2026</div>
+            <div class="paper-main">
+              <p class="paper-status">In preparation · EMNLP 2026 demo</p>
+              <h3>Anamnesis: An Open-Source Platform for Large-Scale Backstory-Conditioned Survey Simulation</h3>
+              <p class="paper-authors"><strong>Song-Ze Yu</strong>, Joseph Suh, Yutong Bai, Serina Chang, David M. Chan</p>
+              <p class="paper-summary">An open-source platform for demographically controlled multimodal survey simulation and virtual population studies.</p>
+            </div>
+          </article>
+
+          <article class="paper-row">
+            <div class="paper-index">2025</div>
+            <div class="paper-main">
+              <p class="paper-status">Preprint · arXiv:2509.24404</p>
+              <h3><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">From Sound to Setting: AI-Based EQ Parameter Prediction for Piano Tone Replication</a></h3>
+              <p class="paper-authors"><strong>Song-Ze Yu</strong>, Yi-Wen Liu</p>
+              <p class="paper-summary">A supervised model predicts multi-band EQ settings from reference-audio DSP features. The work became VTR-SmartEQ, a JUCE plugin for real-time tone replication.</p>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">arXiv ↗</a><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Plugin ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wide footer-inner"><span>Song-Ze Yu · Research</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div></footer>
+  <script src="assets/js/main.js?v=5"></script>
+</body>
+</html>
