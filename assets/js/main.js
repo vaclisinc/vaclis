@@ -59,3 +59,84 @@ setTimeout(function () {
 if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   fadeEls.forEach(function (element) { element.classList.add('visible'); });
 }
+
+const researchTabs = Array.from(document.querySelectorAll('[data-research-view]'));
+const researchPanels = Array.from(document.querySelectorAll('[data-research-panel]'));
+const researchTopicLinks = Array.from(document.querySelectorAll('[data-taste-target]'));
+
+if (researchTabs.length && researchPanels.length) {
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setResearchView(view, shouldAnimate) {
+    const previousView = researchTabs.find(function (tab) {
+      return tab.getAttribute('aria-selected') === 'true';
+    });
+
+    researchTabs.forEach(function (tab) {
+      const isActive = tab.dataset.researchView === view;
+      tab.classList.toggle('is-active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      tab.setAttribute('tabindex', isActive ? '0' : '-1');
+    });
+
+    researchPanels.forEach(function (panel) {
+      panel.hidden = panel.dataset.researchPanel !== view;
+    });
+
+    const activePanel = researchPanels.find(function (panel) {
+      return panel.dataset.researchPanel === view;
+    });
+
+    if (shouldAnimate && activePanel && previousView && previousView.dataset.researchView !== view && !reduceMotion) {
+      const directionClass = view === 'taste' ? 'research-enter-from-right' : 'research-enter-from-left';
+      activePanel.classList.remove('research-enter-from-right', 'research-enter-from-left');
+      void activePanel.offsetWidth;
+      activePanel.classList.add(directionClass);
+      activePanel.addEventListener('animationend', function () {
+        activePanel.classList.remove(directionClass);
+      }, { once: true });
+    }
+  }
+
+  function scrollToResearchTop() {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+
+  researchTabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () {
+      const view = tab.dataset.researchView;
+      setResearchView(view, true);
+      history.replaceState(null, '', view === 'taste' ? '#taste' : '#work');
+      scrollToResearchTop();
+    });
+
+    tab.addEventListener('keydown', function (event) {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const direction = event.key === 'ArrowRight' ? 1 : -1;
+      const nextTab = researchTabs[(index + direction + researchTabs.length) % researchTabs.length];
+      nextTab.focus();
+      nextTab.click();
+    });
+  });
+
+  researchTopicLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      const target = document.getElementById(link.dataset.tasteTarget);
+      if (!target) return;
+      setResearchView('taste', true);
+      history.replaceState(null, '', '#' + target.id);
+      window.requestAnimationFrame(function () {
+        target.focus({ preventScroll: true });
+        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+  });
+
+  const initialTarget = window.location.hash.slice(1);
+  if (initialTarget === 'taste' || initialTarget.indexOf('taste-') === 0) {
+    setResearchView('taste', false);
+  } else {
+    setResearchView('work', false);
+  }
+}

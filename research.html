@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=7" />
+  <link rel="stylesheet" href="assets/css/style.css?v=11" />
 </head>
 <body class="research-page">
   <nav class="nav" id="nav" aria-label="Main navigation">
@@ -24,37 +24,129 @@
   </nav>
 
   <main class="research-main">
-    <section class="research-opening">
-      <div class="research-shell fade-in">
-        <header class="research-title-row">
+    <h1 class="visually-hidden">Research by Song-Ze (Jimmy) Yu</h1>
+
+    <div class="research-view-nav">
+      <div class="research-shell">
+        <div class="research-view-switch" role="tablist" aria-label="Research view">
+          <button class="research-view-tab is-active" id="research-tab-work" type="button" role="tab" aria-selected="true" aria-controls="research-panel-work" tabindex="0" data-research-view="work"><span class="research-view-bar" aria-hidden="true"></span><span class="research-view-label"><span aria-hidden="true">←</span> Work</span></button>
+          <button class="research-view-tab" id="research-tab-taste" type="button" role="tab" aria-selected="false" aria-controls="research-panel-taste" tabindex="-1" data-research-view="taste"><span class="research-view-bar" aria-hidden="true"></span><span class="research-view-label">Taste <span aria-hidden="true">→</span></span></button>
+        </div>
+      </div>
+    </div>
+
+    <section class="research-panel research-work-panel" id="research-panel-work" role="tabpanel" aria-labelledby="research-tab-work" tabindex="0" data-research-panel="work">
+      <div class="research-shell">
+        <p class="research-list-note">Public work and ongoing research, newest first.</p>
+
+        <div class="research-work-list">
+          <article class="research-work">
+            <div class="research-work-meta">
+              <span>2026 · Preprint</span>
+              <button class="research-topic-link" type="button" data-taste-target="taste-understanding">Music understanding <span aria-hidden="true">→</span></button>
+              <a class="research-lab-link" href="more.html#experience-bair">BAIR <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="research-work-body">
+              <h3><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></h3>
+              <p class="research-work-authors">Milan Liessens Dujardin<sup>*</sup>, <strong>Song-Ze Yu<sup>*</sup></strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen <span class="research-contribution"><sup>*</sup> Equal contribution</span></p>
+              <p>ALMs are moving quickly toward high-level music understanding and captioning, yet the field lacks a systematic, hierarchical benchmark for the perceptual abilities those applications assume. PitchBench addresses this gap with 28 experiments that disentangle what a model perceives from when it perceives it, progressing from I. atomic pitch to II. contextual, time-grounded perception and III. melodic pitch perceptions. Together, these levels test the absolute and relative pitch hearing needed to reason about intervals, melodies, and harmony.</p>
+              <figure class="research-work-visual"><a href="images/research/pitchbench.jpg" target="_blank" rel="noopener"><img src="images/research/pitchbench.jpg" alt="PitchBench hierarchy from atomic to contextual and melodic pitch perception" /></a></figure>
+              <div class="research-work-links"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset</a><a href="https://anonymous.4open.science/r/PitchBench-32CD/" target="_blank" rel="noopener">Code</a></div> <!--- https://github.com/vaclisinc/PitchBench --->
+            </div>
+          </article>
+
+          <article class="research-work">
+            <div class="research-work-meta">
+              <span>2026 · DAFx</span>
+              <button class="research-topic-link" type="button" data-taste-target="taste-controllability">Controllability <span aria-hidden="true">→</span></button>
+              <a class="research-lab-link" href="more.html#experience-cnmat">CNMAT <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="research-work-body">
+              <h3><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: A Multi-Turn Text-to-Effect System for Sequential Audio Effect Refinement</a></h3>
+              <p class="research-work-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang, Brian Cruz, Jeremy Wagner, Carmine-Emanuele Cella</p>
+              <p>Introduces sequential FX refinement: given the current effect state and a new instruction, update the sound while preserving what earlier instructions have already achieved. InstructFX2FX combines LLM planning with CLAP-guided optimization for iterative, multi-turn audio effect design.</p>
+              <figure class="research-work-visual"><a href="images/research/instructfx2fx.jpg" target="_blank" rel="noopener"><img src="images/research/instructfx2fx.jpg" alt="InstructFX2FX architecture and multi-turn effect-chain refinement" /></a></figure>
+              <div class="research-work-links"><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper</a><a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">Demo</a><a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">Code</a></div>
+            </div>
+          </article>
+
+          <article class="research-work">
+            <div class="research-work-meta">
+              <span>2026 · Under review</span>
+              <button class="research-topic-link" type="button" data-taste-target="taste-understanding">Music understanding <span aria-hidden="true">→</span></button>
+              <a class="research-lab-link" href="more.html#experience-cnmat">CNMAT <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="research-work-body">
+              <h3>MuNo-LM: Music Notation for Language Models, Unifying Score and Performance for Audio-Language Modeling</h3>
+              <p class="research-work-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong></p>
+              <p>Fine-grained music understanding requires models to represent both what is played and how it is performed, grounded in time. MuNo-LM replaces coarse, weakly time-grounded synthesized captions with an LLM-readable notation that unifies score structure and time-aligned perceptual features, then generates musically informed, time-grounded captions and question-answer pairs. Inter-annotator agreement and the Perception Index validate these pairs as temporally precise, reliable supervision for audio-language models.</p>
+              <figure class="research-work-visual"><a href="images/research/munolm.jpg" target="_blank" rel="noopener"><img src="images/research/munolm.jpg" alt="MuNo-LM compared with score image, ABC, MIDI, and MusicXML representations" /></a></figure>
+              <div class="research-work-links"><a href="https://milan477.github.io/MuNo-LM-demo/" target="_blank" rel="noopener">Demo</a></div>
+            </div>
+          </article>
+
+          <article class="research-work">
+            <div class="research-work-meta">
+              <span>2026 · Under review</span>
+              <button class="research-topic-link" type="button" data-taste-target="taste-alignment">Alignment and HCI <span aria-hidden="true">→</span></button>
+              <a class="research-lab-link" href="more.html#experience-bair">BAIR <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="research-work-body">
+              <h3>Anamnesis: An Open-Source Platform for Large-Scale Backstory-Conditioned Survey Simulation</h3>
+              <p class="research-work-authors"><strong>Song-Ze Yu</strong>, Joseph Suh, Yutong Bai, Serina Chang, David M. Chan</p>
+              <p>An open-source platform for demographically controlled multimodal survey simulation and virtual population studies.</p>
+              <figure class="research-work-visual"><a href="images/research/anamnesis.jpg" target="_blank" rel="noopener"><img src="images/research/anamnesis.jpg" alt="Anamnesis pipeline connecting LLM-generated personas, virtual opinions, and human studies" /></a></figure>
+              <div class="research-work-links"><span class="research-work-link-pending">Paper · coming soon</span><a href="https://simulate.group" target="_blank" rel="noopener">Demo</a></div>
+            </div>
+          </article>
+
+          <article class="research-work">
+            <div class="research-work-meta">
+              <span>2025 · Preprint</span>
+              <button class="research-topic-link" type="button" data-taste-target="taste-controllability">Controllability <span aria-hidden="true">→</span></button>
+              <a class="research-lab-link" href="more.html#experience-ahg">AHG Music Lab <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="research-work-body">
+              <h3><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">From Sound to Setting: AI-Based EQ Parameter Prediction for Piano Tone Replication</a></h3>
+              <p class="research-work-authors"><strong>Song-Ze Yu</strong>, Yi-Wen Liu</p>
+              <p>A supervised model predicts multi-band EQ settings from reference-audio DSP features. The work became VTR-SmartEQ, a JUCE plugin for real-time tone replication.</p>
+              <figure class="research-work-visual"><a href="images/research/vtr.jpg" target="_blank" rel="noopener"><img src="images/research/vtr.jpg" alt="VTR system design from audio feature extraction to EQ parameter prediction and JUCE processing" /></a></figure>
+              <div class="research-work-links"><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">Paper</a><a href="https://github.com/vaclisinc/Vaclis_Tone_Replication" target="_blank" rel="noopener">Code</a><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Plugin</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-panel research-taste-panel" id="research-panel-taste" role="tabpanel" aria-labelledby="research-tab-taste" tabindex="0" data-research-panel="taste" hidden>
+      <div class="research-shell">
+        <header class="research-panel-header research-taste-header">
           <div>
-            <p class="research-kicker">Research taste</p>
-            <h1>Three problems I care about.</h1>
+            <p class="research-kicker">Research</p>
+            <h2>Taste</h2>
           </div>
-          <p class="research-opening-note">
-            Generative music systems are improving quickly. They can produce convincing audio, but I am more interested in what they still miss: the <strong>humanity</strong>, <strong>intention</strong>, and <strong>creativity</strong> that give a musical performance its meaning.
-          </p>
+          <p>Generative music systems can produce convincing audio. I am more interested in what they still miss: the <strong>humanity</strong>, <strong>intention</strong>, and <strong>creativity</strong> that give a musical performance its meaning.</p>
         </header>
 
         <div class="research-problem-list">
-          <article class="research-problem">
-            <h2>Controllability.</h2>
+          <article class="research-problem" id="taste-controllability" tabindex="-1">
+            <h3>Controllability.</h3>
             <div class="research-problem-copy">
               <p>Many models produce impressive zero-shot results while giving musicians very little control. I want systems that make musical decisions inspectable and revisable, so musicians can steer music generation and audio effect design instead of accepting a finished output.</p>
               <p class="research-question">How can a model expand creative possibility while leaving authorship with the musician?</p>
             </div>
           </article>
 
-          <article class="research-problem">
-            <h2>Music understanding.</h2>
+          <article class="research-problem" id="taste-understanding" tabindex="-1">
+            <h3>Music understanding.</h3>
             <div class="research-problem-copy">
               <p>Many models learn latent patterns from internet-scale data, but still lack grounded understanding from the perceptual level (pitch, rhythm, and musical structure) to the hidden level (the composer’s intention, the performer’s expression, and the audience’s emotion).</p>
               <p class="research-question">These are what bring music from a random permutation of notes to life.</p>
             </div>
           </article>
 
-          <article class="research-problem">
-            <h2>Humanity and alignment.</h2>
+          <article class="research-problem" id="taste-alignment" tabindex="-1">
+            <h3>Humanity and alignment.</h3>
             <div class="research-problem-copy">
               <p>Music is the most abstract language we have. There is no single ground truth hidden in the notes or audio signal itself, and the same musical phrase can mean something different to every listener.</p>
               <p class="research-question">Can audio-language models represent and align with human preferences without flattening that variance?</p>
@@ -68,88 +160,11 @@
         </div>
       </div>
     </section>
-
-    <section class="research-work-section" id="work">
-      <div class="research-shell fade-in">
-        <header class="research-work-header">
-          <div>
-            <p class="research-kicker">Research record</p>
-            <h2>Work</h2>
-          </div>
-          <p>Public work and ongoing research, newest first.</p>
-        </header>
-
-        <div class="research-work-list">
-          <article class="research-work">
-            <div class="research-work-meta">
-              <span>2026 · Preprint</span>
-              <span>Music understanding</span>
-            </div>
-            <div class="research-work-body">
-              <h3><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></h3>
-              <p class="research-work-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen</p>
-              <p>Twenty-eight controlled experiments measure whether audio-language models can hear pitch across sequences, chords, instruments, notation formats, and acoustic conditions. Current frontier models remain unstable even on basic musical perception.</p>
-              <div class="research-work-links"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset</a><a href="https://github.com/vaclisinc/PitchBench" target="_blank" rel="noopener">Code</a></div>
-            </div>
-          </article>
-
-          <article class="research-work">
-            <div class="research-work-meta">
-              <span>2026 · DAFx</span>
-              <span>Controllability</span>
-            </div>
-            <div class="research-work-body">
-              <h3><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: Multi-turn Text-to-Preset for Iterative Audio Effect Refinement</a></h3>
-              <p class="research-work-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang</p>
-              <p>A stateful text-to-preset system for iterative audio production. Language-model planning creates an effect chain, then CLAP-guided optimization refines the existing sound over successive instructions without restarting the process.</p>
-              <div class="research-work-links"><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper</a><a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">Project</a><a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">Code</a></div>
-            </div>
-          </article>
-
-          <article class="research-work">
-            <div class="research-work-meta">
-              <span>2026 · Under review</span>
-              <span>Music understanding</span>
-            </div>
-            <div class="research-work-body">
-              <h3>MuNo-LM: Music Notation for Language Models, Unifying Score and Performance for Audio-Language Modeling</h3>
-              <p class="research-work-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong></p>
-              <p>A text-based representation that brings score-level information, including harmony, phrasing, dynamics, voicing, and articulation, together with time-aligned audio-perceptual features.</p>
-            </div>
-          </article>
-
-          <article class="research-work">
-            <div class="research-work-meta">
-              <span>2026 · In preparation</span>
-              <span>Alignment and HCI</span>
-            </div>
-            <div class="research-work-body">
-              <h3>Anamnesis: An Open-Source Platform for Large-Scale Backstory-Conditioned Survey Simulation</h3>
-              <p class="research-work-authors"><strong>Song-Ze Yu</strong>, Joseph Suh, Yutong Bai, Serina Chang, David M. Chan</p>
-              <p>An open-source platform for demographically controlled multimodal survey simulation and virtual population studies.</p>
-            </div>
-          </article>
-
-          <article class="research-work">
-            <div class="research-work-meta">
-              <span>2025 · Preprint</span>
-              <span>Controllability</span>
-            </div>
-            <div class="research-work-body">
-              <h3><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">From Sound to Setting: AI-Based EQ Parameter Prediction for Piano Tone Replication</a></h3>
-              <p class="research-work-authors"><strong>Song-Ze Yu</strong>, Yi-Wen Liu</p>
-              <p>A supervised model predicts multi-band EQ settings from reference-audio DSP features. The work became VTR-SmartEQ, a JUCE plugin for real-time tone replication.</p>
-              <div class="research-work-links"><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">Paper</a><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Plugin</a></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
     <div class="wide footer-inner"><span>Song-Ze (Jimmy) Yu · Research</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
   </footer>
-  <script src="assets/js/main.js?v=6"></script>
+  <script src="assets/js/main.js?v=7"></script>
 </body>
 </html>
