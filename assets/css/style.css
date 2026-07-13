@@ -641,12 +641,87 @@ h1 em, h2 em { font-style: italic; }
   border-top: 1px solid var(--line);
 }
 
+.research-work-visual-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
 .research-work-visual img {
   width: 100%;
   aspect-ratio: 2.25 / 1;
   object-fit: contain;
   background: var(--paper-deep);
   border: 1px solid var(--line);
+}
+
+.research-work-visual figcaption {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .66rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.research-lightbox {
+  width: min(calc(100% - 48px), 1280px);
+  max-width: none;
+  max-height: calc(100vh - 48px);
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.research-lightbox::backdrop {
+  background: oklch(17% .03 255 / .86);
+}
+
+.research-lightbox-inner {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  max-height: calc(100vh - 50px);
+  padding: 54px 18px 14px;
+}
+
+.research-lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 1.55rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.research-lightbox-image {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 128px);
+  object-fit: contain;
+}
+
+.research-lightbox-caption {
+  margin: 9px 44px 0 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: .78rem;
+  line-height: 1.4;
 }
 
 .research-topic-link {
@@ -855,6 +930,9 @@ h1 em, h2 em { font-style: italic; }
   .research-vision > p:last-child { font-size: 1.13rem; }
   .research-work { grid-template-columns: 1fr; gap: 11px; padding: 25px 0 28px; }
   .research-work-meta { display: flex; flex-wrap: wrap; gap: 5px 15px; padding-top: 0; }
+  .research-work-visual { width: 100%; margin-top: 9px; }
+  .research-lightbox { width: calc(100% - 24px); max-height: calc(100vh - 24px); }
+  .research-lightbox-inner { max-height: calc(100vh - 26px); padding: 52px 10px 12px; }
   .research-topic-link { min-height: 44px; margin: -11px 0; }
   .research-work-body h3 { font-size: 1.28rem; }
   .research-questions { grid-template-columns: 1fr; gap: 0; }

@@ -140,3 +140,51 @@ if (researchTabs.length && researchPanels.length) {
     setResearchView('work', false);
   }
 }
+
+const researchLightbox = document.getElementById('research-lightbox');
+const researchLightboxImage = researchLightbox && researchLightbox.querySelector('.research-lightbox-image');
+const researchLightboxCaption = researchLightbox && researchLightbox.querySelector('.research-lightbox-caption');
+const researchLightboxClose = researchLightbox && researchLightbox.querySelector('.research-lightbox-close');
+const researchFigureButtons = Array.from(document.querySelectorAll('[data-lightbox-src]'));
+let researchLightboxTrigger = null;
+
+if (researchLightbox && researchLightboxImage && researchLightboxCaption && researchLightboxClose) {
+  function resetResearchLightbox() {
+    researchLightboxImage.removeAttribute('src');
+    if (researchLightboxTrigger) researchLightboxTrigger.focus();
+  }
+
+  function closeResearchLightbox() {
+    if (typeof researchLightbox.close === 'function') {
+      researchLightbox.close();
+    } else {
+      researchLightbox.removeAttribute('open');
+      resetResearchLightbox();
+    }
+  }
+
+  researchFigureButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const preview = button.querySelector('img');
+      researchLightboxTrigger = button;
+      researchLightboxImage.src = button.dataset.lightboxSrc;
+      researchLightboxImage.alt = preview ? preview.alt : '';
+      researchLightboxCaption.textContent = button.dataset.lightboxCaption || '';
+
+      if (typeof researchLightbox.showModal === 'function') {
+        researchLightbox.showModal();
+      } else {
+        researchLightbox.setAttribute('open', '');
+      }
+      researchLightboxClose.focus();
+    });
+  });
+
+  researchLightboxClose.addEventListener('click', closeResearchLightbox);
+  researchLightbox.addEventListener('click', function (event) {
+    if (event.target === researchLightbox) closeResearchLightbox();
+  });
+  researchLightbox.addEventListener('close', function () {
+    resetResearchLightbox();
+  });
+}
