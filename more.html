@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>More · Song-Ze Yu</title>
-  <meta name="description" content="Experience, music, projects, and selected awards from Song-Ze Yu." />
+  <title>Experience · Song-Ze Yu</title>
+  <meta name="description" content="Research, work, music, projects, and selected recognition from Song-Ze Yu." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=5" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=15" />
 </head>
 <body>
   <nav class="nav" id="nav" aria-label="Main navigation">
@@ -18,85 +18,174 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="more.html" class="active" aria-current="page">More</a></li>
+        <li><a href="more.html" class="active" aria-current="page">Experience</a></li>
         <li><a href="assets/files/vaclis_Curriculum_Vitae.pdf" target="_blank" rel="noopener">CV ↗</a></li>
       </ul>
     </div>
   </nav>
 
   <main class="page-main">
-    <header class="page-header">
+    <header class="page-header experience-header">
       <div class="measure fade-in">
-        <p class="eyebrow">Beyond the paper</p>
-        <h1>The work has a wider <em>context</em>.</h1>
-        <p class="lead">Research is the center of this site. These are the places, projects, and practices that shaped how I build.</p>
+        <p class="eyebrow">Experience</p>
+        <h1>Research and work, <em>in parallel</em>.</h1>
+        <p class="lead">I build systems for understanding sound, then carry those ideas into products used beyond the lab.</p>
       </div>
     </header>
 
-    <section class="page-section" id="experience">
+    <section class="page-section experience-section" id="experience">
       <div class="wide fade-in">
-        <div class="section-heading"><p class="eyebrow">Experience</p><h2>Where I work.</h2></div>
-        <div class="experience-list">
-          <article class="experience-row" id="experience-bair">
-            <div class="experience-date">Feb 2026<br />Present</div>
-            <div><h3>Berkeley AI Research Lab <span>Researcher</span></h3><p class="meta"><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">BAIR</a>, UC Berkeley · Trevor Darrell and David M. Chan</p><p>Co-first author on PitchBench and lead author on Anamnesis, working on evaluation and interaction for audio-language models.</p></div>
-          </article>
-          <article class="experience-row" id="experience-cnmat">
-            <div class="experience-date">Sep 2025<br />Present</div>
-            <div><h3>CNMAT <span>Research Lead</span></h3><p class="meta"><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music and Audio Technologies</a>, UC Berkeley · Carmine-Emanuele Cella</p><p>Working on MuNo-LM and InstructFX2FX, connecting notation, audio perception, and controllable effect design.</p></div>
-          </article>
-          <article class="experience-row">
-            <div class="experience-date">Jun 2025<br />Sep 2025</div>
-            <div><h3>Positive Grid <span>Machine Learning Intern</span></h3><p class="meta">Guitar amp modeling and audio ML in production.</p><p>Built JUCE VST plugins and integrated an audio-to-preset model through a PyTorch inference pipeline.</p></div>
-          </article>
-          <article class="experience-row">
-            <div class="experience-date">Sep 2025<br />Present</div>
-            <div><h3>Berkeleytime <span>ML Pod Lead and Full-Stack Engineer</span></h3><p class="meta">ASUC student platform · 122K+ monthly users</p><p>Lead a 10-member ML pod and ship semantic search, GraphQL, Redis, and full-stack product work.</p><p class="inline-links"><a href="https://berkeleytime.vaclis.net/" target="_blank" rel="noopener">Presentation ↗</a><a href="https://github.com/asuc-octo/berkeleytime/pulls?q=author%3Avaclisinc" target="_blank" rel="noopener">Pull requests ↗</a></p></div>
-          </article>
-          <article class="experience-row" id="experience-ahg">
-            <div class="experience-date">Jul 2024<br />May 2025</div>
-            <div><h3>AHG Music Lab <span>Undergraduate Researcher</span></h3><p class="meta">National Tsing Hua University · Yi-Wen Liu</p><p>Built a piano dataset and trained a model to predict EQ parameters from reference-audio DSP features. The work became VTR-SmartEQ.</p></div>
-          </article>
+        <div class="experience-columns">
+          <section class="experience-track" aria-labelledby="research-experience-title">
+            <header class="experience-track-header">
+              <p class="track-label">Research</p>
+              <h2 id="research-experience-title">Labs and ongoing questions.</h2>
+            </header>
+            <div class="timeline-list">
+              <article class="timeline-entry" id="experience-bair">
+                <time datetime="2026-02">Feb 2026<br />Present</time>
+                <div class="timeline-body">
+                  <h3><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research <span aria-hidden="true">↗</span></a></h3>
+                  <p class="experience-role">Researcher · UC Berkeley</p>
+                  <p>Co-first author on PitchBench and lead author on Anamnesis, working on evaluation and interaction for audio-language models.</p>
+                </div>
+              </article>
+              <article class="timeline-entry" id="experience-cnmat">
+                <time datetime="2025-09">Sep 2025<br />Present</time>
+                <div class="timeline-body">
+                  <h3><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT <span aria-hidden="true">↗</span></a></h3>
+                  <p class="experience-role">Research Lead · UC Berkeley</p>
+                  <p>Working on MuNo-LM and InstructFX2FX, connecting notation, audio perception, and controllable effect design.</p>
+                </div>
+              </article>
+              <article class="timeline-entry" id="experience-ahg">
+                <time datetime="2024-07">Jul 2024<br />May 2025</time>
+                <div class="timeline-body">
+                  <h3><a href="https://www.ee.nthu.edu.tw/ywliu/research.html" target="_blank" rel="noopener">AHG Music Lab <span aria-hidden="true">↗</span></a></h3>
+                  <p class="experience-role">Undergraduate Researcher · National Tsing Hua University</p>
+                  <p>Built a piano dataset and trained a model to predict EQ parameters from reference-audio DSP features. The work became VTR-SmartEQ.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="experience-track" aria-labelledby="work-experience-title">
+            <header class="experience-track-header">
+              <p class="track-label">Work</p>
+              <h2 id="work-experience-title">Products beyond the lab.</h2>
+            </header>
+            <div class="timeline-list">
+              <article class="timeline-entry">
+                <time datetime="2025-09">Sep 2025<br />Present</time>
+                <div class="timeline-body">
+                  <h3>Berkeleytime</h3>
+                  <p class="experience-role">ML Pod Lead and Full-Stack Engineer</p>
+                  <p>Lead a 10-member ML pod and ship semantic search, GraphQL, Redis, and full-stack product work for 122K+ monthly users.</p>
+                  <p class="inline-links"><a href="https://berkeleytime.vaclis.net/" target="_blank" rel="noopener">Presentation ↗</a><a href="https://github.com/asuc-octo/berkeleytime/pulls?q=author%3Avaclisinc" target="_blank" rel="noopener">Pull requests ↗</a></p>
+                </div>
+              </article>
+              <article class="timeline-entry">
+                <time datetime="2025-06">Jun 2025<br />Sep 2025</time>
+                <div class="timeline-body">
+                  <h3>Positive Grid</h3>
+                  <p class="experience-role">Machine Learning Intern</p>
+                  <p>Built JUCE VST plugins and integrated an audio-to-preset model through a PyTorch inference pipeline for production music tools.</p>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       </div>
     </section>
 
     <section class="page-section tinted-section" id="music">
-      <div class="measure fade-in">
-        <div class="section-heading"><p class="eyebrow">Pianist · composer · producer</p><h2>Before research, there was music.</h2></div>
-        <p class="body-copy">I learned piano by ear and performed across China and Taiwan from 2009 to 2016: 24 solo recitals, more than 70 TV appearances, and three on-stage collaborations with Jay Chou. I still write and produce, with 20+ original songs and a music practice that continues to shape how I think about perception, expression, and tools.</p>
-        <div class="stat-line"><span><strong>24</strong> solo recitals</span><span><strong>70+</strong> TV appearances</span><span><strong>20+</strong> original songs</span></div>
-        <p class="inline-links"><a href="music-cv/en.html" target="_blank" rel="noopener">Full music CV ↗</a><a href="https://www.youtube.com/@vaclis_daily" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram ↗</a></p>
+      <div class="wide music-experience fade-in">
+        <div class="section-heading">
+          <p class="eyebrow">Pianist · composer · producer</p>
+          <h2>Before research, there was music.</h2>
+        </div>
+        <div class="music-experience-body">
+          <p class="body-copy">I learned piano by ear and performed across China and Taiwan from 2009 to 2016: 24 solo recitals, more than 70 TV appearances, and three on-stage collaborations with Jay Chou. I still write and produce, with 20+ original songs and a music practice that continues to shape how I think about perception, expression, and tools.</p>
+          <div class="stat-line" aria-label="Music career highlights"><span><strong>24</strong> solo recitals</span><span><strong>70+</strong> TV appearances</span><span><strong>20+</strong> original songs</span></div>
+          <p class="inline-links"><a href="music-cv/en.html" target="_blank" rel="noopener">Full music CV ↗</a><a href="https://www.youtube.com/@vaclis_daily" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram ↗</a></p>
+        </div>
       </div>
     </section>
 
     <section class="page-section" id="projects">
       <div class="wide fade-in">
-        <div class="section-heading section-heading-row"><div><p class="eyebrow">Selected projects</p><h2>Things I have built.</h2></div><a class="section-link" href="https://github.com/vaclisinc" target="_blank" rel="noopener">GitHub ↗</a></div>
+        <div class="section-heading section-heading-row"><h2>Selected projects</h2><a class="section-link" href="https://github.com/vaclisinc" target="_blank" rel="noopener">GitHub ↗</a></div>
         <div class="project-list">
-          <article><div><h3>VTR-SmartEQ</h3><p class="project-stack">JUCE · C++ · PyTorch · ReaScript</p></div><p>A VST plugin that predicts multi-band EQ parameters from a reference recording, accompanying the 2025 tone-replication paper.</p><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Repository ↗</a></article>
-          <article><div><h3>ParkFlow</h3><p class="project-stack">Vue 3 · Flutter · Taipei Parking API</p></div><p>Real-time parking, navigation, and notifications for Taipei. Selected for integration into the official TownPass app.</p><a href="https://github.com/vaclisinc/ParkFlow" target="_blank" rel="noopener">Repository ↗</a></article>
           <article><div><h3>Berkeleytime</h3><p class="project-stack">TypeScript · GraphQL · MongoDB · Redis</p></div><p>ASUC's student platform, where I lead the ML pod and build search and product infrastructure used by 122K+ monthly users.</p><a href="https://github.com/asuc-octo/berkeleytime/pulls?q=author%3Avaclisinc" target="_blank" rel="noopener">My pull requests ↗</a></article>
-          <article><div><h3>InningIQ</h3><p class="project-stack">React · Python · FastAPI · Firebase</p></div><p>A set of tools for amateur baseball, including jyBaseball, a community-driven digitization tool built with the NTHU baseball team.</p><a href="https://github.com/vaclisinc/InningIQ" target="_blank" rel="noopener">Repository ↗</a></article>
           <article><div><h3>Claude Code Remote</h3><p class="project-stack">JavaScript · IMAP · SMTP</p></div><p>Contributed execution-trace notifications and a terminal-style email UI, including a fix for a critical self-reply loop.</p><a href="https://github.com/vaclisinc/Claude-Code-Remote" target="_blank" rel="noopener">Repository ↗</a></article>
+          <article><div><h3>ParkFlow</h3><p class="project-stack">Vue 3 · Flutter · Taipei Parking API</p></div><p>Real-time parking, navigation, and notifications for Taipei. Selected for integration into the official Taipei Pass app.</p><a href="https://github.com/vaclisinc/ParkFlow" target="_blank" rel="noopener">Repository ↗</a></article>
+          <article><div><h3>VTR-SmartEQ</h3><p class="project-stack">JUCE · C++ · PyTorch · ReaScript</p></div><p>A VST plugin that predicts multi-band EQ parameters from a reference recording, accompanying the 2025 tone-replication paper.</p><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Repository ↗</a></article>
+          <article><div><h3>InningIQ</h3><p class="project-stack">React · Python · FastAPI · Firebase</p></div><p>A set of tools for amateur baseball, including jyBaseball, a community-driven digitization tool built with the NTHU baseball team.</p><a href="https://github.com/vaclisinc/InningIQ" target="_blank" rel="noopener">Repository ↗</a></article>
         </div>
       </div>
     </section>
 
     <section class="page-section" id="awards">
-      <div class="measure fade-in">
-        <div class="section-heading"><p class="eyebrow">Awards and events</p><h2>A few useful constraints.</h2></div>
-        <ul class="award-list">
-          <li><span>Oct 2025</span><div><strong>Best Design</strong><br />Claude × a16z × Berkeley M.E.T. Makeathon, for Haven</div></li>
-          <li><span>Oct 2024</span><div><strong>2nd Place, Google Prize</strong><br />Meichu Hackathon, for Travelity</div></li>
-          <li><span>Sep 2024</span><div><strong>3rd Place</strong><br />Taipei Hackathon, for ParkFlow</div></li>
-          <li><span>Jul 2024</span><div><strong>1st Place</strong><br />SITCON Hackathon, for ccDiary</div></li>
-        </ul>
+      <div class="wide fade-in">
+        <div class="section-heading"><p class="eyebrow">Leadership &amp; awards</p><h2>Selected recognition and public work.</h2></div>
+        <div class="award-list">
+          <article class="award-entry">
+            <time datetime="2025-10">Oct 2025</time>
+            <div class="award-body">
+              <div class="award-title"><h3>Claude × a16z × Berkeley M.E.T. Makeathon</h3><p>Best Design · Berkeley, California</p></div>
+              <ul><li>Built Haven in five hours, a mobile app that helps homeowners personalize their spaces by scanning their rooms.</li></ul>
+            </div>
+          </article>
+          <article class="award-entry">
+            <time datetime="2024-10">Oct 2024</time>
+            <div class="award-body">
+              <div class="award-title"><h3>Meichu Hackathon 2024</h3><p>2nd Place in Google Group · Hsinchu, Taiwan</p></div>
+              <ul><li>Built <a href="https://github.com/vaclisinc/Travelity" target="_blank" rel="noopener">Travelity</a>, an AI-driven personalized travel planner based on user interests, personality, and real-time data.</li></ul>
+              <p class="award-stack">Flutter · Python · Google Maps API · Google Search API · Gemini</p>
+            </div>
+          </article>
+          <article class="award-entry">
+            <time datetime="2024-09">Sep 2024</time>
+            <div class="award-body">
+              <div class="award-title"><h3>Taipei Hackathon 2024</h3><p>3rd Place · Taipei, Taiwan</p></div>
+              <ul>
+                <li>Developed <a href="https://github.com/vaclisinc/ParkFlow" target="_blank" rel="noopener">ParkFlow</a>, a web app for real-time parking information, navigation, and smart notifications in Taipei.</li>
+                <li>Selected for integration into Taipei Pass, the city government's app with more than 3 million downloads, and received NT$100,000.</li>
+              </ul>
+              <p class="award-stack">Vue 3 · Flutter · Taipei Parking API · Mapbox · GPS</p>
+            </div>
+          </article>
+          <article class="award-entry">
+            <time datetime="2024-07">Jul 2024</time>
+            <div class="award-body">
+              <div class="award-title"><h3>SITCON Hackathon 2024</h3><p>Group Award Winner · Taipei, Taiwan</p></div>
+              <ul><li>Developed <a href="https://github.com/SimonLiu423/cc_diary" target="_blank" rel="noopener">ccDiary</a>, an AI-powered mental health journaling app with emotion analysis and anonymous social features.</li></ul>
+              <p class="award-stack">Flutter · Python · OpenAI · LangChain · Hugging Face · PyTorch</p>
+            </div>
+          </article>
+          <article class="award-entry">
+            <time datetime="2024-05">May 2024</time>
+            <div class="award-body">
+              <div class="award-title"><h3>WorldQuant Challenge 2024</h3><p>Silver Level · Online</p></div>
+              <ul><li>Developed and optimized quantitative trading strategies through academic research and systematic alpha exploration.</li></ul>
+            </div>
+          </article>
+          <article class="award-entry">
+            <time datetime="2023-08">Aug 2023</time>
+            <div class="award-body">
+              <div class="award-title"><h3>NCKU Campus Speaker 2023</h3><p>Tainan, Taiwan</p></div>
+              <ul>
+                <li>Selected to deliver a special lecture for incoming freshmen on documenting life through music.</li>
+                <li>Turned audience submissions into live improvised songs, showing how everyday moments can become melodies.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer"><div class="wide footer-inner"><span>Song-Ze Yu · Berkeley, CA</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div></footer>
-  <script src="assets/js/main.js?v=5"></script>
+  <script src="assets/js/main.js?v=9"></script>
 </body>
 </html>

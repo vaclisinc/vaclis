@@ -7,8 +7,8 @@
   <meta name="description" content="Song-Ze (Jimmy) Yu researches music understanding for audio-language models and controllability for music generation and audio effect design." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=8" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=15" />
 </head>
 <body class="home-page">
   <nav class="nav" id="nav" aria-label="Main navigation">
@@ -74,20 +74,33 @@
 
     <section class="selected-work" id="selected-work">
       <div class="profile-width fade-in">
-        <h2>Selected Work</h2>
+        <div class="selected-work-heading">
+          <h2>Selected Work</h2>
+          <a class="selected-work-more" href="research.html"><span aria-hidden="true">→</span> Look more</a>
+        </div>
         <div class="home-paper-list">
           <article class="home-paper">
-            <div class="home-paper-meta">2026 · Preprint</div>
+            <div class="home-paper-meta research-work-meta">
+              <span>2026 · Preprint</span>
+              <a class="research-topic-link" href="research.html#taste-understanding">Music understanding <span aria-hidden="true">→</span></a>
+              <a class="research-lab-link" href="more.html#experience-bair">BAIR <span aria-hidden="true">→</span></a>
+              <figure class="research-work-visual"><button class="research-work-visual-button" type="button" data-lightbox-src="images/research/pitchbench.jpg" data-lightbox-caption="PitchBench: 28 experiments across 6 categories, covering atomic, contextual, and melodic pitch perception." aria-label="Enlarge PitchBench figure"><img src="images/research/pitchbench.jpg" alt="PitchBench hierarchy from atomic to contextual and melodic pitch perception" /></button><figcaption>Click to enlarge</figcaption></figure>
+            </div>
             <div class="home-paper-body">
               <h3><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></h3>
-              <p class="home-paper-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen</p>
+              <p class="home-paper-authors">Milan Liessens Dujardin<sup>*</sup>, <strong>Song-Ze Yu<sup>*</sup></strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen <span class="research-contribution"><sup>*</sup> Equal contribution</span></p>
               <p>Evaluating pitch hearing in audio-language models through controlled experiments across sequences, chords, instruments, and acoustic conditions.</p>
               <div class="home-paper-links"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset</a><a href="https://github.com/vaclisinc/PitchBench" target="_blank" rel="noopener">Code</a></div>
             </div>
           </article>
 
           <article class="home-paper">
-            <div class="home-paper-meta">2026 · DAFx</div>
+            <div class="home-paper-meta research-work-meta">
+              <span>2026 · DAFx</span>
+              <a class="research-topic-link" href="research.html#taste-controllability">Controllability <span aria-hidden="true">→</span></a>
+              <a class="research-lab-link" href="more.html#experience-cnmat">CNMAT <span aria-hidden="true">→</span></a>
+              <figure class="research-work-visual"><button class="research-work-visual-button" type="button" data-lightbox-src="images/research/instructfx2fx.jpg" data-lightbox-caption="InstructFX2FX architecture. An LLM planner and routing module drive a CLAP-guided optimization backend over a persistent session state." aria-label="Enlarge InstructFX2FX figure"><img src="images/research/instructfx2fx.jpg" alt="InstructFX2FX architecture and multi-turn effect-chain refinement" /></button><figcaption>Click to enlarge</figcaption></figure>
+            </div>
             <div class="home-paper-body">
               <h3><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: A Multi-Turn Text-to-Effect System for Sequential Audio Effect Refinement</a></h3>
               <p class="home-paper-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang, Brian Cruz, Jeremy Wagner, Carmine-Emanuele Cella</p>
@@ -100,9 +113,18 @@
     </section>
   </main>
 
+  <dialog class="research-lightbox" id="research-lightbox" aria-labelledby="research-lightbox-title">
+    <div class="research-lightbox-inner">
+      <h2 class="visually-hidden" id="research-lightbox-title">Research figure</h2>
+      <button class="research-lightbox-close" type="button" aria-label="Close enlarged figure"><span aria-hidden="true">×</span></button>
+      <img class="research-lightbox-image" src="images/research/pitchbench.jpg" alt="" />
+      <p class="research-lightbox-caption"></p>
+    </div>
+  </dialog>
+
   <footer class="footer">
     <div class="wide footer-inner"><span>Song-Ze (Jimmy) Yu</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
   </footer>
-  <script src="assets/js/main.js?v=6"></script>
+  <script src="assets/js/main.js?v=9"></script>
 </body>
 </html>

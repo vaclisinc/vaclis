@@ -136,6 +136,15 @@ if (researchTabs.length && researchPanels.length) {
   const initialTarget = window.location.hash.slice(1);
   if (initialTarget === 'taste' || initialTarget.indexOf('taste-') === 0) {
     setResearchView('taste', false);
+    if (initialTarget.indexOf('taste-') === 0) {
+      const target = document.getElementById(initialTarget);
+      if (target) {
+        window.requestAnimationFrame(function () {
+          target.focus({ preventScroll: true });
+          target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        });
+      }
+    }
   } else {
     setResearchView('work', false);
   }
