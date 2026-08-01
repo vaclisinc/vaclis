@@ -1,6 +1,33 @@
 const nav = document.getElementById('nav');
 const toggle = document.getElementById('nav-toggle');
 const links = document.getElementById('nav-links');
+const themeToggle = document.getElementById('theme-toggle');
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+function activeTheme() {
+  return document.documentElement.dataset.theme || (systemTheme.matches ? 'dark' : 'light');
+}
+
+function updateThemeToggle() {
+  if (!themeToggle) return;
+  const isDark = activeTheme() === 'dark';
+  themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  themeToggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+  themeToggle.classList.toggle('is-dark', isDark);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', function () {
+    const nextTheme = activeTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = nextTheme;
+    try { localStorage.setItem('theme', nextTheme); } catch (error) { /* Storage may be unavailable. */ }
+    updateThemeToggle();
+  });
+
+  systemTheme.addEventListener('change', updateThemeToggle);
+  updateThemeToggle();
+}
 
 function updateNav() {
   nav.classList.toggle('scrolled', window.scrollY > 24);
