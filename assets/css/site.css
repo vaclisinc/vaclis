@@ -160,6 +160,16 @@ a:hover { text-decoration-color: currentColor; }
   .interlude-memory { position: relative; right: auto; bottom: auto; width: 12rem; margin: 1rem 1rem 0 auto; padding: 0; }
 }
 
+/* Phone: show profile and About before the recital interlude. */
+@media (max-width: 52rem) {
+  .home-flow { display: flex; flex-direction: column; width: min(100% - 2 * var(--gutter), var(--page)); margin-inline: auto; padding-bottom: clamp(3rem, 8vw, 6rem); }
+  .home-flow > .layout, .home-flow .content { display: contents; }
+  .home-flow .interlude { width: 100%; order: 3; margin-bottom: clamp(2.75rem, 5vw, 3.75rem); }
+  .home-flow .profile { order: 1; }
+  .home-flow #about { order: 2; margin-top: 2rem; }
+  .home-flow .block:not(#about) { order: 4; }
+}
+
 /* ─── Layout ───────────────────────────────────── */
 
 .layout {
