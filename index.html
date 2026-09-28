@@ -7,13 +7,13 @@
   <meta name="description" content="Song-Ze (Jimmy) Yu is a musician and music/audio ML researcher at UC Berkeley and NTHU, working on music understanding in audio-language models and controllability in music generation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&amp;text=%E6%B8%B8%E6%9D%BE%E6%BE%A4&amp;display=swap" rel="stylesheet" />
   <script>try{const theme=localStorage.getItem('theme');if(theme)document.documentElement.dataset.theme=theme}catch(error){}</script>
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/site.css?v=1" />
+  <link rel="stylesheet" href="assets/css/site.css?v=3" />
 </head>
-<body class="has-stage">
+<body class="has-interlude">
   <header class="masthead">
     <nav class="page masthead-inner" aria-label="Main navigation">
       <a href="index.html" class="masthead-name">Song-Ze Yu<span class="long"> (Jimmy)</span></a>
@@ -27,10 +27,20 @@
     </nav>
   </header>
 
-  <figure class="stage" style="margin:0">
-    <img src="images/piano.jpg" alt="Song-Ze Yu performing a solo recital at a grand piano" width="2560" height="424" fetchpriority="high" />
-    <div class="keys" aria-hidden="true"></div>
-  </figure>
+  <section class="page interlude" id="music" aria-labelledby="music-title">
+    <div class="interlude-stage">
+      <img src="images/piano.jpg" alt="Song-Ze Yu performing a solo recital at a grand piano" width="2560" height="424" fetchpriority="high" />
+    </div>
+    <div class="interlude-story">
+      <h2 class="interlude-label" id="music-title">Before research</h2>
+      <p class="interlude-copy">I performed 24 solo recitals and appeared on television more than 70 times across China and Taiwan. I still perform, compose, and produce, and that musician’s perspective shapes both the research directions I pursue and the approach I take.</p>
+      <p class="interlude-links"><a href="music-cv/en.html" target="_blank" rel="noopener">Music CV</a><a href="https://www.youtube.com/@vaclis/featured" target="_blank" rel="noopener">YouTube (7K subscribers)</a><a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+    <figure class="interlude-memory">
+      <img src="music-cv/proof/kid_star/CIMG9377.JPG" alt="Song-Ze Yu at the piano as a child, showing an original composition to Jay Chou" width="3264" height="2448" />
+      <figcaption><a href="https://www.youtube.com/watch?v=sUzeCFrn8rM" target="_blank" rel="noopener">Showing my composition to Jay Chou.</a></figcaption>
+    </figure>
+  </section>
 
   <div class="page layout">
     <aside class="profile" aria-label="Profile">
@@ -53,27 +63,8 @@
       <section class="block" id="about" aria-labelledby="about-title">
         <h2 class="block-title" id="about-title">About</h2>
         <div class="prose">
-          <p>I’m a Computer Science student at <a href="https://www.berkeley.edu/" target="_blank" rel="noopener">UC Berkeley</a> and <a href="https://www.nthu.edu.tw/" target="_blank" rel="noopener">NTHU</a>. I work with <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a> under <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank" rel="noopener">Prof. Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and with the <a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a> under <a href="https://affige.github.io/" target="_blank" rel="noopener">Prof. Yi-Hsuan (Eric) Yang</a>. Previously, I worked with <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT</a> under <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Prof. Carmine-Emanuele Cella</a>.</p>
+          <p>I’m a Computer Science student at <a href="https://www.berkeley.edu/" target="_blank" rel="noopener">UC Berkeley</a> and <a href="https://www.nthu.edu.tw/" target="_blank" rel="noopener">NTHU</a>. I work with <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a> under <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank" rel="noopener">Prof. Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and with the <a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a> under <a href="https://affige.github.io/" target="_blank" rel="noopener">Prof. Yi-Hsuan (Eric) Yang</a>. Previously, I worked with <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a> under <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Prof. Carmine-Emanuele Cella</a>.</p>
           <p>My research works toward artificial music intelligence for large audio-language models, and toward controllability in music generation and audio effect design. My long-term goal is to build LALMs that can perceive and reason about music, while giving musicians more direct and expressive ways to interact with generative systems.</p>
-        </div>
-      </section>
-
-      <section class="block" id="music" aria-labelledby="music-title">
-        <h2 class="block-title" id="music-title">Music</h2>
-        <div class="music">
-          <div>
-            <p class="music-copy">I performed 24 solo recitals and appeared on television more than 70 times across China and Taiwan. I still perform, compose, and produce; that perspective shapes the research questions and tools I choose to build.</p>
-            <ul class="music-facts">
-              <li><strong>24</strong>solo recitals</li>
-              <li><strong>70+</strong>TV appearances</li>
-              <li><strong>7K</strong>YouTube subscribers</li>
-            </ul>
-            <p class="music-links"><a href="music-cv/en.html" target="_blank" rel="noopener">Music CV</a><a href="https://www.youtube.com/@vaclis/featured" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram</a></p>
-          </div>
-          <figure class="music-memory">
-            <img src="music-cv/proof/kid_star/CIMG9377.JPG" alt="Song-Ze Yu at the piano, showing an original composition to Jay Chou" width="3264" height="2448" loading="lazy" />
-            <figcaption><a href="https://www.youtube.com/watch?v=sUzeCFrn8rM" target="_blank" rel="noopener">Showing my composition to Jay Chou ↗</a></figcaption>
-          </figure>
         </div>
       </section>
 
@@ -157,11 +148,11 @@
         <h2 class="block-title" id="experience-title">Experience</h2>
         <ul class="roster">
           <li><time>2026 – now</time><div><b><a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a></b><span>Research Assistant · advised by Prof. Yi-Hsuan (Eric) Yang</span></div></li>
-          <li><time>2026 – now</time><div><b><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research</a></b><span>Undergraduate Researcher · advised by David M. Chan &amp; Prof. Trevor Darrell</span></div></li>
-          <li><time>2025 – 2026</time><div><b><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT, UC Berkeley</a></b><span>Undergraduate Research Lead · advised by Prof. Carmine-Emanuele Cella</span></div></li>
+          <li><time>2026 – now</time><div><b><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research</a></b><span>Researcher · advised by David M. Chan &amp; Prof. Trevor Darrell</span></div></li>
+          <li><time>2025 – 2026</time><div><b><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a></b><span>Undergraduate Research Lead · advised by Prof. Carmine-Emanuele Cella</span></div></li>
           <li><time>2025 – 2026</time><div><b><a href="https://berkeleytime.com/" target="_blank" rel="noopener">Berkeleytime</a></b><span>Lead, Machine Learning Pod · semantic search for 122K+ monthly users</span></div></li>
-          <li><time>2025</time><div><b>Positive Grid</b><span>Machine Learning Intern · audio-to-preset models, JUCE plugins</span></div></li>
-          <li><time>2024 – 2025</time><div><b><a href="https://www.ee.nthu.edu.tw/ywliu/research.html" target="_blank" rel="noopener">AHG Music Lab, NTHU</a></b><span>Undergraduate Researcher · advised by Prof. Yi-Wen Liu</span></div></li>
+          <li><time>2025</time><div><b><a href="https://www.positivegrid.com/" target="_blank" rel="noopener">Positive Grid</a></b><span>Machine Learning Intern · Scrum Master for Amp-AI-SaaS; text-to-FX modeling</span></div></li>
+          <li><time>2024 – 2025</time><div><b><a href="https://www.ee.nthu.edu.tw/ywliu/research.html" target="_blank" rel="noopener">Acoustics and Hearing Group (AHG), NTHU</a></b><span>Undergraduate Researcher · advised by Prof. Yi-Wen Liu</span></div></li>
         </ul>
         <a class="more-link" href="more.html">Full experience, awards &amp; projects →</a>
       </section>
