@@ -3,140 +3,174 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Song-Ze (Jimmy) Yu · Music Intelligence Research</title>
-  <meta name="description" content="Song-Ze (Jimmy) Yu researches music understanding for audio-language models and controllability for music generation and audio effect design." />
+  <title>Song-Ze (Jimmy) Yu</title>
+  <meta name="description" content="Song-Ze (Jimmy) Yu is a musician and music/audio ML researcher at UC Berkeley and NTHU, working on music understanding in audio-language models and controllability in music generation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&amp;text=%E6%B8%B8%E6%9D%BE%E6%BE%A4&amp;display=swap" rel="stylesheet" />
   <script>try{const theme=localStorage.getItem('theme');if(theme)document.documentElement.dataset.theme=theme}catch(error){}</script>
-  <link rel="stylesheet" href="assets/css/style.css?v=31" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/site.css?v=1" />
 </head>
-<body class="home-page">
-  <nav class="nav" id="nav" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-name">Song-Ze (Jimmy) Yu</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="research.html">Research</a></li>
+<body class="has-stage">
+  <header class="masthead">
+    <nav class="page masthead-inner" aria-label="Main navigation">
+      <a href="index.html" class="masthead-name">Song-Ze Yu<span class="long"> (Jimmy)</span></a>
+      <ul class="masthead-links">
+        <li class="optional"><a href="#music">Music</a></li>
+        <li><a href="#publications">Publications</a></li>
         <li><a href="more.html">Experience</a></li>
-        <li><a href="assets/files/vaclis_Curriculum_Vitae.pdf" target="_blank" rel="noopener">CV ↗</a></li>
-        <li class="theme-toggle-item"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false"><span class="theme-toggle-option"><svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg></span><span class="theme-toggle-option"><svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"></path></svg></span></button></li>
+        <li><a href="assets/files/vaclis_Curriculum_Vitae.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg></button></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <main>
-    <header class="profile-hero">
-      <div class="profile-grid fade-in">
-        <div class="profile-media">
-          <img class="profile-photo" src="images/me_grad.jpg" alt="Song-Ze (Jimmy) Yu" />
+  <figure class="stage" style="margin:0">
+    <img src="images/piano.jpg" alt="Song-Ze Yu performing a solo recital at a grand piano" width="2560" height="424" fetchpriority="high" />
+    <div class="keys" aria-hidden="true"></div>
+  </figure>
+
+  <div class="page layout">
+    <aside class="profile" aria-label="Profile">
+      <img class="profile-avatar" src="images/me_grad.jpg" alt="Portrait of Song-Ze (Jimmy) Yu" width="2915" height="2915" />
+      <h1 class="profile-name">Song-Ze (Jimmy) Yu<span class="hanzi" lang="zh-Hant">游松澤</span></h1>
+      <p class="profile-role">Musician &amp; music/audio ML researcher</p>
+      <p class="profile-status">Applying to CS PhD programs, Fall 2027</p>
+      <ul class="profile-links">
+        <li class="affiliation"><span><i class="fa fa-university" aria-hidden="true"></i>UC Berkeley · NTHU</span></li>
+        <li><a href="mailto:vaclis@berkeley.edu"><i class="fa fa-envelope" aria-hidden="true"></i>Email</a></li>
+        <li><a href="https://scholar.google.com/citations?user=5wgTSVcAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a></li>
+        <li><a href="https://github.com/vaclisinc" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/vaclis/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@vaclis/featured" target="_blank" rel="noopener"><i class="fa fa-youtube-play" aria-hidden="true"></i>YouTube</a></li>
+        <li><a href="assets/files/vaclis_Curriculum_Vitae.pdf" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i>CV (PDF)</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section class="block" id="about" aria-labelledby="about-title">
+        <h2 class="block-title" id="about-title">About</h2>
+        <div class="prose">
+          <p>I’m a Computer Science student at <a href="https://www.berkeley.edu/" target="_blank" rel="noopener">UC Berkeley</a> and <a href="https://www.nthu.edu.tw/" target="_blank" rel="noopener">NTHU</a>. I work with <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a> under <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank" rel="noopener">Prof. Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and with the <a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a> under <a href="https://affige.github.io/" target="_blank" rel="noopener">Prof. Yi-Hsuan (Eric) Yang</a>. Previously, I worked with <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT</a> under <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Prof. Carmine-Emanuele Cella</a>.</p>
+          <p>My research works toward artificial music intelligence for large audio-language models, and toward controllability in music generation and audio effect design. My long-term goal is to build LALMs that can perceive and reason about music, while giving musicians more direct and expressive ways to interact with generative systems.</p>
         </div>
-        <div class="profile-copy">
-          <h1>Song-Ze (Jimmy) Yu <span>游松澤</span></h1>
-          <p class="profile-role">A musician &amp; music/audio ML researcher, <span>Actively seeking Fall 2027 CS PhD.</span></p>
-          <p class="profile-intro">
-            I’m a Computer Science student at <a href="https://www.berkeley.edu/" target="_blank" rel="noopener">UC Berkeley</a> and <a href="https://www.nthu.edu.tw/" target="_blank" rel="noopener">NTHU</a>. I work with <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a> under <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank" rel="noopener">Prof. Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a> and the <a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a> under <a href="https://affige.github.io/" target="_blank" rel="noopener">Prof. Yi-Hsuan (Eric) Yang</a>. Previously, I worked with <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT</a> under <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Prof. Carmine-Emanuele Cella</a>.
-          </p>
-          <p class="profile-intro">
-            My research focuses on toward artificial music intelligence for large audio-language models, as well as controllability in music generation and audio effect design. My long-term goal is to build LALMs that can perceive and reason about music, while giving musicians more direct and expressive ways to interact with generative systems.
-          </p>
-          <div class="profile-links" aria-label="Connections and curricula vitae">
-            <a href="mailto:vaclis@berkeley.edu">Email</a>
-            <a href="https://scholar.google.com/citations?user=5wgTSVcAAAAJ&amp;hl=zh-TW" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="https://github.com/vaclisinc" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/vaclis/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="assets/files/vaclis_Curriculum_Vitae.pdf" target="_blank" rel="noopener">Academic CV</a>
+      </section>
+
+      <section class="block" id="music" aria-labelledby="music-title">
+        <h2 class="block-title" id="music-title">Music</h2>
+        <div class="music">
+          <div>
+            <p class="music-copy">I performed 24 solo recitals and appeared on television more than 70 times across China and Taiwan. I still perform, compose, and produce; that perspective shapes the research questions and tools I choose to build.</p>
+            <ul class="music-facts">
+              <li><strong>24</strong>solo recitals</li>
+              <li><strong>70+</strong>TV appearances</li>
+              <li><strong>7K</strong>YouTube subscribers</li>
+            </ul>
+            <p class="music-links"><a href="music-cv/en.html" target="_blank" rel="noopener">Music CV</a><a href="https://www.youtube.com/@vaclis/featured" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram</a></p>
           </div>
+          <figure class="music-memory">
+            <img src="music-cv/proof/kid_star/CIMG9377.JPG" alt="Song-Ze Yu at the piano, showing an original composition to Jay Chou" width="3264" height="2448" loading="lazy" />
+            <figcaption><a href="https://www.youtube.com/watch?v=sUzeCFrn8rM" target="_blank" rel="noopener">Showing my composition to Jay Chou ↗</a></figcaption>
+          </figure>
         </div>
-      </div>
-    </header>
+      </section>
 
-    <section class="music-interlude fade-in" aria-label="A life in music">
-      <div class="music-stage">
-        <img src="images/piano.jpg" alt="Song-Ze Yu performing at a grand piano on stage" />
-      </div>
-      <div class="music-story">
-        <p class="music-story-label">Before research</p>
-        <p class="music-story-copy">
-          I performed 24 solo recitals and appeared on television more than 70 times across China and Taiwan. I still perform, compose, and produce; that perspective shapes the research questions and tools I choose to build.
-        </p>
-        <div class="music-links" aria-label="Music background links">
-          <a href="music-cv/en.html" target="_blank" rel="noopener">Music CV</a>
-          <a href="https://www.youtube.com/@vaclis/featured" target="_blank" rel="noopener">YouTube (7K subscribers)</a>
-          <a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-      <figure class="music-memory">
-        <img src="music-cv/proof/kid_star/CIMG9377.JPG" alt="Song-Ze Yu playing piano for Jay Chou" />
-        <figcaption><a href="https://www.youtube.com/watch?v=sUzeCFrn8rM" target="_blank" rel="noopener">Showing my composition to Jay Chou.</a></figcaption>
-      </figure>
-    </section>
-
-    <section class="home-news fade-in" aria-label="News">
-      <div class="profile-width">
-        <h2>News</h2>
+      <section class="block" id="news" aria-labelledby="news-title">
+        <h2 class="block-title" id="news-title">News</h2>
         <ul class="news-list">
-          <li><span class="news-date">Sep 2026</span><span class="news-text">PitchBench accepted to <strong>NeurIPS 2026 E&amp;D</strong>. See you in Australia! <a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper <span aria-hidden="true">→</span></a></span></li>
-          <li><span class="news-date">Aug 2026</span><span class="news-text">Anamnesis accepted to <strong>EMNLP 2026 System Demonstration</strong>. <a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Paper <span aria-hidden="true">→</span></a></span></li>
-          <li><span class="news-date">Jun 2026</span><span class="news-text">InstructFX2FX accepted to <strong>DAFx 2026 Demo</strong>. See you in Boston! <a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper <span aria-hidden="true">→</span></a></span></li>
+          <li><time datetime="2026-09">Sep 2026</time><span>PitchBench accepted to <strong>NeurIPS 2026 E&amp;D</strong>. See you in Australia! <a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a></span></li>
+          <li><time datetime="2026-08">Aug 2026</time><span>Anamnesis accepted to <strong>EMNLP 2026 System Demonstrations</strong>. <a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Paper</a></span></li>
+          <li><time datetime="2026-06">Jun 2026</time><span>InstructFX2FX accepted to <strong>DAFx 2026 Demo</strong>. See you in Boston! <a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper</a></span></li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <section class="selected-work" id="selected-work">
-      <div class="profile-width fade-in">
-        <div class="selected-work-heading">
-          <h2>Selected Work</h2>
-          <a class="selected-work-more" href="research.html"><span aria-hidden="true">→</span> Look more</a>
+      <section class="block" id="publications" aria-labelledby="publications-title">
+        <h2 class="block-title block-title-row" id="publications-title">Publications <small>* equal contribution</small></h2>
+
+        <div class="pub-group">
+          <h3 class="pub-group-title">Music understanding</h3>
+          <ol class="pubs">
+            <li class="pub">
+              <p class="pub-title"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></p>
+              <p class="pub-authors">Milan Liessens Dujardin*, <strong>Song-Ze Yu*</strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen</p>
+              <div class="pub-meta"><span class="venue">NeurIPS 2026, Evaluations &amp; Datasets</span><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset</a><a href="https://anonymous.4open.science/r/PitchBench-32CD/" target="_blank" rel="noopener">Code</a></div>
+            </li>
+            <li class="pub">
+              <p class="pub-title"><a href="https://arxiv.org/abs/2608.28212" target="_blank" rel="noopener">MuSP-Bench: Advanced Multimodal Benchmarking of Music Understanding across Score and Performance</a></p>
+              <p class="pub-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Kevin Miao</p>
+              <div class="pub-meta"><span class="venue">ISMIR 2026, Late-Breaking Demo</span><a href="https://arxiv.org/abs/2608.28212" target="_blank" rel="noopener">Paper</a><a href="https://musp.vaclis.net/" target="_blank" rel="noopener">Project</a></div>
+            </li>
+            <li class="pub">
+              <p class="pub-title"><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Unifying Score and Performance for Fine-Grained Music Understanding in Audio-Language Models</a></p>
+              <p class="pub-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Kevin Miao</p>
+              <div class="pub-meta"><span class="venue pending">Under review, 2026</span><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Paper</a><a href="https://milan477.github.io/MuNo-LM-demo/" target="_blank" rel="noopener">Demo</a></div>
+            </li>
+            <li class="pub">
+              <p class="pub-title">Diagnosing Music Understanding in Audio-Language Models: Encoder-Decoder Probing and Task Adaptation</p>
+              <p class="pub-authors">Jun-You Wang, <strong>Song-Ze Yu</strong>, Xuanjun Chen, Chih-Kai Yang, Ke-Han Lu, Sung-Feng Huang</p>
+              <div class="pub-meta"><span class="venue pending">Under review, 2026</span></div>
+            </li>
+            <li class="pub">
+              <p class="pub-title">UniFront: Revisiting Time-Frequency Frontends for Unified Music and Speech Modeling</p>
+              <p class="pub-authors"><strong>Song-Ze Yu</strong>, David M. Chan</p>
+              <div class="pub-meta"><span class="venue pending">Under review, 2026</span></div>
+            </li>
+          </ol>
         </div>
-        <div class="home-paper-list">
-          <article class="home-paper">
-            <div class="home-paper-meta research-work-meta">
-              <span>2026 · NeurIPS E&amp;D</span>
-              <a class="research-topic-link" href="research.html#taste-understanding">Music understanding <span aria-hidden="true">→</span></a>
-              <a class="research-lab-link" href="more.html#experience-bair">BAIR <span aria-hidden="true">→</span></a>
-              <figure class="research-work-visual"><button class="research-work-visual-button" type="button" data-lightbox-src="images/research/pitchbench.jpg" data-lightbox-caption="PitchBench: 28 experiments across 6 categories, covering atomic, contextual, and melodic pitch perception." aria-label="Enlarge PitchBench figure"><img src="images/research/pitchbench.jpg" alt="PitchBench hierarchy from atomic to contextual and melodic pitch perception" /></button><figcaption>Click to enlarge</figcaption></figure>
-            </div>
-            <div class="home-paper-body">
-              <h3><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></h3>
-              <p class="home-paper-authors">Milan Liessens Dujardin<sup>*</sup>, <strong>Song-Ze Yu<sup>*</sup></strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen <span class="research-contribution"><sup>*</sup> Equal contribution</span></p>
-              <p>Evaluating pitch hearing in audio-language models through controlled experiments across sequences, chords, instruments, and acoustic conditions.</p>
-              <div class="home-paper-links"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset</a><a href="https://github.com/vaclisinc/PitchBench" target="_blank" rel="noopener">Code</a></div>
-            </div>
-          </article>
 
-          <article class="home-paper">
-            <div class="home-paper-meta research-work-meta">
-              <span>2026 · DAFx</span>
-              <a class="research-topic-link" href="research.html#taste-controllability">Controllability <span aria-hidden="true">→</span></a>
-              <a class="research-lab-link" href="more.html#experience-cnmat">CNMAT <span aria-hidden="true">→</span></a>
-              <figure class="research-work-visual"><button class="research-work-visual-button" type="button" data-lightbox-src="images/research/instructfx2fx.jpg" data-lightbox-caption="InstructFX2FX architecture. An LLM planner and routing module drive a CLAP-guided optimization backend over a persistent session state." aria-label="Enlarge InstructFX2FX figure"><img src="images/research/instructfx2fx.jpg" alt="InstructFX2FX architecture and multi-turn effect-chain refinement" /></button><figcaption>Click to enlarge</figcaption></figure>
-            </div>
-            <div class="home-paper-body">
-              <h3><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: A Multi-Turn Text-to-Effect System for Sequential Audio Effect Refinement</a></h3>
-              <p class="home-paper-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang, Brian Cruz, Jeremy Wagner, Carmine-Emanuele Cella</p>
-              <p>Introduces sequential FX refinement: given the current effect state and a new instruction, update the sound while preserving what earlier instructions have already achieved. InstructFX2FX combines LLM planning with CLAP-guided optimization for iterative, multi-turn audio effect design.</p>
-              <div class="home-paper-links"><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper</a><a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">Project</a><a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">Code</a></div>
-            </div>
-          </article>
+        <div class="pub-group">
+          <h3 class="pub-group-title">Controllability for musicians</h3>
+          <ol class="pubs">
+            <li class="pub">
+              <p class="pub-title"><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: A Multi-Turn Text-to-Effect System for Sequential Audio Effect Refinement</a></p>
+              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang, Brian Cruz, Jeremy Wagner, Carmine-Emanuele Cella</p>
+              <div class="pub-meta"><span class="venue">DAFx 2026, Demo</span><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper</a><a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">Demo</a><a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">Code</a></div>
+            </li>
+            <li class="pub">
+              <p class="pub-title">MIDI-REPA: Improving Text-to-Music Generation with Symbolic Representation Alignment</p>
+              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Fang-Duo Tsai, Yi-Hsuan Yang</p>
+              <div class="pub-meta"><span class="venue pending">Under review, 2026</span></div>
+            </li>
+            <li class="pub">
+              <p class="pub-title"><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">From Sound to Setting: AI-Based EQ Parameter Prediction for Piano Tone Replication</a></p>
+              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Yi-Wen Liu</p>
+              <div class="pub-meta"><span class="venue pending">Preprint, 2025</span><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">Paper</a><a href="https://github.com/vaclisinc/Vaclis_Tone_Replication" target="_blank" rel="noopener">Code</a><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Plugin</a></div>
+            </li>
+          </ol>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <dialog class="research-lightbox" id="research-lightbox" aria-labelledby="research-lightbox-title">
-    <div class="research-lightbox-inner">
-      <h2 class="visually-hidden" id="research-lightbox-title">Research figure</h2>
-      <button class="research-lightbox-close" type="button" aria-label="Close enlarged figure"><span aria-hidden="true">×</span></button>
-      <img class="research-lightbox-image" src="images/research/pitchbench.jpg" alt="" />
-      <p class="research-lightbox-caption"></p>
-    </div>
-  </dialog>
+        <div class="pub-group">
+          <h3 class="pub-group-title">HCI &amp; human simulation</h3>
+          <ol class="pubs">
+            <li class="pub">
+              <p class="pub-title"><a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Anamnesis: An Open-Source Platform for Large-Scale Backstory-Conditioned Survey Simulation</a></p>
+              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Joseph Suh, Serina Chang, David M. Chan</p>
+              <div class="pub-meta"><span class="venue">EMNLP 2026, System Demonstrations</span><a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Paper</a><a href="https://simulate.group" target="_blank" rel="noopener">Demo</a></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="block" id="experience" aria-labelledby="experience-title">
+        <h2 class="block-title" id="experience-title">Experience</h2>
+        <ul class="roster">
+          <li><time>2026 – now</time><div><b><a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a></b><span>Research Assistant · advised by Prof. Yi-Hsuan (Eric) Yang</span></div></li>
+          <li><time>2026 – now</time><div><b><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research</a></b><span>Undergraduate Researcher · advised by David M. Chan &amp; Prof. Trevor Darrell</span></div></li>
+          <li><time>2025 – 2026</time><div><b><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">CNMAT, UC Berkeley</a></b><span>Undergraduate Research Lead · advised by Prof. Carmine-Emanuele Cella</span></div></li>
+          <li><time>2025 – 2026</time><div><b><a href="https://berkeleytime.com/" target="_blank" rel="noopener">Berkeleytime</a></b><span>Lead, Machine Learning Pod · semantic search for 122K+ monthly users</span></div></li>
+          <li><time>2025</time><div><b>Positive Grid</b><span>Machine Learning Intern · audio-to-preset models, JUCE plugins</span></div></li>
+          <li><time>2024 – 2025</time><div><b><a href="https://www.ee.nthu.edu.tw/ywliu/research.html" target="_blank" rel="noopener">AHG Music Lab, NTHU</a></b><span>Undergraduate Researcher · advised by Prof. Yi-Wen Liu</span></div></li>
+        </ul>
+        <a class="more-link" href="more.html">Full experience, awards &amp; projects →</a>
+      </section>
+    </main>
+  </div>
 
   <footer class="footer">
-    <div class="wide footer-inner"><span>Song-Ze (Jimmy) Yu</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
+    <div class="page"><span>© 2026 Song-Ze (Jimmy) Yu</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
   </footer>
-  <script src="assets/js/main.js?v=11"></script>
+  <script src="assets/js/site.js?v=2"></script>
 </body>
 </html>
