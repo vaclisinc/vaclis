@@ -759,6 +759,50 @@ h1 em, h2 em { font-style: italic; }
   line-height: 1.68;
 }
 
+.research-area-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+  margin: 0 0 34px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: .92rem;
+}
+
+.research-area-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--blue);
+  text-underline-offset: 5px;
+}
+
+.research-area-nav a:hover { text-decoration: underline; }
+.research-area-nav a:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; }
+
+.research-area { scroll-margin-top: calc(var(--nav-height) + 24px); }
+.research-area + .research-area { margin-top: 64px; }
+
+.research-area-header { margin-bottom: 22px; }
+.research-area-header h2 {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3.5vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+
+.research-area-header p {
+  max-width: 65ch;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .research-work-list {
   border-top: 1px solid var(--line-strong);
 }
