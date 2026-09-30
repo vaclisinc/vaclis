@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "more.html"
+        ],
+        "createdAt": "2026-09-30T07:58:53.078Z",
+        "reason": "Agent verified computed styles at 1440px and 390px: page heading 40/30.4px, section heading 25.6/21.6px, entry heading 17px, body 15/16px; hierarchy exceeds 1.25x and is visually distinct."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-30T08:01:04.417Z",
+        "reason": "Agent: remaining finding names publication rows; .pub has padding-block .9rem (14.4px), visually verified at desktop and mobile. Detector misses logical padding-block; bordered action padding fixed separately."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "more.html"
+        ],
+        "createdAt": "2026-09-30T08:01:04.444Z",
+        "reason": "Agent: remaining finding names entry rows; .entry has padding-block 1.1rem (17.6px), visually verified at desktop and mobile. Detector misses logical padding-block; bordered action padding fixed separately."
+      },
+      {
+        "rule": "design-system-font",
+        "value": "sfmono-regular",
+        "files": [
+          "more.html"
+        ],
+        "createdAt": "2026-09-30T08:27:47.999Z",
+        "reason": "Agent: SFMono-Regular is a monospace fallback used only by .entry-code code for the user-requested two-line HTML embed example; existing body and heading fonts are unchanged."
+      }
+    ]
+  }
+}

@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Song-Ze (Jimmy) Yu</title>
-  <meta name="description" content="Song-Ze (Jimmy) Yu is a musician and music/audio ML researcher at UC Berkeley and NTHU, working on music understanding in audio-language models and controllability in music generation." />
+  <title>Song-Ze (Jimmy) Yu 游松澤</title>
+  <meta name="description" content="Song-Ze (Jimmy) Yu 游松澤 is a musician and music/audio ML researcher at UC Berkeley and NTHU, working on music understanding in audio-language models and controllability in music generation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&amp;text=%E6%B8%B8%E6%9D%BE%E6%BE%A4&amp;display=swap" rel="stylesheet" />
   <script>try{const theme=localStorage.getItem('theme');if(theme)document.documentElement.dataset.theme=theme}catch(error){}</script>
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/site.css?v=12" />
+  <link rel="stylesheet" href="assets/css/site.css?v=21" />
 </head>
 <body class="has-interlude">
   <header class="masthead">
     <nav class="page masthead-inner" aria-label="Main navigation">
-      <a href="index.html" class="masthead-name">Song-Ze<span class="long"> (Jimmy)</span> Yu</a>
+      <a href="index.html" class="masthead-name">Song-Ze Yu</a>
       <ul class="masthead-links">
         <li><a href="#publications">Publications</a></li>
         <li><a href="more.html">Experience</a></li>
@@ -33,7 +33,7 @@
     </div>
     <div class="interlude-story">
       <h2 class="interlude-label" id="music-title">Before research</h2>
-      <p class="interlude-copy">I performed 24 solo recitals and appeared on television more than 70 times across China and Taiwan. I still perform, compose, and produce, and that musician’s perspective shapes both the research directions I pursue and the approach I take.</p>
+      <p class="interlude-copy">I performed 24 solo recitals and 70+ TV shows across China and Taiwan. I still perform, compose, and produce, and that musician’s perspective shapes both the research directions I pursue and the approach I take.</p>
       <p class="interlude-links"><a href="music-cv/en.html" target="_blank" rel="noopener">Music CV</a><a href="https://www.youtube.com/@vaclis/featured" target="_blank" rel="noopener">YouTube (7K subscribers)</a><a href="https://www.instagram.com/jy.1204_/" target="_blank" rel="noopener">Instagram</a></p>
     </div>
     <figure class="interlude-memory">
@@ -64,7 +64,7 @@
         <h2 class="block-title" id="about-title">About</h2>
         <div class="prose">
           <p>I’m a Computer Science student at <a href="https://www.berkeley.edu/" target="_blank" rel="noopener">UC Berkeley</a> and <a href="https://www.nthu.edu.tw/" target="_blank" rel="noopener">NTHU</a>. I work with <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research (BAIR)</a> under <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank" rel="noopener">Prof. Trevor Darrell</a> and <a href="https://dchan.cc/" target="_blank" rel="noopener">David M. Chan</a>, and with the <a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a> under <a href="https://affige.github.io/" target="_blank" rel="noopener">Prof. Yi-Hsuan (Eric) Yang</a>. Previously, I worked with <a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a> under <a href="https://www.carminecella.com/" target="_blank" rel="noopener">Prof. Carmine-Emanuele Cella</a>.</p>
-          <p>My research focuses on grounded music understanding in large audio-language models and controllability for musicians in music and audio effects generation. My long-term goal is to bring music models toward artificial music intelligence, offering musicians new interfaces to directly discuss, collaborate, and interact with machines.</p>
+          <p>My research focuses on grounded <strong>music understanding</strong> in large audio-language models and <strong>controllability for musicians</strong> in music and audio effects generation. My long-term goal is to bring music models toward artificial music intelligence, offering musicians new interfaces to directly discuss, collaborate, and interact with machines.</p>
         </div>
       </section>
 
@@ -84,10 +84,15 @@
         <div class="pub-group">
           <h3 class="pub-group-title">Music Understanding in Audio-Language Models</h3>
           <ol class="pubs">
-            <li class="pub">
-              <p class="pub-title"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></p>
-              <p class="pub-authors">Milan Liessens Dujardin*, <strong>Song-Ze Yu*</strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen</p>
-              <div class="pub-meta"><span class="venue">NeurIPS 2026, Evaluations &amp; Datasets</span><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset</a><a href="https://github.com/vaclisinc/PitchBench" target="_blank" rel="noopener">Code</a></div>
+            <li class="pub pub-with-image">
+              <button class="pub-image" type="button" data-full-image="images/research/pitchbench.jpg" aria-label="View full figure for pitchbench" aria-haspopup="dialog">
+                <img src="images/research/thumbs/pitchbench.webp" alt="PitchBench pitch-hearing task hierarchy" width="2550" height="1174" loading="lazy" decoding="async" />
+              </button>
+              <div class="pub-details">
+                  <p class="pub-title"><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench: Measuring Pitch Hearing in Audio-Language Models</a></p>
+                <p class="pub-authors">Milan Liessens Dujardin*, <strong>Song-Ze Yu*</strong>, Craver Corbyn Thomas-Smith, David M. Chan, Karina Nguyen</p>
+                <div class="pub-meta"><span class="venue">NeurIPS 2026, Evaluations &amp; Datasets</span><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">Paper</a><a href="https://huggingface.co/datasets/pitchbench-authors/PitchBench" target="_blank" rel="noopener">Dataset</a><a href="https://github.com/vaclisinc/PitchBench" target="_blank" rel="noopener">Code</a></div>
+              </div>
             </li>
             <li class="pub">
               <p class="pub-title">UniFront: Revisiting Time-Frequency Frontends for Unified Music and Speech Modeling</p>
@@ -99,15 +104,25 @@
               <p class="pub-authors">Jun-You Wang, <strong>Song-Ze Yu</strong>, Xuanjun Chen, Chih-Kai Yang, Ke-Han Lu, Sung-Feng Huang</p>
               <div class="pub-meta"><span class="venue pending">Under review, 2026</span></div>
             </li>
-            <li class="pub">
-              <p class="pub-title"><a href="https://arxiv.org/abs/2608.28212" target="_blank" rel="noopener">MuSP-Bench: Advanced Multimodal Benchmarking of Music Understanding across Score and Performance</a></p>
-              <p class="pub-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Kevin Miao</p>
-              <div class="pub-meta"><span class="venue">ISMIR 2026, Late Breaking Demo</span><a href="https://arxiv.org/abs/2608.28212" target="_blank" rel="noopener">Paper</a><a href="https://musp.vaclis.net/" target="_blank" rel="noopener">Dataset</a></div>
+            <li class="pub pub-with-image">
+              <button class="pub-image" type="button" data-full-image="images/research/musp-bench.png" aria-label="Enlarge figure: MuSP-Bench multimodal music understanding benchmark" aria-haspopup="dialog">
+                <img src="images/research/thumbs/musp-bench.webp" alt="MuSP-Bench multimodal music understanding benchmark" width="3026" height="1804" loading="lazy" decoding="async" />
+              </button>
+              <div class="pub-details">
+                <p class="pub-title"><a href="https://arxiv.org/abs/2608.28212" target="_blank" rel="noopener">MuSP-Bench: Advanced Multimodal Benchmarking of Music Understanding across Score and Performance</a></p>
+                <p class="pub-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Kevin Miao</p>
+                <div class="pub-meta"><span class="venue">ISMIR 2026, Late Breaking Demo</span><a href="https://arxiv.org/abs/2608.28212" target="_blank" rel="noopener">Paper</a><a href="https://musp.vaclis.net/" target="_blank" rel="noopener">Dataset</a></div>
+              </div>
             </li>
-            <li class="pub">
-              <p class="pub-title"><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Unifying Score and Performance for Fine-Grained Music Understanding in Audio-Language Models</a></p>
-              <p class="pub-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Kevin Miao</p>
-              <div class="pub-meta"><span class="venue pending">Under review, 2026</span><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Paper</a><a href="https://milan477.github.io/MuNo-LM-demo/" target="_blank" rel="noopener">Demo</a></div>
+            <li class="pub pub-with-image">
+              <button class="pub-image" type="button" data-full-image="images/research/score-performance.png" aria-label="Enlarge figure: Unifying score and performance for music understanding" aria-haspopup="dialog">
+                <img src="images/research/thumbs/score-performance.webp" alt="Unifying score and performance for music understanding" width="1974" height="782" loading="lazy" decoding="async" />
+              </button>
+              <div class="pub-details">
+                <p class="pub-title"><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Unifying Score and Performance for Fine-Grained Music Understanding in Audio-Language Models</a></p>
+                <p class="pub-authors">Milan Liessens Dujardin, <strong>Song-Ze Yu</strong>, Kevin Miao</p>
+                <div class="pub-meta"><span class="venue pending">Under review, 2026</span><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Paper</a><a href="https://milan477.github.io/MuNo-LM-demo/" target="_blank" rel="noopener">Demo</a></div>
+              </div>
             </li>
           </ol>
         </div>
@@ -115,20 +130,35 @@
         <div class="pub-group">
           <h3 class="pub-group-title">Controllability for musicians</h3>
           <ol class="pubs">
-            <li class="pub">
-              <p class="pub-title"><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: A Multi-Turn Text-to-Effect System for Sequential Audio Effect Refinement</a></p>
-              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang, Brian Cruz, Jeremy Wagner, Carmine-Emanuele Cella</p>
-              <div class="pub-meta"><span class="venue">DAFx 2026, Demo</span><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper</a><a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">Demo</a><a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">Code</a></div>
+            <li class="pub pub-with-image">
+              <button class="pub-image" type="button" data-full-image="images/research/instructfx2fx.jpg" aria-label="View full figure for instructfx2fx" aria-haspopup="dialog">
+                <img src="images/research/thumbs/instructfx2fx.webp" alt="InstructFX2FX multi-turn audio effect refinement workflow" width="1962" height="788" loading="lazy" decoding="async" />
+              </button>
+              <div class="pub-details">
+                  <p class="pub-title"><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX: A Multi-Turn Text-to-Effect System for Sequential Audio Effect Refinement</a></p>
+                <p class="pub-authors"><strong>Song-Ze Yu</strong>, Milan Liessens Dujardin, Yuxuan Cai, Wantong Zhang, Brian Cruz, Jeremy Wagner, Carmine-Emanuele Cella</p>
+                <div class="pub-meta"><span class="venue">DAFx 2026, Demo</span><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">Paper</a><a href="https://instructfx2fx.vaclis.net/" target="_blank" rel="noopener">Demo</a><a href="https://github.com/vaclisinc/InstructFX2FX" target="_blank" rel="noopener">Code</a></div>
+              </div>
             </li>
-            <li class="pub">
-              <p class="pub-title"><a href="https://midi-repa.vaclis.net/" target="_blank" rel="noopener">MIDI-REPA: Improving Text-to-Music Generation with Symbolic Representation Alignment</a></p>
-              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Fang-Duo Tsai, Yi-Hsuan Yang</p>
-              <div class="pub-meta"><span class="venue pending">Under review, 2026</span><a href="https://midi-repa.vaclis.net/" target="_blank" rel="noopener">Project</a><a href="https://github.com/vaclisinc/MIDI-REPA" target="_blank" rel="noopener">Code</a></div>
+            <li class="pub pub-with-image">
+              <button class="pub-image" type="button" data-full-image="images/research/midi-repa.png" aria-label="View full figure for midi-repa" aria-haspopup="dialog">
+                <img src="images/research/thumbs/midi-repa.webp" alt="MIDI-REPA symbolic representation alignment architecture" width="1730" height="808" loading="lazy" decoding="async" />
+              </button>
+              <div class="pub-details">
+                  <p class="pub-title"><a href="https://midi-repa.vaclis.net/" target="_blank" rel="noopener">MIDI-REPA: Improving Text-to-Music Generation with Symbolic Representation Alignment</a></p>
+                <p class="pub-authors"><strong>Song-Ze Yu</strong>, Fang-Duo Tsai, Yi-Hsuan Yang</p>
+                <div class="pub-meta"><span class="venue pending">Under review, 2026</span><a href="https://midi-repa.vaclis.net/" target="_blank" rel="noopener">Project</a><a href="https://github.com/vaclisinc/MIDI-REPA" target="_blank" rel="noopener">Code</a></div>
+              </div>
             </li>
-            <li class="pub">
-              <p class="pub-title"><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">From Sound to Setting: AI-Based EQ Parameter Prediction for Piano Tone Replication</a></p>
-              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Yi-Wen Liu</p>
-              <div class="pub-meta"><span class="venue pending">Preprint, 2025</span><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">Paper</a><a href="https://github.com/vaclisinc/Vaclis_Tone_Replication" target="_blank" rel="noopener">Code</a><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Plugin</a></div>
+            <li class="pub pub-with-image">
+              <button class="pub-image" type="button" data-full-image="images/research/vtr-system.png" aria-label="Enlarge figure: VTR system design: audio features, equalizer parameter prediction, and JUCE plugin" aria-haspopup="dialog">
+                <img src="images/research/thumbs/vtr-system.webp" alt="VTR system design: audio features, equalizer parameter prediction, and JUCE plugin" width="5464" height="1568" loading="lazy" decoding="async" />
+              </button>
+              <div class="pub-details">
+                <p class="pub-title"><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">From Sound to Setting: AI-Based EQ Parameter Prediction for Piano Tone Replication</a></p>
+                <p class="pub-authors"><strong>Song-Ze Yu</strong>, Yi-Wen Liu</p>
+                <div class="pub-meta"><span class="venue pending">Preprint, 2025</span><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">Paper</a><a href="https://github.com/vaclisinc/Vaclis_Tone_Replication" target="_blank" rel="noopener">Code</a><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">Plugin</a></div>
+              </div>
             </li>
           </ol>
         </div>
@@ -136,10 +166,15 @@
         <div class="pub-group">
           <h3 class="pub-group-title">HCI &amp; human simulation</h3>
           <ol class="pubs">
-            <li class="pub">
-              <p class="pub-title"><a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Anamnesis: An Open-Source Platform for Large-Scale Backstory-Conditioned Survey Simulation</a></p>
-              <p class="pub-authors"><strong>Song-Ze Yu</strong>, Joseph Suh, Serina Chang, David M. Chan</p>
-              <div class="pub-meta"><span class="venue">EMNLP 2026, System Demonstrations</span><a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Paper</a><a href="https://simulate.group" target="_blank" rel="noopener">Demo</a></div>
+            <li class="pub pub-with-image">
+              <button class="pub-image" type="button" data-full-image="images/research/anamnesis.jpg" aria-label="View full figure for anamnesis" aria-haspopup="dialog">
+                <img src="images/research/thumbs/anamnesis.webp" alt="Anamnesis backstory-conditioned survey simulation diagram" width="642" height="376" loading="lazy" decoding="async" />
+              </button>
+              <div class="pub-details">
+                  <p class="pub-title"><a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Anamnesis: An Open-Source Platform for Large-Scale Backstory-Conditioned Survey Simulation</a></p>
+                <p class="pub-authors"><strong>Song-Ze Yu</strong>, Joseph Suh, Serina Chang, David M. Chan</p>
+                <div class="pub-meta"><span class="venue">EMNLP 2026, System Demonstrations</span><a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Paper</a><a href="https://simulate.group" target="_blank" rel="noopener">Demo</a></div>
+              </div>
             </li>
           </ol>
         </div>
@@ -162,8 +197,17 @@
   </div>
 
   <footer class="footer">
-    <div class="page"><span>© 2026 Song-Ze (Jimmy) Yu</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
+    <div class="page"><span>© 2026 Song-Ze (Jimmy) Yu 游松澤</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
   </footer>
-  <script src="assets/js/site.js?v=2"></script>
+  <dialog class="figure-viewer" id="figure-viewer" aria-labelledby="figure-viewer-caption">
+    <div class="figure-viewer-toolbar">
+      <p id="figure-viewer-caption"></p>
+      <button class="figure-viewer-close" type="button" aria-label="Close enlarged figure" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+    </div>
+    <img class="figure-viewer-image" src="images/research/thumbs/pitchbench.webp" alt="" />
+  </dialog>
+  <script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

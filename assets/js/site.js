@@ -31,3 +31,35 @@ if (masthead) {
   window.addEventListener('scroll', updateMasthead, { passive: true });
   updateMasthead();
 }
+
+
+const figureViewer = document.getElementById('figure-viewer');
+if (figureViewer) {
+  const viewerImage = figureViewer.querySelector('.figure-viewer-image');
+  const viewerCaption = document.getElementById('figure-viewer-caption');
+
+  document.querySelectorAll('.pub-image[data-full-image]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      viewerImage.src = button.dataset.fullImage;
+      viewerImage.alt = button.querySelector('img').alt;
+      viewerCaption.textContent = button.closest('.pub').querySelector('.pub-title').textContent;
+      figureViewer.showModal();
+      document.documentElement.classList.add('figure-view-open');
+    });
+  });
+
+  figureViewer.querySelector('.figure-viewer-close').addEventListener('click', function () {
+    figureViewer.close();
+  });
+  figureViewer.addEventListener('click', function (event) {
+    if (event.target !== figureViewer) return;
+    const bounds = figureViewer.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom) {
+      figureViewer.close();
+    }
+  });
+  figureViewer.addEventListener('close', function () {
+    document.documentElement.classList.remove('figure-view-open');
+  });
+}

@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Experience · Song-Ze (Jimmy) Yu</title>
-  <meta name="description" content="Research and industry experience, awards, and projects from Song-Ze (Jimmy) Yu." />
+  <title>Experience · Song-Ze (Jimmy) Yu 游松澤</title>
+  <meta name="description" content="Research and engineering experience, awards, invited talks, music tools, and open-source contributions from Song-Ze (Jimmy) Yu 游松澤." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&amp;text=%E6%B8%B8%E6%9D%BE%E6%BE%A4&amp;display=swap" rel="stylesheet" />
   <script>try{const theme=localStorage.getItem('theme');if(theme)document.documentElement.dataset.theme=theme}catch(error){}</script>
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/site.css?v=12" />
+  <link rel="stylesheet" href="assets/css/site.css?v=21" />
 </head>
-<body>
+<body class="experience-page">
   <header class="masthead">
     <nav class="page masthead-inner" aria-label="Main navigation">
-      <a href="index.html" class="masthead-name">Song-Ze<span class="long"> (Jimmy)</span> Yu</a>
+      <a href="index.html" class="masthead-name">Song-Ze Yu</a>
       <ul class="masthead-links">
         <li><a href="index.html#publications">Publications</a></li>
         <li><a href="more.html" aria-current="page">Experience</a></li>
@@ -45,7 +45,7 @@
 
     <main class="content">
       <h1 class="page-title">Experience</h1>
-      <p class="page-lede">Research positions, industry work, awards, and side projects. Papers are listed on the <a href="index.html#publications">home page</a>.</p>
+      <p class="page-lede">Research positions, engineering work, awards, invited talks, music tools, and open-source contributions. Papers are listed on the <a href="index.html#publications">home page</a>.</p>
       <section class="block" id="research" aria-labelledby="research-title">
         <h2 class="block-title" id="research-title">Research</h2>
         <ol class="entries timeline">
@@ -55,9 +55,8 @@
               <h3><a href="https://affige.github.io/lab.html" target="_blank" rel="noopener">NTU Music and AI Lab</a></h3>
               <p class="entry-meta">Research Assistant · National Taiwan University · Advised by Prof. Yi-Hsuan (Eric) Yang</p>
               <ul>
-                <li>Developing MIDI-REPA to improve text-to-music generation by aligning audio-model representations with symbolic musical structure.</li>
-                <li>Investigating music understanding in audio-language models through encoder-decoder probing and task adaptation.</li>
-                <li>Leading a collaborative music LALM project with BAIR, NVIDIA, and Prof. Hung-yi Lee; model training is underway.</li>
+                <li>Leading the development of a <strong>large audio-language model (LALM) for music</strong>, bringing together insights from prior music benchmarking, methodology, and diagnostic studies into large-scale model alignment and training, with collaborators from NVIDIA, BAIR, NTNU, Queen Mary University of London, and Prof. Hung-yi Lee's group.</li>
+                <li>Researching symbolic representation alignment for text-to-music generation and representation transfer and utilization in audio-language models, leading to <a href="https://midi-repa.vaclis.net/" target="_blank" rel="noopener"><strong>MIDI-REPA</strong></a> and <strong>encoder–decoder probing studies</strong>.</li>
               </ul>
             </div>
           </li>
@@ -67,9 +66,8 @@
               <h3><a href="https://bair.berkeley.edu/" target="_blank" rel="noopener">Berkeley AI Research</a></h3>
               <p class="entry-meta">Researcher · UC Berkeley · Advised by David M. Chan and Prof. Trevor Darrell</p>
               <ul>
-                <li><a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener">PitchBench</a>: measuring pitch hearing in audio-language models (NeurIPS 2026 E&amp;D).</li>
-                <li>UniFront: time-frequency frontends for unified music and speech modeling; training audio encoders is underway.</li>
-                <li><a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener">Anamnesis</a>: large-scale backstory-conditioned survey simulation (EMNLP 2026 System Demonstrations).</li>
+                <li>Revisiting the ubiquitous 25 ms log-Mel frontend used across general audio encoders and models under conflicting speech–music resolution demands, leading to <strong>UniFront</strong>.</li>
+                <li>Lead-developed <a href="https://arxiv.org/abs/2605.26176" target="_blank" rel="noopener"><strong>PitchBench</strong></a> and <a href="https://arxiv.org/abs/2607.10628" target="_blank" rel="noopener"><strong>Anamnesis</strong></a>, spanning the basics of music understanding in audio-language models and large-scale human simulation.</li>
               </ul>
             </div>
           </li>
@@ -79,10 +77,9 @@
               <h3><a href="https://cnmat.berkeley.edu/" target="_blank" rel="noopener">Center for New Music &amp; Audio Technologies (CNMAT)</a></h3>
               <p class="entry-meta">Undergraduate Research Lead · UC Berkeley · Advised by Prof. Carmine-Emanuele Cella</p>
               <ul>
-                <li><a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener">InstructFX2FX</a>: multi-turn text-to-effect refinement (DAFx 2026).</li>
-                <li><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Unifying Score and Performance</a> for fine-grained music understanding in ALMs (under review).</li>
-                <li><a href="https://musp.vaclis.net/" target="_blank" rel="noopener">MuSP-Bench</a>: multimodal benchmarking across score and performance (ISMIR 2026 Late Breaking Demo).</li>
+                <li>Led the research direction on interactive, musician-centered audio effect modeling and editing, extending single-shot methods toward iterative refinement and leading to <a href="https://arxiv.org/abs/2606.22005" target="_blank" rel="noopener"><strong>InstructFX2FX</strong></a>.</li>
               </ul>
+              <p class="entry-links"><a href="https://arxiv.org/abs/2609.10351" target="_blank" rel="noopener">Unifying Score and Performance</a><a href="https://musp.vaclis.net/" target="_blank" rel="noopener">MuSP-Bench</a></p>
             </div>
           </li>
           <li class="entry" id="experience-ahg">
@@ -91,33 +88,32 @@
               <h3><a href="https://www.ee.nthu.edu.tw/ywliu/research.html" target="_blank" rel="noopener">Acoustics and Hearing Group (AHG)</a></h3>
               <p class="entry-meta">Undergraduate Researcher · National Tsing Hua University · Advised by Prof. Yi-Wen Liu</p>
               <ul>
-                <li><a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener">From Sound to Setting</a>: EQ parameter prediction for piano tone replication, later shipped as the VTR-SmartEQ plugin.</li>
+                <li>Developed the <a href="https://arxiv.org/abs/2509.24404" target="_blank" rel="noopener"><strong>audio-to-equalizer model (VTR)</strong></a> for single-shot tone replication as my undergraduate capstone project, later deployed as a Virtual Studio Technology (VST) plugin at Positive Grid.</li>
               </ul>
             </div>
           </li>
         </ol>
       </section>
       <section class="block" id="work" aria-labelledby="work-title">
-        <h2 class="block-title" id="work-title">Industry</h2>
+        <h2 class="block-title" id="work-title">Selected Engineering Experience</h2>
         <ol class="entries timeline">
           <li class="entry">
             <time datetime="2025-09">Sep 2025 – May 2026</time>
             <div>
-              <h3><a href="https://berkeleytime.com/" target="_blank" rel="noopener">Berkeleytime</a></h3>
+              <h3><a href="https://berkeleytime.com/" target="_blank" rel="noopener">BerkeleyTime</a></h3>
+              <p class="entry-meta">Berkeley, CA</p>
               <div class="entry-sub">
-                <h4>Lead, Machine Learning Pod <span>Jan – May 2026</span></h4>
+                <h4>Machine Learning Pod — Pod Lead <span>Jan – May 2026</span></h4>
                 <ul>
-                  <li>Led development and launch of the new Explore page, serving 122K+ monthly users.</li>
-                  <li>Managed a 10-member pod across technical strategy, engineering execution, task allocation, and code review.</li>
-                  <li>Led the migration from FAISS to Redis and MongoDB Vector Search, unblocking production deployment of semantic search.</li>
+                  <li>Led a <strong>10-member machine learning team</strong> across semantic search, recommendation system, and enrollment prediction, coordinating researcher–engineer pairs and designers from model development through deployment.</li>
+                  <li>Led development of a <a href="https://berkeleytime.vaclis.net/" target="_blank" rel="noopener"><strong>new Explore page</strong></a>, integrating course recommendations into BerkeleyTime's product experience.</li>
                 </ul>
               </div>
               <div class="entry-sub">
-                <h4>Full-Stack &amp; Machine Learning Engineer <span>Sep 2025 – May 2026</span></h4>
+                <h4>Catalog Pod — Machine Learning Engineer <span>Sep – Dec 2025</span></h4>
                 <ul>
-                  <li>Built AI semantic search (BGE + FAISS) as a FastAPI microservice within the Node.js and Docker stack.</li>
-                  <li>Cut GraphQL first-load latency from 25 s to 1 s through pagination and Redis caching.</li>
-                  <li>Shipped 20+ pull requests.</li>
+                  <li>Built <strong>BGE text-embedding and FAISS vector-search services</strong> with FastAPI for <a href="https://berkeleytime.com/" target="_blank" rel="noopener"><strong>122K+ monthly users</strong></a>.</li>
+                  <li>Reduced GraphQL first-load latency from <strong>25s to 1s</strong> with pagination and Redis caching; shipped and fixed <a href="https://github.com/asuc-octo/berkeleytime/pulls?q=author%3Avaclisinc" target="_blank" rel="noopener"><strong>20+ pull requests</strong></a>.</li>
                 </ul>
               </div>
               <p class="entry-links"><a href="https://berkeleytime.vaclis.net/" target="_blank" rel="noopener">Presentation</a><a href="https://github.com/asuc-octo/berkeleytime/pulls?q=author%3Avaclisinc" target="_blank" rel="noopener">Pull requests</a></p>
@@ -127,11 +123,10 @@
             <time datetime="2025-06">Jun – Aug 2025</time>
             <div>
               <h3><a href="https://www.positivegrid.com/" target="_blank" rel="noopener">Positive Grid</a></h3>
-              <p class="entry-meta">Machine Learning Intern · Scrum Master for Amp-AI-SaaS · Taipei, Taiwan</p>
+              <p class="entry-meta">Machine Learning Intern · Taipei, Taiwan</p>
               <ul>
-                <li>Scrum Master for Amp-AI-SaaS, defining the agentic workflow and system architecture for audio products.</li>
-                <li>Built two JUCE-based VST plugins and integrated an audio-to-preset model through a PyTorch inference pipeline.</li>
-                <li>Worked on source separation and zero-shot virtual amplifier modeling.</li>
+                <li>Served as Scrum Master for <strong>Amp-AI-SaaS</strong> and designed the <a href="https://vaclis.net/assets/files/Multi-Agent_Orchestration_Harness_for_Software_Engineering.pdf" target="_blank" rel="noopener"><strong>Multi-Agent Orchestration Harness</strong></a> for ongoing software-engineering workflows at Positive Grid.</li>
+                <li>Integrated my capstone <strong>VTR audio-to-EQ model</strong> into a <strong>JUCE VST plugin</strong>, using PyTorch inference for real-time audio processing in a digital audio workstation.</li>
               </ul>
               <p class="entry-links"><a href="assets/files/Multi-Agent_Orchestration_Harness_for_Software_Engineering.pdf" target="_blank" rel="noopener">Multi-Agent Orchestration Harness (PDF)</a></p>
             </div>
@@ -139,7 +134,7 @@
         </ol>
       </section>
       <section class="block" id="awards" aria-labelledby="awards-title">
-        <h2 class="block-title" id="awards-title">Awards</h2>
+        <h2 class="block-title" id="awards-title">Awards &amp; Invited Talks</h2>
         <ol class="entries timeline">
           <li class="entry">
             <time datetime="2026-09">Sep 2026</time>
@@ -147,10 +142,9 @@
               <h3>Meichu Hackathon 2026</h3>
               <p class="entry-meta">3rd Place, NXP Group · Hsinchu, Taiwan</p>
               <ul>
-                <li>Built <a href="https://github.com/Jimmy200504/GodEyes" target="_blank" rel="noopener">GodEyes</a>, a <strong>physical AI</strong> system that uses a <strong>world model</strong> to reconstruct a crime scene from a few photos as an explorable 3D Gaussian Splat world.</li>
-                <li>Users walk through the scene with <strong>SLAM</strong> and <strong>on-device NPU</strong> gesture tracking on an NXP i.MX edge board.</li>
+                <li>Built <a href="https://github.com/Jimmy200504/GodEyes" target="_blank" rel="noopener">GodEyes</a>, a <strong>physical AI</strong> system using a <strong>world model</strong> to reconstruct crime scenes as explorable 3D worlds, with SLAM-based navigation and on-device NPU gesture tracking on an NXP i.MX 93 edge board.</li>
               </ul>
-              <p class="entry-stack">World model (World Labs Marble) · 3D Gaussian Splatting · SLAM · Edge NPU · NXP i.MX</p>
+              <p class="entry-stack">World model (World Labs Marble) · 3D Gaussian Splatting · SLAM · Edge NPU · NXP i.MX 93</p>
             </div>
           </li>
           <li class="entry">
@@ -158,7 +152,9 @@
             <div>
               <h3>Claude × a16z × Berkeley M.E.T. Makeathon</h3>
               <p class="entry-meta">Best Design · Berkeley, California</p>
-              <ul><li>Built Haven in five hours, a mobile app that helps homeowners personalize their spaces by scanning their rooms.</li></ul>
+              <ul>
+                <li>Built Haven in five hours, a mobile app that personalizes home-design recommendations from room scans.</li>
+              </ul>
             </div>
           </li>
           <li class="entry">
@@ -166,7 +162,9 @@
             <div>
               <h3>Meichu Hackathon 2024</h3>
               <p class="entry-meta">2nd Place, Google Group · Hsinchu, Taiwan</p>
-              <ul><li>Built <a href="https://github.com/vaclisinc/Travelity" target="_blank" rel="noopener">Travelity</a>, an AI travel planner driven by user interests, personality, and real-time data.</li></ul>
+              <ul>
+                <li>Built <a href="https://github.com/vaclisinc/Travelity" target="_blank" rel="noopener">Travelity</a>, an AI travel planner using interests, personality, and real-time map and search data.</li>
+              </ul>
               <p class="entry-stack">Flutter · Python · Google Maps API · Gemini</p>
             </div>
           </li>
@@ -176,8 +174,8 @@
               <h3>Taipei Hackathon 2024</h3>
               <p class="entry-meta">3rd Place · Taipei, Taiwan</p>
               <ul>
-                <li>Developed <a href="https://github.com/vaclisinc/ParkFlow" target="_blank" rel="noopener">ParkFlow</a>, real-time parking information, navigation, and notifications for Taipei.</li>
-                <li>Selected for integration into Taipei Pass, the city government’s app with 3M+ downloads; awarded NT$100,000.</li>
+                <li>Built <a href="https://github.com/vaclisinc/ParkFlow" target="_blank" rel="noopener">ParkFlow</a>, a WebView microservice for real-time parking information, navigation, and notifications; selected for integration into Taipei's official city app (<strong>3M+ downloads</strong>) and awarded NT$100K.</li>
+                <li>Documented the project's development in a <a href="https://www.youtube.com/watch?v=ZP9nikrbwak" target="_blank" rel="noopener">video reaching <strong>1K+ views</strong></a>; delivered an <a href="https://www.youtube.com/watch?v=btnbg0e95_E&amp;t=778s" target="_blank" rel="noopener">invited talk hosted by the Taipei City Government</a> the following year.</li>
               </ul>
               <p class="entry-stack">Vue 3 · Flutter · Taipei Parking API · Mapbox</p>
             </div>
@@ -187,7 +185,9 @@
             <div>
               <h3>SITCON Hackathon 2024</h3>
               <p class="entry-meta">Group Award · Taipei, Taiwan</p>
-              <ul><li>Developed <a href="https://github.com/SimonLiu423/cc_diary" target="_blank" rel="noopener">ccDiary</a>, an AI journaling app with emotion analysis and anonymous social features.</li></ul>
+              <ul>
+                <li>Built <a href="https://github.com/SimonLiu423/cc_diary" target="_blank" rel="noopener">ccDiary</a>, an AI-assisted mental-health journal with emotion analysis and anonymous social features.</li>
+              </ul>
               <p class="entry-stack">Flutter · Python · LangChain · PyTorch</p>
             </div>
           </li>
@@ -203,7 +203,7 @@
             <div>
               <h3>NCKU Campus Speaker</h3>
               <p class="entry-meta">Tainan, Taiwan</p>
-              <ul><li>Lecture for incoming freshmen on documenting life through music; turned audience submissions into live improvised songs.</li></ul>
+              <ul><li>Delivered an <a href="https://www.youtube.com/watch?v=5zZ8GBSkKAA" target="_blank" rel="noopener">invited talk</a> for incoming students on writing music as a diary, then turned audience-submitted phrases and sentences on Slido into improvised songs performed live.</li></ul>
             </div>
           </li>
         </ol>
@@ -214,31 +214,71 @@
         </div>
       </section>
       <section class="block" id="projects" aria-labelledby="projects-title">
-        <h2 class="block-title block-title-row" id="projects-title">Projects <small><a href="https://github.com/vaclisinc" target="_blank" rel="noopener">GitHub ↗</a></small></h2>
+        <h2 class="block-title block-title-row" id="projects-title">Music Tools <small><a href="https://github.com/vaclisinc" target="_blank" rel="noopener">GitHub ↗</a></small></h2>
         <ol class="entries">
           <li class="entry">
-            <time>Open source</time>
+            <p class="entry-kind">npm package</p>
+            <div>
+              <h3><a href="https://github.com/vaclisinc/midi-realplayer-web" target="_blank" rel="noopener">MIDI RealPlayer — Web</a></h3>
+              <p class="entry-meta">midi-realplayer · Web Audio</p>
+              <ul><li>Designed for music researchers building demo pages and listening tests. Embed synchronized audio and MIDI playback with per-track controls directly in your page.</li></ul>
+              <p class="entry-links"><a href="https://midirealplayer.vaclis.net/" target="_blank" rel="noopener">Live demo</a><a href="https://www.npmjs.com/package/midi-realplayer" target="_blank" rel="noopener">npm</a><a href="https://github.com/vaclisinc/midi-realplayer-web" target="_blank" rel="noopener">GitHub</a></p>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry-kind">VS Code extension</p>
+            <div>
+              <h3><a href="https://marketplace.visualstudio.com/items?itemName=vaclis.midi-realplayer" target="_blank" rel="noopener">MIDI RealPlayer — VS Code</a></h3>
+              <p class="entry-meta">300+ downloads · MIDI · SoundFont · Piano roll</p>
+              <ul><li>Play and inspect multi-track MIDI inside VS Code, with SoundFont instruments, synchronized piano-roll visualization, and track mixing controls.</li></ul>
+              <p class="entry-links"><a href="https://marketplace.visualstudio.com/items?itemName=vaclis.midi-realplayer" target="_blank" rel="noopener">VS Code Marketplace</a><a href="https://github.com/vaclisinc/midi-realplayer-vscode" target="_blank" rel="noopener">GitHub</a></p>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry-kind">Music tool</p>
+            <div>
+              <h3><a href="https://github.com/vaclisinc/AMTFlow" target="_blank" rel="noopener">AMTFlow</a></h3>
+              <p class="entry-links"><a href="https://github.com/vaclisinc/AMTFlow" target="_blank" rel="noopener">GitHub</a></p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="block" id="open-source" aria-labelledby="open-source-title">
+        <h2 class="block-title" id="open-source-title">Open Source</h2>
+        <ol class="entries">
+          <li class="entry">
+            <p class="entry-kind">Education</p>
+            <div>
+              <h3><a href="https://github.com/asuc-octo/berkeleytime" target="_blank" rel="noopener">BerkeleyTime</a></h3>
+              <p class="entry-meta">UC Berkeley · Course discovery</p>
+              <ul>
+                <li>Led a <strong>10-member machine learning team</strong> across semantic search, recommendation system, and enrollment prediction, coordinating researcher–engineer pairs and designers from model development through deployment.</li>
+                <li>Led development of a <a href="https://berkeleytime.vaclis.net/" target="_blank" rel="noopener"><strong>new Explore page</strong></a>, integrating course recommendations into BerkeleyTime's product experience.</li>
+                <li>Built <strong>BGE text-embedding and FAISS vector-search services</strong> with FastAPI for <a href="https://berkeleytime.com/" target="_blank" rel="noopener"><strong>122K+ monthly users</strong></a>.</li>
+                <li>Reduced GraphQL first-load latency from <strong>25s to 1s</strong> with pagination and Redis caching; shipped and fixed <a href="https://github.com/asuc-octo/berkeleytime/pulls?q=author%3Avaclisinc" target="_blank" rel="noopener"><strong>20+ pull requests</strong></a>.</li>
+              </ul>
+              <p class="entry-links"><a href="https://github.com/asuc-octo/berkeleytime" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/asuc-octo/berkeleytime/pulls?q=author%3Avaclisinc" target="_blank" rel="noopener">Pull requests</a></p>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry-kind">Civic tech</p>
+            <div>
+              <h3><a href="https://github.com/taipei-doit/townpass2024-parking" target="_blank" rel="noopener">ParkFlow — Taipei TownPass</a></h3>
+              <p class="entry-meta">Taipei City Government · Parking microservice</p>
+              <ul>
+                <li>Built <a href="https://github.com/vaclisinc/ParkFlow" target="_blank" rel="noopener">ParkFlow</a>, a WebView microservice for real-time parking information, navigation, and notifications; selected for integration into Taipei's official city app (<strong>3M+ downloads</strong>) and awarded NT$100K.</li>
+                <li>Documented the project's development in a <a href="https://www.youtube.com/watch?v=ZP9nikrbwak" target="_blank" rel="noopener">video reaching <strong>1K+ views</strong></a>; delivered an <a href="https://www.youtube.com/watch?v=btnbg0e95_E&amp;t=778s" target="_blank" rel="noopener">invited talk hosted by the Taipei City Government</a> the following year.</li>
+              </ul>
+              <p class="entry-links"><a href="https://github.com/taipei-doit/townpass2024-parking" target="_blank" rel="noopener">GitHub</a></p>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry-kind">Agent tooling</p>
             <div>
               <h3><a href="https://github.com/JessyTsui/Claude-Code-Remote" target="_blank" rel="noopener">Claude Code Remote</a></h3>
-              <p class="entry-meta">Agent tooling · Email · Telegram · LINE</p>
-              <ul><li>Keep a desktop coding agent moving from anywhere: receive full terminal traces, reply with the next command. Five merged PRs on reliability and configurability, <a href="https://x.com/Jiaxi_Cui/status/1951174683103244535" target="_blank" rel="noopener">highlighted on X</a>.</li></ul>
-              <p class="entry-links"><a href="https://github.com/JessyTsui/Claude-Code-Remote/pulls?q=is%3Apr+author%3Avaclisinc" target="_blank" rel="noopener">5 merged PRs</a><a href="https://x.com/Jiaxi_Cui/status/1951174683103244535" target="_blank" rel="noopener">Highlighted on X</a></p>
-            </div>
-          </li>
-          <li class="entry">
-            <time>Audio</time>
-            <div>
-              <h3><a href="https://github.com/vaclisinc/VTR-smartEQ" target="_blank" rel="noopener">VTR-SmartEQ</a></h3>
-              <p class="entry-meta">AHG capstone · Positive Grid · VST plugin</p>
-              <ul><li>Load a reference track and the model translates its timbre into five-band EQ settings inside the DAW.</li></ul>
-            </div>
-          </li>
-          <li class="entry">
-            <time>Data</time>
-            <div>
-              <h3><a href="https://inningiq.web.app/" target="_blank" rel="noopener">InningIQ</a></h3>
-              <p class="entry-meta">Baseball data · Visualization · Digitization</p>
-              <ul><li>Turns CSVs, scraped pages, and handwritten scorecards from amateur teams into structured records and visualizations, built with the NTHU baseball team.</li></ul>
+              <p class="entry-meta">Remote coding workflows · 1.3K stars</p>
+              <ul><li>Contributed improvements to reliability and configurability for remote Claude Code workflows, with contributions <a href="https://x.com/Jiaxi_Cui/status/1951174683103244535" target="_blank" rel="noopener">highlighted on X</a>.</li></ul>
+              <p class="entry-links"><a href="https://github.com/JessyTsui/Claude-Code-Remote" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/JessyTsui/Claude-Code-Remote/pulls?q=is%3Apr+author%3Avaclisinc" target="_blank" rel="noopener">Pull requests</a><a href="https://x.com/Jiaxi_Cui/status/1951174683103244535" target="_blank" rel="noopener">Post</a></p>
             </div>
           </li>
         </ol>
@@ -247,8 +287,8 @@
   </div>
 
   <footer class="footer">
-    <div class="page"><span>© 2026 Song-Ze (Jimmy) Yu</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
+    <div class="page"><span>© 2026 Song-Ze (Jimmy) Yu 游松澤</span><a href="mailto:vaclis@berkeley.edu">vaclis@berkeley.edu</a></div>
   </footer>
-  <script src="assets/js/site.js?v=2"></script>
+  <script src="assets/js/site.js?v=3"></script>
 </body>
 </html>
