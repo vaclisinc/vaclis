@@ -340,6 +340,16 @@ a:hover { text-decoration-color: currentColor; }
 
 .entry > div { min-width: 0; }
 
+#awards .entries { container-type: inline-size; }
+.award-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(10rem, 36%); align-items: start; gap: 1.25rem; }
+.award-content > div { min-width: 0; }
+.award-image { display: block; margin-top: .2rem; }
+.award-image img { display: block; width: 100%; height: auto; }
+.award-image:hover { outline: 1px solid var(--felt); outline-offset: 3px; }
+@container (max-width: 38rem) {
+  .award-content { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+  .award-image { width: min(100%, 24rem); margin-top: 0; }
+}
 
 .timeline { --pad: 1.1rem; position: relative; padding-left: 1.75rem; }
 .roster.timeline { --pad: .55rem; }
